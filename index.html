@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brazil. The Coffee Nation — Interesse Internacional 2026–2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   TOKENS
+============================================================ */
+:root{
+  --black:    #090909;
+  --near:     #111111;
+  --dark:     #181818;
+  --mid:      #2A2A2A;
+  --muted:    #737373;
+  --line:     rgba(255,255,255,.1);
+  --line-lt:  rgba(0,0,0,.1);
+  --white:    #FFFFFF;
+  --paper:    #F5F2EC;
+  --paper2:   #EBE6DA;
+  --gold:     #C8973A;
+  --gold-lt:  #E0AA48;
+  --gold-pale:rgba(200,151,58,.13);
+  --green:    #2D7A50;
+  --green-lt: #389963;
+  --red:      #C0392B;
+  --r:        12px;
+}
+
+@keyframes fadeUp  { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+@keyframes scaleIn { from{opacity:0;transform:scale(.97)} to{opacity:1;transform:scale(1)} }
+@keyframes pulse   { 0%,100%{box-shadow:0 0 0 0 rgba(200,151,58,.5)} 70%{box-shadow:0 0 0 8px rgba(200,151,58,0)} }
+
+.reveal{ opacity:0 }
+.reveal.in{ animation: fadeUp .7s cubic-bezier(.16,.84,.44,1) forwards }
+
+*{ box-sizing:border-box; margin:0; padding:0 }
+html{ scroll-behavior:smooth }
+body{
+  font-family:'Poppins',sans-serif;
+  background:var(--paper);
+  color:var(--near);
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ============================================================
+   HEADER
+============================================================ */
+header{
+  background:var(--black);
+  padding:0 40px; height:64px;
+  display:flex; align-items:center; justify-content:space-between;
+  position:sticky; top:0; z-index:200;
+  border-bottom:1px solid var(--line);
+}
+.hd-brand{ display:flex; align-items:center; gap:18px }
+.hd-logo{ height:28px; opacity:.9 }
+.hd-div{ width:1px; height:22px; background:rgba(255,255,255,.15) }
+.hd-name{
+  font-size:10.5px; font-weight:700;
+  letter-spacing:.22em; text-transform:uppercase;
+  color:var(--gold); opacity:.8;
+}
+.hd-nav{ display:flex; align-items:center; gap:24px }
+.hd-link{
+  font-size:11.5px; font-weight:400; letter-spacing:.04em;
+  color:rgba(255,255,255,.4); text-decoration:none; transition:color .2s;
+}
+.hd-link:hover{ color:rgba(255,255,255,.85) }
+.btn-hd{
+  font-family:'Poppins',sans-serif;
+  font-size:11.5px; font-weight:700;
+  letter-spacing:.08em; text-transform:uppercase;
+  color:var(--black); background:var(--gold);
+  padding:9px 20px; border-radius:5px; border:none; cursor:pointer;
+  transition:background .2s;
+}
+.btn-hd:hover{ background:var(--gold-lt) }
+
+/* ============================================================
+   HERO
+============================================================ */
+.hero{
+  position:relative; min-height:90vh;
+  display:flex; align-items:flex-end; overflow:hidden;
+  background:var(--black);
+}
+.hero-bg{
+  position:absolute; inset:0;
+  background-image:
+    linear-gradient(180deg, rgba(9,9,9,0) 0%, rgba(9,9,9,.25) 35%, rgba(9,9,9,.8) 72%, var(--black) 100%),
+    linear-gradient(100deg, rgba(9,9,9,.65) 0%, rgba(9,9,9,.1) 55%),
+    url('https://images.unsplash.com/photo-1618260975982-63c8cc2026d1?w=1600&q=85&fit=crop&crop=center');
+  background-size:cover; background-position:center 40%;
+}
+.hero-content{
+  position:relative; z-index:2;
+  max-width:1080px; margin:0 auto; width:100%;
+  padding:0 40px 88px;
+}
+.hero-eyebrow{
+  display:inline-flex; align-items:center; gap:12px;
+  margin-bottom:22px;
+  font-size:10.5px; font-weight:600;
+  letter-spacing:.26em; text-transform:uppercase; color:var(--gold);
+}
+.hero-eyebrow::before{ content:''; width:28px; height:1.5px; background:var(--gold) }
+.hero h1{
+  font-size:clamp(2.8rem,7vw,5.8rem); font-weight:800;
+  line-height:1.0; letter-spacing:-.025em;
+  color:var(--white); max-width:820px; margin-bottom:20px;
+}
+.hero h1 em{ font-style:italic; font-weight:300; color:rgba(255,255,255,.55) }
+.hero-lede{
+  font-size:1.05rem; font-weight:300; line-height:1.75;
+  color:rgba(255,255,255,.5); max-width:500px; margin-bottom:36px;
+}
+.hero-pills{ display:flex; flex-wrap:wrap; gap:9px; margin-bottom:40px }
+.pill{
+  font-size:11px; font-weight:500; letter-spacing:.04em;
+  color:rgba(255,255,255,.65);
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.13);
+  padding:7px 16px; border-radius:40px;
+}
+.pill strong{ color:var(--white); font-weight:700 }
+.hero-acts{ display:flex; gap:14px; align-items:center; flex-wrap:wrap }
+.btn-gold{
+  display:inline-flex; align-items:center; gap:9px;
+  font-family:'Poppins',sans-serif; font-size:13px; font-weight:700;
+  letter-spacing:.06em; text-transform:uppercase;
+  color:var(--black); background:var(--gold);
+  padding:17px 32px; border-radius:5px; border:none; cursor:pointer;
+  box-shadow:0 16px 40px -10px rgba(200,151,58,.55);
+  transition:background .2s, transform .2s, box-shadow .2s;
+}
+.btn-gold:hover{ background:var(--gold-lt); transform:translateY(-1px); box-shadow:0 22px 48px -8px rgba(200,151,58,.65) }
+.btn-ghost{
+  font-family:'Poppins',sans-serif; font-size:13px; font-weight:400;
+  color:rgba(255,255,255,.45); background:none; border:none; cursor:pointer;
+  letter-spacing:.04em; text-decoration:underline; text-underline-offset:4px;
+  transition:color .2s;
+}
+.btn-ghost:hover{ color:rgba(255,255,255,.85) }
+.scroll-hint{
+  position:absolute; right:40px; bottom:88px; z-index:2;
+  writing-mode:vertical-rl; text-orientation:mixed;
+  font-size:10px; font-weight:500; letter-spacing:.22em;
+  text-transform:uppercase; color:rgba(255,255,255,.22);
+  display:flex; flex-direction:column; align-items:center; gap:12px;
+}
+.scroll-hint::after{ content:''; width:1px; height:56px; background:rgba(255,255,255,.18) }
+
+/* ============================================================
+   STATS BAND
+============================================================ */
+.stats-band{ background:var(--near); border-top:1px solid var(--line); border-bottom:1px solid var(--line) }
+.stats-inner{
+  max-width:1080px; margin:0 auto; padding:0 40px;
+  display:grid; grid-template-columns:repeat(4,1fr);
+}
+.stat-item{ padding:28px 28px; border-right:1px solid var(--line) }
+.stat-item:last-child{ border-right:none }
+.stat-n{ font-size:2rem; font-weight:800; color:var(--white); line-height:1; margin-bottom:4px }
+.stat-n span{ color:var(--gold) }
+.stat-l{ font-size:11px; font-weight:300; color:rgba(255,255,255,.35); letter-spacing:.04em }
+@media(max-width:700px){
+  .stats-inner{ grid-template-columns:repeat(2,1fr) }
+  .stat-item:nth-child(2){ border-right:none }
+}
+
+/* ============================================================
+   SECTION UTILITIES
+============================================================ */
+.s-eyebrow{
+  display:inline-flex; align-items:center; gap:10px;
+  font-size:10.5px; font-weight:700;
+  letter-spacing:.24em; text-transform:uppercase;
+  color:var(--green); margin-bottom:14px;
+}
+.s-eyebrow::before{ content:''; width:22px; height:1.5px; background:var(--green) }
+.s-title{
+  font-size:clamp(1.9rem,3.5vw,2.9rem); font-weight:800;
+  letter-spacing:-.02em; line-height:1.08;
+  color:var(--near); margin-bottom:12px;
+}
+.s-sub{
+  font-size:.98rem; font-weight:300; line-height:1.75;
+  color:var(--muted); max-width:560px;
+}
+
+/* ============================================================
+   FORM SECTION
+============================================================ */
+.form-section{ background:var(--paper) }
+.section-wrap{ max-width:1080px; margin:0 auto; padding:88px 40px }
+
+.form-layout{ display:grid; grid-template-columns:1fr 1.4fr; gap:64px; align-items:start }
+@media(max-width:900px){ .form-layout{ grid-template-columns:1fr; gap:44px } }
+
+.form-aside .feat-list{ display:flex; flex-direction:column; gap:14px; margin-top:24px }
+.feat-row{ display:flex; align-items:flex-start; gap:12px }
+.feat-icon{
+  width:36px; height:36px; border-radius:8px;
+  background:var(--gold-pale);
+  display:flex; align-items:center; justify-content:center;
+  font-size:16px; flex-shrink:0;
+}
+.feat-copy strong{ display:block; font-size:.88rem; font-weight:600; margin-bottom:2px }
+.feat-copy span{ font-size:.8rem; color:var(--muted); font-weight:300; line-height:1.5 }
+
+.form-card{
+  background:var(--white);
+  border:1px solid rgba(0,0,0,.07);
+  border-radius:16px; padding:40px;
+  box-shadow:0 20px 60px -20px rgba(0,0,0,.1);
+}
+.fc-label{
+  font-size:10.5px; font-weight:700; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--muted); margin-bottom:22px;
+}
+.form-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px }
+@media(max-width:540px){ .form-grid{ grid-template-columns:1fr } }
+.f-field{ display:flex; flex-direction:column; gap:6px }
+.f-field label{
+  font-size:10.5px; font-weight:600;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--muted);
+}
+.f-field input{
+  font-family:'Poppins',sans-serif; font-size:14px; font-weight:400;
+  padding:13px 16px;
+  border:1.5px solid rgba(0,0,0,.1); border-radius:8px;
+  background:var(--paper); color:var(--near); outline:none;
+  transition:border-color .18s, box-shadow .18s, background .18s;
+}
+.f-field input:focus{ border-color:var(--green); background:var(--white); box-shadow:0 0 0 3px rgba(45,122,80,.1) }
+.f-field input.err{ border-color:var(--red) }
+.form-divider{ height:1px; background:rgba(0,0,0,.06); margin:22px 0 }
+.form-privacy{ font-size:11.5px; font-weight:300; color:var(--muted); line-height:1.6 }
+.form-privacy a{ color:var(--green); text-decoration:none }
+
+/* ============================================================
+   MEMBER TOGGLE
+============================================================ */
+.member-toggle-wrap{
+  max-width:1080px; margin:0 auto; padding:0 40px 0;
+  display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;
+  margin-bottom:48px;
+}
+.mt-label{
+  font-size:13px; font-weight:500; color:rgba(255,255,255,.55);
+  letter-spacing:.03em;
+}
+.mt-label strong{ color:var(--white); font-weight:600 }
+.toggle-group{
+  display:flex; gap:0; background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12); border-radius:8px; padding:4px;
+}
+.tg-btn{
+  font-family:'Poppins',sans-serif;
+  font-size:12px; font-weight:600; letter-spacing:.06em; text-transform:uppercase;
+  padding:10px 24px; border-radius:5px; border:none; cursor:pointer;
+  color:rgba(255,255,255,.45); background:transparent;
+  transition:all .2s; white-space:nowrap;
+}
+.tg-btn.active-membro{
+  background:var(--gold); color:var(--black);
+  box-shadow:0 4px 16px rgba(200,151,58,.35);
+}
+.tg-btn.active-nao{
+  background:rgba(255,255,255,.1); color:var(--white);
+}
+.member-note{
+  display:none; align-items:center; gap:10px;
+  background:rgba(200,151,58,.1); border:1px solid rgba(200,151,58,.25);
+  border-radius:8px; padding:12px 18px; margin-bottom:28px;
+  max-width:1080px; margin-left:auto; margin-right:auto;
+}
+.member-note.show{ display:flex }
+.member-note p{
+  font-size:12.5px; font-weight:400; color:rgba(255,255,255,.7); line-height:1.5;
+}
+.member-note p strong{ color:var(--gold); font-weight:700 }
+.member-note-icon{ font-size:20px; flex-shrink:0 }
+
+/* ============================================================
+   EVENTS SECTION
+============================================================ */
+.events-section{ background:var(--black) }
+.events-wrap{ max-width:1080px; margin:0 auto; padding:88px 40px }
+
+.events-head{ margin-bottom:48px }
+.events-head .s-eyebrow{ color:rgba(200,151,58,.75) }
+.events-head .s-eyebrow::before{ background:rgba(200,151,58,.75) }
+.events-head .s-title{ color:var(--white) }
+.events-head .s-sub{ color:rgba(255,255,255,.38) }
+
+.month-block{ margin-bottom:52px }
+.month-row{ display:flex; align-items:center; gap:18px; margin-bottom:18px }
+.month-name{
+  font-size:10px; font-weight:700; letter-spacing:.24em;
+  text-transform:uppercase; color:rgba(255,255,255,.28); white-space:nowrap;
+}
+.month-line{ flex:1; height:1px; background:rgba(255,255,255,.09) }
+.events-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:16px }
+
+/* Event card */
+.ev-card{
+  position:relative; border-radius:var(--r); overflow:hidden;
+  cursor:pointer; aspect-ratio:4/3;
+  background:var(--dark);
+  border:1.5px solid rgba(255,255,255,.06);
+  transition:transform .3s cubic-bezier(.16,.84,.44,1), border-color .25s, box-shadow .3s;
+  user-select:none;
+}
+.ev-card:hover{ transform:scale(1.025); box-shadow:0 24px 60px -16px rgba(0,0,0,.65) }
+.ev-card.selected{
+  border-color:var(--gold);
+  box-shadow:0 0 0 3px rgba(200,151,58,.28), 0 20px 50px -14px rgba(0,0,0,.65);
+}
+.ev-photo{
+  position:absolute; inset:0;
+  background-size:cover; background-position:center;
+  transition:transform .5s cubic-bezier(.16,.84,.44,1);
+  filter:brightness(.72);
+}
+.ev-card:hover .ev-photo{ transform:scale(1.06); filter:brightness(.58) }
+.ev-card.selected .ev-photo{ filter:brightness(.45) }
+.ev-overlay{
+  position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(0,0,0,.04) 0%, rgba(0,0,0,.08) 30%, rgba(0,0,0,.75) 72%, rgba(0,0,0,.94) 100%);
+  transition:background .3s;
+}
+.ev-card.selected .ev-overlay{
+  background:linear-gradient(180deg, rgba(200,151,58,.07) 0%, rgba(0,0,0,.18) 30%, rgba(0,0,0,.82) 72%, rgba(0,0,0,.96) 100%);
+}
+
+/* Top strip */
+.ev-top{
+  position:absolute; top:14px; left:14px; right:14px;
+  z-index:2; display:flex; justify-content:space-between; align-items:flex-start;
+}
+.ev-date{
+  font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--white);
+  background:rgba(0,0,0,.52); backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.14);
+  padding:5px 12px; border-radius:40px;
+}
+.ev-check{
+  width:26px; height:26px; border-radius:50%;
+  border:1.5px solid rgba(255,255,255,.28); background:rgba(255,255,255,.08);
+  backdrop-filter:blur(8px);
+  display:flex; align-items:center; justify-content:center;
+  transition:all .22s cubic-bezier(.16,.84,.44,1); font-size:11px; color:var(--black);
+  opacity:0.7;
+}
+.ev-card.selected .ev-check{
+  background:var(--gold); border-color:var(--gold);
+  box-shadow:0 4px 14px rgba(200,151,58,.55); opacity:1;
+}
+.ev-check-v{ opacity:0; transition:opacity .18s; font-weight:900 }
+.ev-card.selected .ev-check-v{ opacity:1 }
+
+/* Price badge — shows based on toggle */
+.ev-price{
+  display:none;
+  position:absolute; top:14px; left:50%; transform:translateX(-50%);
+  z-index:3; text-align:center; white-space:nowrap;
+}
+.ev-price.show{ display:block }
+.ev-price-inner{
+  font-size:11px; font-weight:700; letter-spacing:.06em;
+  padding:5px 13px; border-radius:20px;
+  backdrop-filter:blur(10px);
+}
+.ev-price-inner.membro-price{
+  background:rgba(200,151,58,.85); color:var(--black);
+}
+.ev-price-inner.nao-price{
+  background:rgba(30,30,30,.85); color:rgba(255,255,255,.85); border:1px solid rgba(200,151,58,.3);
+}
+.ev-price-save{
+  font-size:9.5px; font-weight:500; color:var(--gold);
+  margin-top:4px; letter-spacing:.04em;
+}
+
+/* Bottom body */
+.ev-body{ position:absolute; bottom:0; left:0; right:0; padding:18px 18px; z-index:2 }
+.ev-loc{ font-size:10.5px; font-weight:500; letter-spacing:.07em; text-transform:uppercase; color:rgba(255,255,255,.4); margin-bottom:5px }
+.ev-name{ font-size:1.2rem; font-weight:700; line-height:1.15; letter-spacing:-.01em; color:var(--white); margin-bottom:6px }
+.ev-desc{ font-size:12px; font-weight:300; line-height:1.5; color:rgba(255,255,255,.42); max-height:0; overflow:hidden; transition:max-height .3s }
+.ev-card:hover .ev-desc{ max-height:80px }
+.ev-action{
+  display:inline-flex; align-items:center; gap:6px;
+  font-size:11px; font-weight:600; letter-spacing:.08em; text-transform:uppercase;
+  color:rgba(255,255,255,.28); margin-top:10px; transition:color .2s;
+}
+.ev-card.selected .ev-action{ color:var(--gold) }
+.ev-card.selected .ev-action::before{ content:'✓  ' }
+
+/* ============================================================
+   FLOATING BAR
+============================================================ */
+.float-bar{
+  position:fixed; bottom:28px; left:50%; transform:translateX(-50%) translateY(12px);
+  z-index:300;
+  background:rgba(9,9,9,.96); backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,.11); border-radius:50px;
+  padding:12px 16px 12px 20px;
+  display:flex; align-items:center; gap:14px;
+  box-shadow:0 20px 60px -10px rgba(0,0,0,.75);
+  opacity:0; transition:opacity .3s, transform .3s;
+  pointer-events:none; white-space:nowrap;
+}
+.float-bar.show{ opacity:1; transform:translateX(-50%) translateY(0); pointer-events:auto }
+.float-n{
+  width:28px; height:28px; border-radius:50%;
+  background:var(--gold); color:var(--black);
+  font-size:13px; font-weight:800;
+  display:flex; align-items:center; justify-content:center;
+}
+.float-txt{ font-size:12px; font-weight:400; color:rgba(255,255,255,.6); letter-spacing:.04em }
+.float-btn{
+  font-family:'Poppins',sans-serif;
+  font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--black); background:var(--gold);
+  padding:9px 22px; border-radius:30px; border:none; cursor:pointer;
+  transition:background .2s, transform .15s;
+}
+.float-btn:hover{ background:var(--gold-lt); transform:scale(1.03) }
+
+/* ============================================================
+   SUBMIT
+============================================================ */
+.submit-section{ background:var(--paper) }
+.submit-wrap{ max-width:720px; margin:0 auto; padding:96px 40px 80px }
+.submit-head{ text-align:center; margin-bottom:36px }
+.submit-head .s-eyebrow{ justify-content:center }
+.submit-head .s-eyebrow::before{ display:none }
+.submit-head .s-eyebrow::after{ content:''; width:22px; height:1.5px; background:var(--green) }
+
+.sel-box{
+  background:var(--white); border:1px solid rgba(0,0,0,.07);
+  border-radius:12px; padding:24px 28px; margin-bottom:24px;
+}
+.sel-box-title{ font-size:10.5px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin-bottom:14px }
+.sel-chips{ display:flex; flex-wrap:wrap; gap:8px }
+.sel-chip{
+  display:inline-flex; align-items:center; gap:7px;
+  font-size:12px; font-weight:500; color:var(--near);
+  background:var(--paper2); border:1px solid rgba(0,0,0,.08);
+  padding:7px 14px; border-radius:20px;
+}
+.sel-chip .ck{ color:var(--green); font-weight:700; font-size:11px }
+.sel-empty{ font-size:13px; color:var(--muted); font-weight:300; font-style:italic }
+
+.err-box{
+  background:#fff5f5; border:1.5px solid #ffd0d0; color:var(--red);
+  font-size:13px; font-weight:500; padding:12px 18px;
+  border-radius:8px; margin-bottom:16px; display:none;
+}
+.err-box.show{ display:block }
+
+.btn-confirm{
+  width:100%; display:flex; align-items:center; justify-content:center; gap:10px;
+  font-family:'Poppins',sans-serif; font-size:14px; font-weight:700;
+  letter-spacing:.05em; text-transform:uppercase;
+  color:var(--white); background:var(--near);
+  padding:20px 40px; border-radius:8px; border:none; cursor:pointer;
+  transition:background .2s, transform .2s;
+}
+.btn-confirm:hover{ background:var(--mid); transform:translateY(-1px) }
+.btn-confirm:disabled{ opacity:.4; pointer-events:none }
+.submit-note{ text-align:center; margin-top:14px; font-size:11.5px; font-weight:300; color:var(--muted) }
+.submit-note a{ color:var(--green); text-decoration:none }
+
+/* Success */
+.success{
+  display:none; text-align:center;
+  padding:96px 40px 80px; max-width:600px; margin:0 auto;
+}
+.success.show{ display:block; animation:scaleIn .5s cubic-bezier(.16,.84,.44,1) forwards }
+.success-ring{
+  width:72px; height:72px; border-radius:50%;
+  background:var(--green); margin:0 auto 24px;
+  display:flex; align-items:center; justify-content:center;
+}
+.success-ring svg{ width:32px; height:32px; stroke:#fff; fill:none; stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round }
+.success h3{ font-size:2rem; font-weight:800; letter-spacing:-.02em; margin-bottom:12px }
+.success p{ font-size:15px; font-weight:300; color:var(--muted); line-height:1.7; margin-bottom:28px }
+.success-chips{ display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-bottom:32px }
+.s-footnote{ font-size:11px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:rgba(0,0,0,.2) }
+
+/* ============================================================
+   ADESÃO SECTION
+============================================================ */
+.adesao{
+  background:var(--near);
+  position:relative; overflow:hidden;
+}
+.adesao-bg{
+  position:absolute; inset:0;
+  background-image:
+    linear-gradient(90deg, rgba(9,9,9,.95) 0%, rgba(9,9,9,.7) 55%, rgba(9,9,9,.2) 100%),
+    url('https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=1400&q=80&fit=crop&crop=center');
+  background-size:cover; background-position:center;
+}
+.adesao-inner{
+  position:relative; z-index:2;
+  max-width:1080px; margin:0 auto; padding:100px 40px;
+  display:grid; grid-template-columns:1.2fr 1fr; gap:60px; align-items:center;
+}
+@media(max-width:800px){ .adesao-inner{ grid-template-columns:1fr } }
+.adesao-copy .s-eyebrow{ color:rgba(200,151,58,.75) }
+.adesao-copy .s-eyebrow::before{ background:rgba(200,151,58,.75) }
+.adesao-copy .s-title{ color:var(--white); font-size:clamp(1.8rem,3.5vw,2.8rem) }
+.adesao-copy .s-sub{ color:rgba(255,255,255,.4); max-width:480px }
+
+.adesao-features{ display:flex; flex-direction:column; gap:14px; margin-top:28px }
+.af-item{
+  display:flex; align-items:flex-start; gap:14px; padding:14px 16px;
+  background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08);
+  border-radius:10px;
+}
+.af-bullet{
+  width:8px; height:8px; border-radius:50%;
+  background:var(--gold); flex-shrink:0; margin-top:5px;
+}
+.af-text{ font-size:13px; font-weight:300; color:rgba(255,255,255,.55); line-height:1.55 }
+.af-text strong{ color:rgba(255,255,255,.85); font-weight:600 }
+
+.adesao-cta-box{
+  background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.1);
+  border-radius:16px; padding:40px;
+}
+.adesao-cta-box .badge{
+  display:inline-flex; align-items:center; gap:8px;
+  font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--gold); background:var(--gold-pale);
+  border:1px solid rgba(200,151,58,.25);
+  padding:6px 14px; border-radius:20px; margin-bottom:20px;
+}
+.adesao-cta-box .badge .dot{ width:6px; height:6px; border-radius:50%; background:var(--gold); animation:pulse 2s infinite }
+.adesao-cta-box h4{
+  font-size:1.35rem; font-weight:700; letter-spacing:-.01em;
+  color:var(--white); margin-bottom:10px;
+}
+.adesao-cta-box p{ font-size:13.5px; font-weight:300; color:rgba(255,255,255,.45); line-height:1.65; margin-bottom:28px }
+.btn-adesao{
+  width:100%; font-family:'Poppins',sans-serif;
+  display:flex; align-items:center; justify-content:center; gap:10px;
+  font-size:13.5px; font-weight:700; letter-spacing:.05em; text-transform:uppercase;
+  color:var(--black); background:var(--gold);
+  padding:18px 32px; border-radius:8px; border:none; cursor:pointer;
+  box-shadow:0 12px 32px -8px rgba(200,151,58,.55);
+  transition:background .2s, transform .2s;
+  text-decoration:none;
+}
+.btn-adesao:hover{ background:var(--gold-lt); transform:translateY(-1px) }
+.adesao-note{ font-size:11.5px; font-weight:300; color:rgba(255,255,255,.3); text-align:center; margin-top:12px }
+
+/* ============================================================
+   FOOTER
+============================================================ */
+footer{
+  background:var(--black); border-top:1px solid var(--line);
+  padding:52px 40px 36px;
+}
+.foot-inner{ max-width:1080px; margin:0 auto }
+.foot-top{
+  display:flex; justify-content:space-between; align-items:flex-start;
+  flex-wrap:wrap; gap:32px; margin-bottom:44px;
+}
+.foot-brand img{ height:26px; opacity:.7; margin-bottom:12px }
+.foot-brand p{ font-size:10.5px; font-weight:400; color:rgba(255,255,255,.28); letter-spacing:.06em }
+.foot-links{ display:flex; flex-direction:column; gap:8px }
+.foot-links a{ font-size:13px; font-weight:300; color:rgba(255,255,255,.38); text-decoration:none; transition:color .2s }
+.foot-links a:hover{ color:rgba(255,255,255,.85) }
+.foot-bottom{
+  border-top:1px solid var(--line); padding-top:18px;
+  display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+  font-size:11px; font-weight:300; color:rgba(255,255,255,.22); letter-spacing:.04em;
+}
+.foot-bottom a{ color:rgba(255,255,255,.3); text-decoration:none; transition:color .2s }
+.foot-bottom a:hover{ color:rgba(255,255,255,.7) }
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+@media(max-width:768px){
+  header{ padding:0 20px }
+  .hd-nav .hd-link{ display:none }
+  .hero-content{ padding:0 20px 68px }
+  .section-wrap{ padding:64px 20px }
+  .events-wrap{ padding:64px 20px }
+  .member-toggle-wrap{ padding:0 20px; margin-bottom:36px }
+  .member-note{ margin-left:20px; margin-right:20px }
+  .submit-wrap{ padding:64px 20px }
+  .adesao-inner{ padding:72px 20px }
+  footer{ padding:40px 20px 28px }
+  .scroll-hint{ display:none }
+}
+@media(max-width:520px){
+  .events-grid{ grid-template-columns:1fr }
+  .ev-card{ aspect-ratio:3/2 }
+  .stats-inner{ padding:0 20px }
+  .stat-item{ padding:22px 14px }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="hd-brand">
+    <img class="hd-logo"
+      src="https://www.bsca.com.br/wp-content/uploads/2025/09/Logo_BSCA-white.png"
+      alt="BSCA" onerror="this.style.display='none'">
+    <div class="hd-div"></div>
+    <span class="hd-name">Brazil. The Coffee Nation</span>
+  </div>
+  <nav class="hd-nav">
+    <a href="https://www.bsca.com.br/projeto-setorial/" class="hd-link" target="_blank">Projeto Setorial</a>
+    <a href="https://www.bsca.com.br/membros/" class="hd-link" target="_blank">Seja Membro</a>
+    <button class="btn-hd" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">
+      Manifestar Interesse
+    </button>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Projeto Setorial BSCA · ApexBrasil</div>
+    <h1>O café especial<br>brasileiro no <em>palco</em><br>do mundo</h1>
+    <p class="hero-lede">Manifeste seu interesse nas principais feiras internacionais do 2º semestre de 2026 e janeiro de 2027 com o projeto "Brazil. The Coffee Nation".</p>
+    <div class="hero-pills">
+      <div class="pill"><strong>6</strong> eventos internacionais</div>
+      <div class="pill"><strong>5</strong> países estratégicos</div>
+      <div class="pill">Até <strong>50% off</strong> para membros BSCA</div>
+      <div class="pill"><strong>Gratuito</strong> manifestar interesse</div>
+    </div>
+    <div class="hero-acts">
+      <button class="btn-gold" onclick="document.getElementById('events-section').scrollIntoView({behavior:'smooth'})">
+        Ver os eventos
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="btn-ghost" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">
+        Preencher formulário
+      </button>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll</div>
+</section>
+
+<!-- NOVA RÉGUA APEX -->
+<div style="background:#ffffff;padding:15px 0;line-height:0;border-top:1px solid rgba(255,255,255,.07);display:flex;justify-content:center;align-items:center">
+  <img
+    src="ADAPTADO.jpg"
+    alt="Realização: BSCA | Promoção: ApexBrasil | BSCA Associação Brasileira de Cafés Especiais"
+    style="max-height:90px;height:auto;width:auto;max-width:100%;display:block;object-fit:contain"
+  >
+</div>
+
+<!-- STATS -->
+<div class="stats-band">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-n">6<span>+</span></div>
+      <div class="stat-l">Ações internacionais</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-n">5</div>
+      <div class="stat-l">Países estratégicos</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-n">50<span>%</span></div>
+      <div class="stat-l">Desconto para membros</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-n">2<span>x</span></div>
+      <div class="stat-l">Continentes cobertos</div>
+    </div>
+  </div>
+</div>
+
+<!-- FORM SECTION -->
+<section class="form-section" id="form-section">
+  <div class="section-wrap">
+    <div class="form-layout">
+
+      <div class="form-aside reveal">
+        <div class="s-eyebrow">Seus dados</div>
+        <h2 class="s-title">Quem<br>representa você?</h2>
+        <p class="s-sub">Preencha abaixo para que nossa equipe entre em contato com as condições de participação.</p>
+        <div class="feat-list">
+          <div class="feat-row">
+            <div class="feat-icon">🌎</div>
+            <div class="feat-copy">
+              <strong>Alcance global</strong>
+              <span>Presença em feiras dos mercados asiático, americano e árabe</span>
+            </div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-icon">🤝</div>
+            <div class="feat-copy">
+              <strong>Suporte completo</strong>
+              <span>Equipe BSCA acompanha toda a sua participação</span>
+            </div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-icon">🎯</div>
+            <div class="feat-copy">
+              <strong>Sem compromisso</strong>
+              <span>Manifestar interesse é gratuito e sem obrigação</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-card reveal">
+        <div class="fc-label">Dados de contato</div>
+        <div class="form-grid">
+          <div class="f-field">
+            <label for="fNome">Nome completo</label>
+            <input type="text" id="fNome" placeholder="Seu nome" autocomplete="name">
+          </div>
+          <div class="f-field">
+            <label for="fEmpresa">Empresa / Propriedade</label>
+            <input type="text" id="fEmpresa" placeholder="Razão social ou fazenda">
+          </div>
+          <div class="f-field">
+            <label for="fEmail">E-mail</label>
+            <input type="email" id="fEmail" placeholder="seu@email.com" autocomplete="email">
+          </div>
+          <div class="f-field">
+            <label for="fTelefone">Telefone / WhatsApp</label>
+            <input type="tel" id="fTelefone" placeholder="(00) 00000-0000" autocomplete="tel">
+          </div>
+        </div>
+        <div class="form-divider"></div>
+        <p class="form-privacy">
+          Seus dados são protegidos pela LGPD e serão usados exclusivamente para contato sobre as ações do projeto setorial.
+          <a href="https://www.bsca.com.br/politica-de-privacidade/" target="_blank">Política de privacidade.</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS SECTION -->
+<section class="events-section" id="events-section">
+  <div class="events-wrap">
+
+    <div class="events-head reveal">
+      <div class="s-eyebrow">Ações 2026 – 2027</div>
+      <h2 class="s-title">Selecione os eventos<br>de interesse</h2>
+      <p class="s-sub">Você pode selecionar quantos quiser. Passe o mouse sobre cada card para ver mais detalhes.</p>
+    </div>
+
+    <!-- MEMBER TOGGLE -->
+    <div class="member-toggle-wrap reveal">
+      <div class="mt-label">Ver valores para: <strong>qual perfil?</strong></div>
+      <div class="toggle-group">
+        <button class="tg-btn active-membro" id="btnMembro" onclick="setMember(true)">
+          ✓ Membro BSCA
+        </button>
+        <button class="tg-btn" id="btnNao" onclick="setMember(false)">
+          Não Membro
+        </button>
+      </div>
+    </div>
+
+    <!-- Non-member note -->
+    <div class="member-note" id="memberNote" style="padding:0 40px 28px;max-width:none;margin:0 0 0 0;background:none;border:none">
+      <div style="display:flex;align-items:center;gap:10px;background:rgba(200,151,58,.1);border:1px solid rgba(200,151,58,.22);border-radius:8px;padding:12px 18px;max-width:1080px;margin:0 auto;width:100%">
+        <span style="font-size:18px">💡</span>
+        <p style="font-size:12.5px;font-weight:400;color:rgba(255,255,255,.65);line-height:1.5">
+          <strong style="color:var(--gold)">Como membro BSCA, você economiza 50% em todas as ações.</strong>
+          A adesão ao projeto é gratuita para membros e não membros, mas os valores de participação nas feiras diferem.
+          <a href="https://www.bsca.com.br/membros/" target="_blank" style="color:var(--gold);text-decoration:underline;text-underline-offset:3px">Conheça a associação →</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- OUTUBRO 2026 -->
+    <div class="month-block reveal">
+      <div class="month-row">
+        <span class="month-name">Outubro 2026</span>
+        <div class="month-line"></div>
+      </div>
+      <div class="events-grid">
+
+        <div class="ev-card" data-id="scaj-2026" data-tag="SCAJ-2026" data-name="SCAJ 2026"
+          data-membro="USD 1.500" data-nao="USD 3.000"
+          onclick="toggleEvent(this)">
+          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=80&fit=crop&crop=center')"></div>
+          <div class="ev-overlay"></div>
+          <div class="ev-top">
+            <div class="ev-date">14–16 Out 2026</div>
+            <div class="ev-check"><span class="ev-check-v">✓</span></div>
+          </div>
+          <div class="ev-price" id="price-scaj-2026">
+            <div class="ev-price-inner membro-price" id="pi-membro-scaj-2026">Membro · USD 1.500</div>
+            <div class="ev-price-inner nao-price" id="pi-nao-scaj-2026" style="display:none">Não Membro · USD 3.000</div>
+            <div class="ev-price-save" id="ps-scaj-2026">Membro economiza USD 1.500</div>
+          </div>
+          <div class="ev-body">
+            <div class="ev-loc">Tóquio, Japão · Tokyo Big Sight</div>
+            <div class="ev-name">SCAJ 2026</div>
+            <div class="ev-desc">World Specialty Coffee Conference and Exhibition — maior evento de cafés especiais da Ásia, reunindo importadores, torrefadores e compradores de todo o mundo.</div>
+            <div class="ev-action">Selecionar evento</div>
+          </div>
+        </div>
+
+        <div class="ev-card" data-id="woc-panama-2026" data-tag="WOC-PANAMA-2026" data-name="World of Coffee Panamá"
+          data-membro="USD 2.100" data-nao="USD 4.200"
+          onclick="toggleEvent(this)">
+          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1605298613890-b82abd3793e8?w=800&q=80&fit=crop&crop=center')"></div>
+          <div class="ev-overlay"></div>
+          <div class="ev-top">
+            <div class="ev-date">23–25 Out 2026</div>
+            <div class="ev-check"><span class="ev-check-v">✓</span></div>
+          </div>
+          <div class="ev-price" id="price-woc-panama-2026">
+            <div class="ev-price-inner membro-price" id="pi-membro-woc-panama-2026">Membro · USD 2.100</div>
+            <div class="ev-price-inner nao-price" id="pi-nao-woc-panama-2026" style="display:none">Não Membro · USD 4.200</div>
+            <div class="ev-price-save" id="ps-woc-panama-2026">Membro economiza USD 2.100</div>
+          </div>
+          <div class="ev-body">
+            <div class="ev-loc">Cidade do Panamá · SCA event</div>
+            <div class="ev-name">World of Coffee Panamá</div>
+            <div class="ev-desc">A maior plataforma global do café especial — edição das Américas conectando produtores brasileiros a compradores internacionais de alto padrão.</div>
+            <div class="ev-action">Selecionar evento</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- NOVEMBRO 2026 -->
+    <div class="month-block reveal">
+      <div class="month-row">
+        <span class="month-name">Novembro 2026</span>
+        <div class="month-line"></div>
+      </div>
+      <div class="events-grid">
+
+        <div class="ev-card" data-id="sic-2026" data-tag="SIC-2026" data-name="SIC 2026 – Projeto Comprador"
+          data-membro="BRL 3.200" data-nao="BRL 6.400"
+          onclick="toggleEvent(this)">
+          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1464983953574-0892a716854b?w=800&q=80&fit=crop&crop=center')"></div>
+          <div class="ev-overlay"></div>
+          <div class="ev-top">
+            <div class="ev-date">11–13 Nov 2026</div>
+            <div class="ev-check"><span class="ev-check-v">✓</span></div>
+          </div>
+          <div class="ev-price" id="price-sic-2026">
+            <div class="ev-price-inner membro-price" id="pi-membro-sic-2026">Membro · BRL 3.200</div>
+            <div class="ev-price-inner nao-price" id="pi-nao-sic-2026" style="display:none">Não Membro · BRL 6.400</div>
+            <div class="ev-price-save" id="ps-sic-2026">Membro economiza BRL 3.200</div>
+          </div>
+          <div class="ev-body">
+            <div class="ev-loc">Brasil · Projeto Comprador</div>
+            <div class="ev-name">SIC 2026</div>
+            <div class="ev-desc">Semana Internacional do Café — maior evento da América Latina, com programação focada em compradores internacionais de alto perfil visitando o Brasil.</div>
+            <div class="ev-action">Selecionar evento</div>
+          </div>
+        </div>
+
+        <div class="ev-card" data-id="taiwan-2026" data-tag="TAIWAN-COFFEE-2026" data-name="Taiwan Intl Coffee Show"
+          data-membro="USD 1.500" data-nao="USD 3.000"
+          onclick="toggleEvent(this)">
+          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1470004914212-05527e49370b?w=800&q=80&fit=crop&crop=center')"></div>
+          <div class="ev-overlay"></div>
+          <div class="ev-top">
+            <div class="ev-date">13–16 Nov 2026</div>
+            <div class="ev-check"><span class="ev-check-v">✓</span></div>
+          </div>
+          <div class="ev-price" id="price-taiwan-2026">
+            <div class="ev-price-inner membro-price" id="pi-membro-taiwan-2026">Membro · USD 1.500</div>
+            <div class="ev-price-inner nao-price" id="pi-nao-taiwan-2026" style="display:none">Não Membro · USD 3.000</div>
+            <div class="ev-price-save" id="ps-taiwan-2026">Membro economiza USD 1.500</div>
+          </div>
+          <div class="ev-body">
+            <div class="ev-loc">Taipei, Taiwan</div>
+            <div class="ev-name">Taiwan Intl Coffee Show</div>
+            <div class="ev-desc">Referência no mercado asiático de cafés premium, com acesso direto a torrefadores, redes de cafeterias e distribuidores da região.</div>
+            <div class="ev-action">Selecionar evento</div>
+          </div>
+        </div>
+
+        <div class="ev-card" data-id="cafe-show-2026" data-tag="CAFE-SHOW-KOREA-2026" data-name="Café Show Seoul"
+          data-membro="USD 1.500" data-nao="USD 3.000"
+          onclick="toggleEvent(this)">
+          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1517154421773-0529f29ea451?w=800&q=80&fit=crop&crop=center')"></div>
+          <div class="ev-overlay"></div>
+          <div class="ev-top">
+            <div class="ev-date">11–14 Nov 2026</div>
+            <div class="ev-check"><span class="ev-check-v">✓</span></div>
+          </div>
+          <div class="ev-price" id="price-cafe-show-2026">
+            <div class="ev-price-inner membro-price" id="pi-membro-cafe-show-2026">Membro · USD 1.500</div>
+            <div class="ev-price-inner nao-price" id="pi-nao-cafe-show-2026" style="display:none">Não Membro · USD 3.000</div>
+            <div class="ev-price-save" id="ps-cafe-show-2026">Membro economiza USD 1.500</div>
+          </div>
+          <div class="ev-body">
+            <div class="ev-loc">Seul, Coreia do Sul</div>
+            <div class="ev-name">Café Show</div>
+            <div class="ev-desc">O maior evento de café da Coreia do Sul — um dos mercados que mais crescem no consumo de cafés especiais de origem brasileira.</div>
+            <div class="ev-action">Selecionar evento</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- JANEIRO 2027 -->
+    <div class="month-block reveal">
+      <div class="month-row">
+        <span class="month-name">Janeiro 2027</span>
+        <div class="month-line"></div>
+      </div>
+      <div class="events-grid">
+
+        <div class="ev-card" data-id="woc-dubai-2027" data-tag="WOC-DUBAI-2027" data-name="World of Coffee Dubai"
+          data-membro="USD 2.100" data-nao="USD 4.200"
+          style="max-width:420px"
+          onclick="toggleEvent(this)">
+          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80&fit=crop&crop=center')"></div>
+          <div class="ev-overlay"></div>
+          <div class="ev-top">
+            <div class="ev-date">26–28 Jan 2027</div>
+            <div class="ev-check"><span class="ev-check-v">✓</span></div>
+          </div>
+          <div class="ev-price" id="price-woc-dubai-2027">
+            <div class="ev-price-inner membro-price" id="pi-membro-woc-dubai-2027">Membro · USD 2.100</div>
+            <div class="ev-price-inner nao-price" id="pi-nao-woc-dubai-2027" style="display:none">Não Membro · USD 4.200</div>
+            <div class="ev-price-save" id="ps-woc-dubai-2027">Membro economiza USD 2.100</div>
+          </div>
+          <div class="ev-body">
+            <div class="ev-loc">Dubai, Emirados Árabes · SCA event</div>
+            <div class="ev-name">World of Coffee Dubai</div>
+            <div class="ev-desc">Porta de entrada para o Oriente Médio — uma das regiões com maior crescimento no consumo de cafés especiais, com compradores de todo o mundo árabe.</div>
+            <div class="ev-action">Selecionar evento</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- /events-wrap -->
+</section>
+
+<!-- FLOATING BAR -->
+<div class="float-bar" id="floatBar">
+  <div class="float-n" id="floatN">0</div>
+  <span class="float-txt">evento(s) selecionado(s)</span>
+  <button class="float-btn" onclick="document.getElementById('submit-section').scrollIntoView({behavior:'smooth'})">
+    Confirmar →
+  </button>
+</div>
+
+<!-- SUBMIT SECTION -->
+<section class="submit-section" id="submit-section">
+  <div id="submitForm">
+    <div class="submit-wrap">
+      <div class="submit-head reveal">
+        <div class="s-eyebrow" style="justify-content:center">Etapa final</div>
+        <h2 class="s-title">Confirme seu interesse</h2>
+        <p class="s-sub" style="margin:0 auto">Revise os eventos selecionados e envie. Nossa equipe entrará em contato em até 48h.</p>
+      </div>
+
+      <div class="sel-box reveal">
+        <div class="sel-box-title">Eventos selecionados</div>
+        <div class="sel-chips" id="selChips">
+          <span class="sel-empty">Nenhum evento selecionado ainda.</span>
+        </div>
+      </div>
+
+      <div class="err-box" id="errBox"></div>
+
+      <button class="btn-confirm" id="btnConfirm" onclick="handleSubmit()">
+        Enviar manifestação de interesse
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M11 5l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <p class="submit-note">Ao enviar, você concorda com a <a href="https://www.bsca.com.br/politica-de-privacidade/" target="_blank">Política de Privacidade da BSCA</a>.</p>
+    </div>
+  </div>
+
+  <div class="success" id="successScreen">
+    <div class="success-ring">
+      <svg viewBox="0 0 32 32"><path d="M6 16l8 8 12-12"/></svg>
+    </div>
+    <h3>Interesse registrado!</h3>
+    <p>Recebemos seu cadastro com sucesso. A equipe da BSCA entrará em contato em até 48h com as condições de participação e próximos passos.</p>
+    <div class="success-chips" id="successChips"></div>
+    <div class="s-footnote">Brazil. The Coffee Nation · BSCA + ApexBrasil</div>
+  </div>
+</section>
+
+<!-- ADESÃO AO PROJETO -->
+<section class="adesao" id="adesao">
+  <div class="adesao-bg"></div>
+  <div class="adesao-inner">
+    <div class="adesao-copy reveal">
+      <div class="s-eyebrow">Adesão ao Projeto</div>
+      <h2 class="s-title">Faça parte da<br><em style="font-style:italic;font-weight:300">"Brasil.<br>A Nação do Café"</em></h2>
+      <p class="s-sub" style="margin-bottom:0">
+        A adesão ao projeto setorial é <strong style="color:rgba(255,255,255,.7)">gratuita</strong> para empresas e produtores que firmam o termo de adesão vinculado ao convênio BSCA + Apex-Brasil.
+      </p>
+      <div class="adesao-features">
+        <div class="af-item">
+          <div class="af-bullet"></div>
+          <div class="af-text"><strong>Acesso a todos os eventos internacionais</strong> — feiras, missões e promoções do projeto 2025–2027</div>
+        </div>
+        <div class="af-item">
+          <div class="af-bullet"></div>
+          <div class="af-text"><strong>50% de desconto</strong> em todas as ações para membros BSCA adimplentes</div>
+        </div>
+        <div class="af-item">
+          <div class="af-bullet"></div>
+          <div class="af-text"><strong>Visibilidade internacional</strong> — exposição da marca brasileira em 5+ países</div>
+        </div>
+        <div class="af-item">
+          <div class="af-bullet"></div>
+          <div class="af-text"><strong>Apoio da Apex-Brasil</strong> — cofinanciamento de 50% das ações de promoção comercial</div>
+        </div>
+      </div>
+    </div>
+    <div class="adesao-cta-box reveal">
+      <div class="badge">
+        <span class="dot"></span>
+        Adesão gratuita
+      </div>
+      <h4>Pronto para internacionalizar<br>seu negócio?</h4>
+      <p>Faça sua adesão ao projeto setorial "Brazil. The Coffee Nation" e tenha acesso a oportunidades exclusivas no mercado internacional de cafés especiais.</p>
+      <a href="https://www.bsca.com.br/projeto-setorial/" target="_blank" class="btn-adesao">
+        Inscreva-se agora
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <p class="adesao-note">Gratuito · Sem compromisso · BSCA + ApexBrasil</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <img src="https://www.bsca.com.br/wp-content/uploads/2025/09/Logo_BSCA-white.png" alt="BSCA">
+        <p>BRAZIL. THE COFFEE NATION · 2026 – 2027</p>
+      </div>
+      <div class="foot-links">
+        <a href="https://www.bsca.com.br/projeto-setorial/" target="_blank">Sobre o Projeto Setorial</a>
+        <a href="https://www.bsca.com.br/membros/" target="_blank">Seja Membro BSCA</a>
+        <a href="https://www.bsca.com.br/missoes-e-feiras/" target="_blank">Missões e Feiras</a>
+        <a href="mailto:info@bsca.com.br">info@bsca.com.br</a>
+      </div>
+    </div>
+    <div style="margin-bottom:28px;line-height:0">
+      <img
+        src="ADAPTADO.jpg"
+        alt="BSCA + ApexBrasil"
+        style="max-height:90px;height:auto;width:auto;max-width:100%;display:block;object-fit:contain;opacity:.8"
+      >
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Brazilian Specialty Coffee Association — BSCA</span>
+      <a href="https://www.bsca.com.br/politica-de-privacidade/" target="_blank">Privacidade</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
+<script>
+/* ================================================================
+   CONFIG
+================================================================ */
+const MAILCHIMP_URL = ''; // 'https://bsca.us17.list-manage.com/subscribe/post?u=XXX&id=YYY'
+const MONDAY_HOOK   = 'https://hook.us2.make.com/wonhep92y3ur7xgkbhiuhsklmhh3e2op';
+
+/* ================================================================
+   STATE
+================================================================ */
+const selected = new Set();
+let isMembro = true;
+
+const EVENT_IDS = ['scaj-2026','woc-panama-2026','sic-2026','taiwan-2026','cafe-show-2026','woc-dubai-2027'];
+
+/* ================================================================
+   SCROLL REVEAL
+================================================================ */
+const revObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); revObs.unobserve(e.target); } });
+}, { threshold:.09 });
+document.querySelectorAll('.reveal').forEach(el => revObs.observe(el));
+
+/* ================================================================
+   MEMBER TOGGLE
+================================================================ */
+function setMember(membro){
+  isMembro = membro;
+  document.getElementById('btnMembro').className = 'tg-btn' + (membro ? ' active-membro' : '');
+  document.getElementById('btnNao').className    = 'tg-btn' + (!membro ? ' active-nao' : '');
+  document.getElementById('memberNote').style.display = membro ? 'none' : 'block';
+  updatePriceBadges();
+}
+
+function updatePriceBadges(){
+  EVENT_IDS.forEach(id => {
+    const card = document.querySelector(`[data-id="${id}"]`);
+    if(!card) return;
+    const priceWrap = document.getElementById(`price-${id}`);
+    const mEl       = document.getElementById(`pi-membro-${id}`);
+    const nEl       = document.getElementById(`pi-nao-${id}`);
+    const sEl       = document.getElementById(`ps-${id}`);
+
+    priceWrap.classList.toggle('show', true);
+
+    if(isMembro){
+      mEl.style.display = 'block';
+      nEl.style.display = 'none';
+      if(sEl) sEl.style.display = 'none';
+    } else {
+      mEl.style.display = 'none';
+      nEl.style.display = 'block';
+      if(sEl) sEl.style.display = 'block';
+    }
+  });
+}
+
+/* Start with prices hidden, show on toggle */
+document.getElementById('memberNote').style.display = 'none';
+
+/* ================================================================
+   EVENT TOGGLE
+================================================================ */
+function toggleEvent(card){
+  const id = card.dataset.id;
+  if(selected.has(id)){ selected.delete(id); card.classList.remove('selected'); }
+  else                 { selected.add(id);    card.classList.add('selected');    }
+  updateFloatBar();
+  updateSelChips();
+}
+
+function updateFloatBar(){
+  const n = selected.size;
+  document.getElementById('floatN').textContent = n;
+  document.getElementById('floatBar').classList.toggle('show', n > 0);
+}
+
+function updateSelChips(){
+  const el = document.getElementById('selChips');
+  const cards = [...document.querySelectorAll('.ev-card.selected')];
+  if(!cards.length){
+    el.innerHTML = '<span class="sel-empty">Nenhum evento selecionado ainda.</span>';
+    return;
+  }
+  el.innerHTML = cards.map(c =>
+    `<div class="sel-chip"><span class="ck">✓</span>${c.dataset.name}</div>`
+  ).join('');
+}
+
+/* ================================================================
+   PHONE MASK
+================================================================ */
+document.getElementById('fTelefone').addEventListener('input', function(){
+  let v = this.value.replace(/\D/g,'').slice(0,11);
+  if(v.length <= 10)
+    this.value = v.replace(/^(\d{0,2})(\d{0,4})(\d{0,4})$/,(_,a,b,c)=>a?(b?`(${a}) ${b}`+(c?`-${c}`:''):`(${a}`):'');
+  else
+    this.value = v.replace(/^(\d{2})(\d{5})(\d{0,4})$/,'($1) $2-$3');
+});
+
+/* ================================================================
+   VALIDATION
+================================================================ */
+function showErr(msg){ const b=document.getElementById('errBox'); b.textContent=msg; b.classList.add('show'); b.scrollIntoView({behavior:'smooth',block:'center'}); }
+function clearErr()  { document.getElementById('errBox').classList.remove('show'); }
+
+function validate(){
+  ['fNome','fEmpresa','fEmail','fTelefone'].forEach(id=>document.getElementById(id).classList.remove('err'));
+  clearErr();
+  const n=document.getElementById('fNome').value.trim();
+  const e=document.getElementById('fEmpresa').value.trim();
+  const m=document.getElementById('fEmail').value.trim();
+  const t=document.getElementById('fTelefone').value.trim();
+  if(!n){ document.getElementById('fNome').classList.add('err'); showErr('Por favor, preencha seu nome completo.'); return false; }
+  if(!e){ document.getElementById('fEmpresa').classList.add('err'); showErr('Por favor, informe a empresa ou propriedade.'); return false; }
+  if(!m||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(m)){ document.getElementById('fEmail').classList.add('err'); showErr('Informe um e-mail válido.'); return false; }
+  if(!t){ document.getElementById('fTelefone').classList.add('err'); showErr('Por favor, informe o telefone ou WhatsApp.'); return false; }
+  if(!selected.size){ showErr('Selecione pelo menos um evento antes de enviar.'); return false; }
+  return true;
+}
+
+/* ================================================================
+   SUBMIT
+================================================================ */
+function handleSubmit(){
+  if(!validate()) return;
+  const btn = document.getElementById('btnConfirm');
+  btn.disabled = true; btn.innerHTML = '<span style="opacity:.55">Enviando…</span>';
+
+  const nome    = document.getElementById('fNome').value.trim();
+  const empresa = document.getElementById('fEmpresa').value.trim();
+  const email   = document.getElementById('fEmail').value.trim();
+  const tel     = document.getElementById('fTelefone').value.trim();
+  const evCards = [...document.querySelectorAll('.ev-card.selected')];
+  const evNames = evCards.map(c=>c.dataset.name);
+  const evStr   = evNames.join(', ');
+  const membroStr = isMembro ? 'Membro BSCA' : 'Não Membro BSCA';
+
+  if(MONDAY_HOOK){
+    fetch(MONDAY_HOOK,{
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({ nome, empresa, email, telefone:tel, eventos:evStr, perfil:membroStr, fonte:'interesse-setorial-bcn' })
+    }).catch(()=>{});
+  }
+
+  if(MAILCHIMP_URL){
+    const [fn,...rest]=nome.split(/\s+/);
+    const cb='mc_'+Date.now();
+    window[cb]=()=>{ delete window[cb]; if(sc.parentNode)sc.parentNode.removeChild(sc); };
+    const url=MAILCHIMP_URL.replace(/\/post(\?)/,'/post-json$1')+'&'+
+      new URLSearchParams({EMAIL:email,FNAME:fn,LNAME:rest.join(' '),PHONE:tel,EMPRESA:empresa,EVENTOS:evStr,PERFIL:membroStr,c:cb});
+    const sc=document.createElement('script');sc.src=url;document.head.appendChild(sc);
+    setTimeout(()=>{ if(window[cb]){delete window[cb];} if(sc.parentNode)sc.parentNode.removeChild(sc); },8000);
+  }
+
+  setTimeout(()=>showSuccess(evNames), 800);
+}
+
+function showSuccess(evNames){
+  document.getElementById('submitForm').style.display='none';
+  const ss=document.getElementById('successScreen');
+  ss.classList.add('show');
+  document.getElementById('successChips').innerHTML=evNames.map(n=>
+    `<div class="sel-chip"><span class="ck">✓</span>${n}</div>`
+  ).join('');
+  ss.scrollIntoView({behavior:'smooth',block:'center'});
+  document.getElementById('floatBar').classList.remove('show');
+}
+</script>
+</body>
+</html>
