@@ -3,29 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Brazil. The Coffee Nation — Interesse Internacional 2026–2027</title>
+<title>Brazil. The Coffee Nation â ManifestaÃ§Ã£o de Interesse 2026â2027</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap" rel="stylesheet">
 <style>
-/* ============================================================
-   TOKENS — BSCA LIGHT THEME
-============================================================ */
 :root{
-  /* BSCA greens */
   --green:      #1B4332;
   --green-mid:  #2D6A4F;
   --green-lt:   #52B788;
   --green-pale: #EBF5EF;
   --green-xpale:#F3FAF5;
-
-  /* Coffee gold */
   --gold:       #C8973A;
   --gold-lt:    #E0AA48;
   --gold-pale:  #FDF8EE;
   --gold-border:rgba(200,151,58,.25);
-
-  /* Neutrals */
   --ink:        #141414;
   --ink-soft:   #5A5A5A;
   --ink-xsoft:  #8A8A8A;
@@ -33,391 +25,169 @@
   --cream-deep: #EDE8DC;
   --white:      #FFFFFF;
   --line:       rgba(0,0,0,.09);
-
-  --r: 12px;
-  --shadow:    0 4px 20px -6px rgba(27,67,50,.12);
-  --shadow-lg: 0 16px 48px -12px rgba(27,67,50,.20);
+  --r:          12px;
+  --shadow:     0 4px 20px -6px rgba(27,67,50,.12);
+  --shadow-lg:  0 16px 48px -12px rgba(27,67,50,.20);
 }
-
 @keyframes fadeUp  { from{opacity:0;transform:translateY(22px)} to{opacity:1;transform:translateY(0)} }
 @keyframes scaleIn { from{opacity:0;transform:scale(.97)} to{opacity:1;transform:scale(1)} }
-@keyframes slideDown { from{opacity:0;max-height:0;padding:0} to{opacity:1;max-height:600px} }
-
 .reveal{ opacity:0 }
 .reveal.in{ animation:fadeUp .65s cubic-bezier(.16,.84,.44,1) forwards }
-
 *{ box-sizing:border-box; margin:0; padding:0 }
 html{ scroll-behavior:smooth }
 body{ font-family:'Poppins',sans-serif; background:var(--cream); color:var(--ink); -webkit-font-smoothing:antialiased }
 
-/* ============================================================
-   HEADER
-============================================================ */
-header{
-  background:var(--white);
-  border-bottom:1px solid var(--line);
-  padding:0 40px; height:66px;
-  display:flex; align-items:center; justify-content:space-between;
-  position:sticky; top:0; z-index:200;
-  box-shadow:0 2px 16px -8px rgba(27,67,50,.1);
-}
+/* HEADER */
+header{ background:var(--white); border-bottom:1px solid var(--line); padding:0 40px; height:66px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:200; box-shadow:0 2px 16px -8px rgba(27,67,50,.1) }
 .hd-brand{ display:flex; align-items:center; gap:16px }
 .hd-logo{ height:36px; width:auto }
-.hd-divider{ width:1px; height:24px; background:var(--line) }
-.hd-tagline{ font-size:11px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--green); opacity:.7 }
 .hd-nav{ display:flex; align-items:center; gap:24px }
-.hd-link{ font-size:12.5px; font-weight:500; color:var(--ink-soft); text-decoration:none; letter-spacing:.02em; transition:color .2s }
+.hd-link{ font-size:12.5px; font-weight:500; color:var(--ink-soft); text-decoration:none; transition:color .2s }
 .hd-link:hover{ color:var(--green) }
-.btn-hd{
-  font-family:'Poppins',sans-serif;
-  font-size:12px; font-weight:700; letter-spacing:.07em; text-transform:uppercase;
-  color:var(--white); background:var(--green);
-  padding:10px 22px; border-radius:6px; border:none; cursor:pointer;
-  transition:background .2s, transform .15s;
-}
+.btn-hd{ font-family:'Poppins',sans-serif; font-size:12px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--white); background:var(--green); padding:10px 22px; border-radius:6px; border:none; cursor:pointer; transition:background .2s, transform .15s }
 .btn-hd:hover{ background:var(--green-mid); transform:translateY(-1px) }
 
-/* ============================================================
-   HERO — light, editorial
-============================================================ */
-.hero{
-  position:relative; min-height:82vh;
-  display:flex; align-items:flex-end; overflow:hidden;
-  background:var(--cream);
-}
-.hero-bg{
-  position:absolute; inset:0;
-  background-image:
-    linear-gradient(90deg, rgba(247,244,238,.97) 0%, rgba(247,244,238,.85) 38%, rgba(247,244,238,.3) 65%, rgba(247,244,238,0) 100%),
-    linear-gradient(180deg, rgba(247,244,238,0) 0%, rgba(247,244,238,0) 55%, rgba(247,244,238,.7) 80%, var(--cream) 100%),
-    url('https://images.unsplash.com/photo-1618260975982-63c8cc2026d1?w=1600&q=85&fit=crop&crop=right');
-  background-size:cover; background-position:center right;
-}
-.hero-inner{
-  position:relative; z-index:2;
-  max-width:1080px; margin:0 auto; width:100%;
-  padding:80px 40px 88px;
-}
-.hero-eyebrow{
-  display:inline-flex; align-items:center; gap:10px;
-  font-size:10px; font-weight:700; letter-spacing:.26em; text-transform:uppercase;
-  color:var(--green); margin-bottom:20px;
-}
-.hero-eyebrow::before{ content:''; width:24px; height:1.5px; background:var(--green) }
-.hero h1{
-  font-size:clamp(2.6rem,6vw,5rem); font-weight:800;
-  line-height:1.02; letter-spacing:-.025em;
-  color:var(--green); max-width:680px; margin-bottom:18px;
-}
+/* HERO */
+.hero{ position:relative; min-height:82vh; display:flex; align-items:flex-end; overflow:hidden; background:var(--cream) }
+.hero-bg{ position:absolute; inset:0; background-image: linear-gradient(90deg, rgba(247,244,238,.97) 0%, rgba(247,244,238,.85) 38%, rgba(247,244,238,.3) 65%, rgba(247,244,238,0) 100%), linear-gradient(180deg, rgba(247,244,238,0) 55%, rgba(247,244,238,.7) 80%, var(--cream) 100%), url('https://images.unsplash.com/photo-1618260975982-63c8cc2026d1?w=1600&q=85&fit=crop&crop=right'); background-size:cover; background-position:center right }
+.hero-inner{ position:relative; z-index:2; max-width:1080px; margin:0 auto; width:100%; padding:80px 40px 88px }
+.hero h1{ font-size:clamp(2.6rem,6vw,5rem); font-weight:800; line-height:1.02; letter-spacing:-.025em; color:var(--green); max-width:680px; margin-bottom:18px }
 .hero h1 em{ font-style:italic; font-weight:300; color:var(--green-mid) }
-.hero-lede{
-  font-size:1.05rem; font-weight:300; line-height:1.75;
-  color:var(--ink-soft); max-width:480px; margin-bottom:36px;
-}
-.hero-pills{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:40px }
-.pill{
-  font-size:11px; font-weight:500; letter-spacing:.03em;
-  color:var(--green); background:var(--green-pale);
-  border:1px solid rgba(27,67,50,.15);
-  padding:7px 16px; border-radius:40px;
-}
+.hero-lede{ font-size:1.05rem; font-weight:300; line-height:1.75; color:var(--ink-soft); max-width:480px; margin-bottom:36px }
+.hero-pills{ display:flex; flew-wrap:wrap; gap:8px; margin-bottom:40px }
+.pill{ font-size:11px; font-weight:500; color:var(--green); background:var(--green-pale); border:1px solid rgba(27,67,50,.15); padding:7px 16px; border-radius:40px }
 .pill strong{ font-weight:700 }
 .hero-acts{ display:flex; gap:14px; align-items:center; flex-wrap:wrap }
-.btn-primary{
-  display:inline-flex; align-items:center; gap:9px;
-  font-family:'Poppins',sans-serif; font-size:13px; font-weight:700;
-  letter-spacing:.06em; text-transform:uppercase;
-  color:var(--white); background:var(--green);
-  padding:17px 32px; border-radius:6px; border:none; cursor:pointer;
-  box-shadow:0 10px 30px -8px rgba(27,67,50,.4);
-  transition:background .2s, transform .2s, box-shadow .2s;
-}
-.btn-primary:hover{ background:var(--green-mid); transform:translateY(-2px); box-shadow:0 16px 38px -6px rgba(27,67,50,.45) }
-.btn-gold{
-  display:inline-flex; align-items:center; gap:9px;
-  font-family:'Poppins',sans-serif; font-size:13px; font-weight:700;
-  letter-spacing:.06em; text-transform:uppercase;
-  color:var(--ink); background:var(--gold);
-  padding:17px 32px; border-radius:6px; border:none; cursor:pointer;
-  box-shadow:0 10px 28px -8px rgba(200,151,58,.45);
-  transition:background .2s, transform .2s;
-}
-.btn-gold:hover{ background:var(--gold-lt); transform:translateY(-1px) }
+.btn-primary{ display:inline-flex; align-items:center; gap:9px; font-family:'Poppins',sans-serif; font-size:13px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--white); background:var(--green); padding:17px 32px; border-radius:6px; border:none; cursor:pointer; box-shadow:0 10px 30px -8px rgba(27,67,50,.4); transition:background .2s, transform .2s }
+.btn-primary:hover{ background:var(--green-mid); transform:translateY(-2px) }
+.btn-gold{ display:inline-flex; align-items:center; gap:9px; font-family:'Poppins',sans-serif; font-size:13px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--ink); background:var(--gold); padding:17px 32px; border-radius:6px; border:none; cursor:pointer; transition:background .2s }
+.btn-gold:hover{ background:var(--gold-lt) }
 
-/* ============================================================
-   STATS BAND
-============================================================ */
-.stats-band{
-  background:var(--green);
-  padding:0 40px;
-}
-.stats-inner{
-  max-width:1080px; margin:0 auto;
-  display:grid; grid-template-columns:1fr 1fr 2fr;
-}
+/* STATS */
+.stats-band{ background:var(--green); padding:0 40px }
+.stats-inner{ max-width:1080px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr 2fr }
 .stat-item{ padding:28px 20px; border-right:1px solid rgba(255,255,255,.15) }
-.stat-wide{ padding:28px 28px }
 .stat-item:last-child{ border-right:none }
 .stat-n{ font-size:2rem; font-weight:800; color:var(--white); line-height:1; margin-bottom:4px }
 .stat-n span{ color:var(--gold-lt) }
 .stat-l{ font-size:11px; font-weight:300; color:rgba(255,255,255,.5); letter-spacing:.04em }
 
-/* ============================================================
-   FORM SECTION
-============================================================ */
+/* FORM */
 .form-section{ background:var(--white) }
 .section-wrap{ max-width:1080px; margin:0 auto; padding:80px 40px }
 .form-layout{ display:grid; grid-template-columns:1fr 1.5fr; gap:72px; align-items:start }
-
-.s-eyebrow{
-  display:inline-flex; align-items:center; gap:9px;
-  font-size:10px; font-weight:700; letter-spacing:.24em; text-transform:uppercase;
-  color:var(--green-mid); margin-bottom:14px;
-}
+.s-eyebrow{ display:inline-flex; align-items:center; gap:9px; font-size:10px; font-weight:700; letter-spacing:.24em; text-transform:uppercase; color:var(--green-mid); margin-bottom:14px }
 .s-eyebrow::before{ content:''; width:20px; height:1.5px; background:var(--green-mid) }
 .s-title{ font-size:clamp(1.9rem,3vw,2.7rem); font-weight:800; letter-spacing:-.02em; line-height:1.1; color:var(--ink); margin-bottom:12px }
 .s-sub{ font-size:.96rem; font-weight:300; line-height:1.75; color:var(--ink-soft); max-width:500px }
-
-.form-aside .feat-list{ display:flex; flex-direction:column; gap:14px; margin-top:28px }
+.feat-list{ display:flex; flex-direction:column; gap:14px; margin-top:28px }
 .feat-row{ display:flex; align-items:flex-start; gap:14px }
 .feat-ico{ width:38px; height:38px; border-radius:9px; background:var(--green-pale); display:flex; align-items:center; justify-content:center; font-size:17px; flex-shrink:0 }
-.feat-txt strong{ display:block; font-size:.88rem; font-weight:600; margin-bottom:2px; color:var(--ink) }
+.feat-txt strong{ display:block; font-size:.88rem; font-weight:600; margin-bottom:2px }
 .feat-txt span{ font-size:.8rem; color:var(--ink-soft); font-weight:300; line-height:1.5 }
-
-.form-card{
-  background:var(--cream);
-  border:1px solid var(--line);
-  border-radius:16px; padding:36px;
-  box-shadow:var(--shadow);
-}
+.form-card{ background:var(--cream); border:1px solid var(--line); border-radius:16px; padding:36px; box-shadow:var(--shadow) }
 .fc-label{ font-size:10px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--green); margin-bottom:22px }
 .form-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px }
 .f-field{ display:flex; flex-direction:column; gap:6px }
 .f-label{ font-size:10px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-soft) }
-.f-input{
-  font-family:'Poppins',sans-serif; font-size:14px; font-weight:400;
-  padding:13px 16px;
-  border:1.5px solid rgba(0,0,0,.12); border-radius:8px;
-  background:var(--white); color:var(--ink); outline:none;
-  transition:border-color .18s, box-shadow .18s;
-}
+.f-input{ font-family:'Poppins',sans-serif; font-size:14px; padding:13px 16px; border:1.5px solid rgba(0,0,0,.12); border-radius:8px; background:var(--white); color:var(--ink); outline:none; transition:border-color .18s, box-shadow .18s }
 .f-input:focus{ border-color:var(--green); box-shadow:0 0 0 3px rgba(27,67,50,.1) }
 .f-input.err{ border-color:#e53935 }
 .form-divider{ height:1px; background:var(--line); margin:20px 0 }
 .form-note{ font-size:11.5px; font-weight:300; color:var(--ink-soft); line-height:1.6 }
 .form-note a{ color:var(--green); text-decoration:none }
+.form-bsca-logo{ display:flex; align-items:center; gap:12px; margin-top:20px; padding-top:18px; border-top:1px solid var(--line) }
+.form-bsca-logo img{ height:34px; width:auto }
+.form-bsca-logo span{ font-size:11px; font-weight:500; color:var(--ink-soft) }
 
-/* ============================================================
-   EVENTS SECTION
-============================================================ */
+/* EVENTS */
 .events-section{ background:var(--cream) }
 .events-wrap{ max-width:1080px; margin:0 auto; padding:80px 40px }
-
-/* Member toggle */
-.toggle-bar{
-  display:flex; align-items:center; justify-content:space-between;
-  flex-wrap:wrap; gap:16px; margin-bottom:44px;
-  padding:18px 22px;
-  background:var(--white); border:1px solid var(--line);
-  border-radius:10px; box-shadow:var(--shadow);
-}
+.toggle-bar{ display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; margin-bottom:28px; padding:18px 22px; background:var(--white); border:1px solid var(--line); border-radius:10px; box-shadow:var(--shadow) }
 .toggle-label{ font-size:13px; font-weight:500; color:var(--ink-soft) }
 .toggle-label strong{ color:var(--ink); font-weight:600 }
-.toggle-group{
-  display:flex; gap:4px;
-  background:var(--cream); border:1.5px solid var(--line);
-  border-radius:8px; padding:4px;
-}
-.tg-btn{
-  font-family:'Poppins',sans-serif; font-size:12px; font-weight:600;
-  letter-spacing:.05em; text-transform:uppercase;
-  padding:9px 22px; border-radius:6px; border:none; cursor:pointer;
-  color:var(--ink-soft); background:transparent;
-  transition:all .2s; white-space:nowrap;
-}
+.toggle-group{ display:flex; gap:4px; background:var(--cream); border:1.5px solid var(--line); border-radius:8px; padding:4px }
+.tg-btn{ font-family:'Poppins',sans-serif; font-size:12px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; padding:9px 22px; border-radius:6px; border:none; cursor:pointer; color:var(--ink-soft); background:transparent; transition:all .2s; white-space:nowrap }
 .tg-btn.a-membro{ background:var(--green); color:var(--white); box-shadow:0 3px 12px rgba(27,67,50,.3) }
 .tg-btn.a-nao{ background:var(--gold-pale); color:var(--gold); border:1.5px solid var(--gold-border) }
-.nao-note{
-  display:none; align-items:flex-start; gap:12px;
-  background:var(--gold-pale); border:1.5px solid var(--gold-border);
-  border-radius:10px; padding:14px 18px; margin-bottom:28px;
-  font-size:12.5px; font-weight:400; color:var(--ink-soft); line-height:1.55;
-}
+.nao-note{ display:none; align-items:flex-start; gap:12px; background:var(--gold-pale); border:1.5px solid var(--gold-border); border-radius:10px; padding:14px 18px; margin-bottom:28px; font-size:12.5px; font-weight:400; color:var(--ink-soft); line-height:1.55 }
 .nao-note.show{ display:flex }
 .nao-note strong{ color:var(--gold); font-weight:700 }
 .nao-note a{ color:var(--green-mid); font-weight:600; text-decoration:none }
-
-/* Month label */
 .month-block{ margin-bottom:52px }
 .month-row{ display:flex; align-items:center; gap:16px; margin-bottom:18px }
-.month-lbl{
-  font-size:10px; font-weight:700; letter-spacing:.22em; text-transform:uppercase;
-  color:var(--ink-soft); white-space:nowrap;
-}
+.month-lbl{ font-size:10px; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:var(--ink-soft); white-space:nowrap }
 .month-rule{ flex:1; height:1px; background:var(--line) }
+.events-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px }
 
 /* Event card */
-.events-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:16px }
-
-.ev-card{
-  position:relative; border-radius:var(--r); overflow:hidden;
-  cursor:pointer; aspect-ratio:4/3; background:var(--cream-deep);
-  border:2px solid transparent;
-  box-shadow:var(--shadow);
-  transition:transform .3s cubic-bezier(.16,.84,.44,1), border-color .22s, box-shadow .3s;
-  user-select:none;
-}
+.ev-card{ position:relative; border-radius:var(--r); overflow:hidden; cursor:pointer; aspect-ratio:4/3; background:var(--cream-deep); border:2px solid transparent; box-shadow:var(--shadow); transition:transform .3s cubic-bezier(.16,.84,.44,1), border-color .22s, box-shadow .3s; user-select:none }
 .ev-card:hover{ transform:translateY(-5px); box-shadow:var(--shadow-lg) }
-.ev-card.selected{
-  border-color:var(--green);
-  box-shadow:0 0 0 3px rgba(27,67,50,.15), var(--shadow-lg);
-}
-.ev-photo{
-  position:absolute; inset:0;
-  background-size:cover; background-position:center;
-  transition:transform .5s cubic-bezier(.16,.84,.44,1);
-  filter:brightness(.78) saturate(.95);
-}
-.ev-card:hover .ev-photo{ transform:scale(1.06); filter:brightness(.65) saturate(.9) }
-.ev-card.selected .ev-photo{ filter:brightness(.5) saturate(.85) }
-.ev-overlay{
-  position:absolute; inset:0;
-  background:linear-gradient(180deg, rgba(0,0,0,.04) 0%, rgba(0,0,0,.06) 25%, rgba(0,0,0,.72) 72%, rgba(0,0,0,.94) 100%);
-}
-.ev-card.selected .ev-overlay{
-  background:linear-gradient(180deg, rgba(27,67,50,.12) 0%, rgba(0,0,0,.18) 30%, rgba(0,0,0,.78) 72%, rgba(0,0,0,.96) 100%);
-}
-
-/* Card top */
-.ev-top{ position:absolute; top:14px; left:14px; right:14px; z-index:2; display:flex; justify-content:space-between; align-items:flex-start }
-.ev-date{
-  font-size:10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--white);
-  background:rgba(0,0,0,.48); backdrop-filter:blur(8px);
-  border:1px solid rgba(255,255,255,.15);
-  padding:5px 12px; border-radius:40px;
-}
-.ev-check{
-  width:28px; height:28px; border-radius:50%;
-  border:1.5px solid rgba(255,255,255,.4); background:rgba(255,255,255,.12);
-  backdrop-filter:blur(8px);
-  display:flex; align-items:center; justify-content:center;
-  transition:all .22s; opacity:.7;
-}
-.ev-card.selected .ev-check{
-  background:var(--green); border-color:var(--green);
-  box-shadow:0 3px 14px rgba(27,67,50,.55); opacity:1;
-}
+.ev-card.selected{ border-color:var(--green); box-shadow:0 0 0 3px rgba(27,67,50,.15), var(--shadow-lg) }
+.ev-photo{ position:absolute; inset:0; background-size:cover; background-position:center; transition:transform .5s cubic-bezier(.16,.84,.44,1); filter:brightness(.76) saturate(.95) }
+.ev-card:hover .ev-photo{ transform:scale(1.06); filter:brightness(.6) saturate(.9) }
+.ev-card.selected .ev-photo{ filter:brightness(.48) saturate(.85) }
+.ev-overlay{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.04) 0%, rgba(0,0,0,.06) 25%, rgba(0,0,0,.72) 72%, rgba(0,0,0,.94) 100%) }
+.ev-card.selected .ev-overlay{ background:linear-gradient(180deg, rgba(27,67,50,.1) 0%, rgba(0,0,0,.18) 30%, rgba(0,0,0,.78) 72%, rgba(0,0,0,.96) 100%) }
+.ev-top{ position:absolute; top:14px; left:14px; right:14px; z-index:2; display:flex; justify-content:space-between; align-items:flex-start; gap:8px }
+.ev-date{ font-size:10px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--white); background:rgba(0,0,0,.48); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,.15); padding:5px 11px; border-radius:40px; white-space:nowrap }
+.ev-badge{ font-size:9.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:5px 11px; border-radius:40px; backdrop-filter:blur(8px); white-space:nowrap }
+.ev-badge.missao{ background:rgba(200,151,58,.85); color:var(--ink) }
+.ev-badge.sca{ background:rgba(27,67,50,.85); color:var(--white); border:1px solid rgba(255,255,255,.2) }
+.ev-badge.concurso{ background:rgba(82,183,136,.85); color:var(--ink) }
+.ev-check{ width:28px; height:28px; border-radius:50%; border:1.5px solid rgba(255,255,255,.4); background:rgba(255,255,255,.12); backdrop-filter:blur(8px); display:flex; align-items:center; justify-content:center; transition:all .22s; opacity:.7; flex-shrink:0 }
+.ev-card.selected .ev-check{ background:var(--green); border-color:var(--green); box-shadow:0 3px 14px rgba(27,67,50,.55); opacity:1 }
 .ev-check-v{ font-size:12px; font-weight:900; color:var(--white); opacity:0; transition:opacity .18s }
 .ev-card.selected .ev-check-v{ opacity:1 }
-
-/* Price badge */
-.ev-price{ position:absolute; top:14px; left:50%; transform:translateX(-50%); z-index:3; display:none; white-space:nowrap; text-align:center }
-.ev-price.show{ display:block }
-.ev-pb{
-  font-size:10.5px; font-weight:700; padding:5px 13px; border-radius:20px;
-  backdrop-filter:blur(10px);
-}
-.ev-pb.m{ background:rgba(27,67,50,.85); color:var(--white) }
-.ev-pb.n{ background:rgba(200,151,58,.88); color:var(--ink) }
-.ev-ps{ font-size:9.5px; color:var(--gold-lt); margin-top:3px; font-weight:500; letter-spacing:.03em }
-
-/* Card body */
-.ev-body{ position:absolute; bottom:0; left:0; right:0; padding:18px 18px; z-index:2 }
+.ev-body{ position:absolute; bottom:0; left:0; right:0; padding:18px; z-index:2 }
 .ev-loc{ font-size:10px; font-weight:500; letter-spacing:.07em; text-transform:uppercase; color:rgba(255,255,255,.45); margin-bottom:5px }
-.ev-name{ font-size:1.2rem; font-weight:700; line-height:1.15; letter-spacing:-.01em; color:var(--white); margin-bottom:5px }
+.ev-name{ font-size:1.15rem; font-weight:700; line-height:1.15; letter-spacing:-.01em; color:var(--white); margin-bottom:5px }
 .ev-desc{ font-size:11.5px; font-weight:300; line-height:1.5; color:rgba(255,255,255,.42); max-height:0; overflow:hidden; transition:max-height .3s }
-.ev-card:hover .ev-desc{ max-height:80px }
-.ev-action{
-  display:inline-flex; align-items:center; gap:6px;
-  font-size:10.5px; font-weight:600; letter-spacing:.08em; text-transform:uppercase;
-  color:rgba(255,255,255,.32); margin-top:10px; transition:color .2s;
-}
+.ev-card:hover .ev-desc{ max-height:90px }
+.ev-action{ display:inline-flex; align-items:center; gap:6px; font-size:10px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:rgba(255,255,255,.32); margin-top:10px; transition:color .2s }
 .ev-card.selected .ev-action{ color:var(--green-lt) }
-.ev-card.selected .ev-action::before{ content:'✓  ' }
+.ev-card.selected .ev-action::before{ content:'â  ' }
 
-/* ============================================================
-   PARTICIPATION TYPES PANEL
-============================================================ */
-.participacao-section{
-  background:var(--white); border:1.5px solid var(--green);
-  border-radius:var(--r); padding:32px;
-  margin-top:-4px; margin-bottom:36px;
-  box-shadow:var(--shadow);
-  display:none; animation:fadeUp .4s ease forwards;
-}
+/* Participation panel */
+.participacao-section{ background:var(--white); border:1.5px solid var(--green); border-radius:var(--r); padding:32px; margin-bottom:36px; box-shadow:var(--shadow); display:none; animation:fadeUp .4s ease forwards }
 .participacao-section.show{ display:block }
-.ptitle{
-  font-size:11px; font-weight:700; letter-spacing:.2em; text-transform:uppercase;
-  color:var(--green); margin-bottom:22px; display:flex; align-items:center; gap:10px;
-}
+.ptitle{ font-size:11px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--green); margin-bottom:22px; display:flex; align-items:center; gap:10px }
 .ptitle::before{ content:''; width:20px; height:1.5px; background:var(--green) }
 .p-events-list{ display:flex; flex-direction:column; gap:20px }
-
-.p-event-block{
-  padding-bottom:20px; border-bottom:1px dashed var(--line);
-}
+.p-event-block{ padding-bottom:20px; border-bottom:1px dashed var(--line) }
 .p-event-block:last-child{ border-bottom:none; padding-bottom:0 }
 .p-event-name{ font-size:.95rem; font-weight:700; color:var(--ink); margin-bottom:12px; display:flex; align-items:center; gap:8px }
-.p-event-name::before{
-  content:''; width:8px; height:8px; border-radius:50%; background:var(--green); flex-shrink:0;
-}
+.p-event-name::before{ content:''; width:8px; height:8px; border-radius:50%; background:var(--green); flex-shrink:0 }
 .p-opts{ display:flex; flex-wrap:wrap; gap:10px }
-.p-opt{
-  display:flex; align-items:center; gap:9px;
-  font-size:13px; font-weight:400; color:var(--ink);
-  padding:10px 16px;
-  background:var(--cream); border:1.5px solid var(--line);
-  border-radius:8px; cursor:pointer;
-  transition:all .18s; user-select:none;
-}
+.p-opt{ display:flex; align-items:center; gap:9px; font-size:13px; font-weight:400; color:var(--ink); padding:10px 16px; background:var(--cream); border:1.5px solid var(--line); border-radius:8px; cursor:pointer; transition:all .18s; user-select:none }
 .p-opt:hover{ border-color:var(--green); background:var(--green-xpale) }
 .p-opt.selected{ border-color:var(--green); background:var(--green-pale); color:var(--green) }
-.p-opt input[type=checkbox]{ display:none }
-.p-opt-check{
-  width:18px; height:18px; border-radius:5px;
-  border:1.5px solid rgba(0,0,0,.2); flex-shrink:0;
-  display:flex; align-items:center; justify-content:center;
-  transition:all .18s; font-size:11px; color:transparent;
-}
+.p-opt-check{ width:18px; height:18px; border-radius:5px; border:1.5px solid rgba(0,0,0,.2); flex-shrink:0; display:flex; align-items:center; justify-content:center; transition:all .18s; font-size:11px; color:transparent }
 .p-opt.selected .p-opt-check{ background:var(--green); border-color:var(--green); color:var(--white) }
-.p-opt-price{ font-size:11px; font-weight:600; color:var(--ink-xsoft); margin-left:auto; white-space:nowrap; padding-left:10px }
-.p-opt.selected .p-opt-price{ color:var(--green-mid) }
+.p-require-note{ font-size:12px; color:var(--ink-xsoft); margin-top:14px; font-style:italic }
 
-.p-require-note{ font-size:12px; font-weight:400; color:var(--ink-xsoft); margin-top:14px; font-style:italic }
+/* Non-member CTA */
+.membro-cta{ display:none; background:linear-gradient(135deg, var(--green) 0%, var(--green-mid) 100%); border-radius:16px; margin-top:36px; overflow:hidden; box-shadow:0 16px 48px -12px rgba(27,67,50,.35) }
+.membro-cta.show{ display:block; animation:fadeUp .4s ease }
+.mc-content{ padding:44px 48px }
+.mc-badge{ display:inline-flex; align-items:center; gap:8px; font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--gold-lt); background:rgba(200,151,58,.18); border:1px solid rgba(200,151,58,.3); padding:6px 14px; border-radius:20px; margin-bottom:18px }
+.mc-title{ font-size:clamp(1.25rem,2.5vw,1.85rem); font-weight:700; letter-spacing:-.015em; color:var(--white); line-height:1.25; margin-bottom:12px }
+.mc-title em{ font-style:italic; font-weight:300; color:rgba(255,255,255,.7) }
+.mc-title strong{ color:var(--gold-lt) }
+.mc-desc{ font-size:13px; font-weight:300; color:rgba(255,255,255,.5); line-height:1.7; max-width:520px; margin-bottom:28px }
+.mc-btn{ display:inline-flex; align-items:center; gap:10px; font-family:'Poppins',sans-serif; font-size:13.5px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--green); background:var(--white); padding:17px 32px; border-radius:8px; text-decoration:none; transition:background .2s }
+.mc-btn:hover{ background:var(--cream) }
+.mc-note{ font-size:11.5px; font-weight:300; color:rgba(255,255,255,.25); margin-top:12px }
 
-/* ============================================================
-   FLOATING BAR
-============================================================ */
-.float-bar{
-  position:fixed; bottom:28px; left:50%; transform:translateX(-50%) translateY(12px);
-  z-index:300;
-  background:var(--green); border-radius:50px;
-  padding:12px 16px 12px 20px;
-  display:flex; align-items:center; gap:14px;
-  box-shadow:0 16px 48px -8px rgba(27,67,50,.5);
-  opacity:0; transition:opacity .3s, transform .3s;
-  pointer-events:none; white-space:nowrap;
-}
+/* Float bar */
+.float-bar{ position:fixed; bottom:28px; left:50%; transform:translateX(-50%) translateY(12px); z-index:300; background:var(--green); border-radius:50px; padding:12px 16px 12px 20px; display:flex; align-items:center; gap:14px; box-shadow:0 16px 48px -8px rgba(27,67,50,.5); opacity:0; transition:opacity .3s, transform .3s; pointer-events:none; white-space:nowrap }
 .float-bar.show{ opacity:1; transform:translateX(-50%) translateY(0); pointer-events:auto }
-.float-n{
-  width:28px; height:28px; border-radius:50%;
-  background:var(--gold); color:var(--ink);
-  font-size:13px; font-weight:800;
-  display:flex; align-items:center; justify-content:center;
-}
-.float-txt{ font-size:12px; font-weight:400; color:rgba(255,255,255,.75); letter-spacing:.04em }
-.float-btn{
-  font-family:'Poppins',sans-serif; font-size:12px; font-weight:700;
-  letter-spacing:.08em; text-transform:uppercase;
-  color:var(--green); background:var(--white);
-  padding:9px 22px; border-radius:30px; border:none; cursor:pointer;
-  transition:all .18s;
-}
-.float-btn:hover{ background:var(--cream); transform:scale(1.03) }
+.float-n{ width:28px; height:28px; border-radius:50%; background:var(--gold); color:var(--ink); font-size:13px; font-weight:800; display:flex; align-items:center; justify-content:center }
+.float-txt{ font-size:12px; font-weight:400; color:rgba(255,255,255,.75) }
+.float-btn{ font-family:'Poppins',sans-serif; font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--green); background:var(--white); padding:9px 22px; border-radius:30px; border:none; cursor:pointer; transition:all .18s }
+.float-btn:hover{ background:var(--cream) }
 
-/* ============================================================
-   SUBMIT SECTION
-============================================================ */
+/* Submit */
 .submit-section{ background:var(--white) }
 .submit-wrap{ max-width:720px; margin:0 auto; padding:88px 40px 72px }
 .submit-head{ text-align:center; margin-bottom:32px }
@@ -425,40 +195,18 @@ header{
 .submit-head .s-eyebrow::before{ display:none }
 .submit-head .s-eyebrow::after{ content:''; width:20px; height:1.5px; background:var(--green-mid) }
 .submit-head .s-title{ color:var(--green) }
-
 .sel-box{ background:var(--cream); border:1px solid var(--line); border-radius:12px; padding:22px 26px; margin-bottom:22px }
 .sel-box-title{ font-size:10px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:12px }
 .sel-chips{ display:flex; flex-wrap:wrap; gap:8px }
-.sel-chip{
-  display:inline-flex; align-items:center; gap:7px;
-  font-size:12px; font-weight:500; color:var(--green);
-  background:var(--green-pale); border:1px solid rgba(27,67,50,.2);
-  padding:7px 14px; border-radius:20px;
-}
+.sel-chip{ display:inline-flex; align-items:center; gap:7px; font-size:12px; font-weight:500; color:var(--green); background:var(--green-pale); border:1px solid rgba(27,67,50,.2); padding:7px 14px; border-radius:20px }
 .sel-empty{ font-size:13px; color:var(--ink-xsoft); font-weight:300; font-style:italic }
-
-.err-box{
-  background:#fff5f5; border:1.5px solid #ffd0d0; color:#c0392b;
-  font-size:13px; font-weight:500; padding:12px 18px;
-  border-radius:8px; margin-bottom:16px; display:none;
-}
+.err-box{ background:#fff5f5; border:1.5px solid #ffd0d0; color:#c0392b; font-size:13px; font-weight:500; padding:12px 18px; border-radius:8px; margin-bottom:16px; display:none }
 .err-box.show{ display:block }
-
-.btn-confirm{
-  width:100%; display:flex; align-items:center; justify-content:center; gap:10px;
-  font-family:'Poppins',sans-serif; font-size:14px; font-weight:700;
-  letter-spacing:.05em; text-transform:uppercase;
-  color:var(--white); background:var(--green);
-  padding:20px 40px; border-radius:8px; border:none; cursor:pointer;
-  box-shadow:0 10px 30px -8px rgba(27,67,50,.4);
-  transition:background .2s, transform .2s;
-}
+.btn-confirm{ width:100%; display:flex; align-items:center; justify-content:center; gap:10px; font-family:'Poppins',sans-serif; font-size:14px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--white); background:var(--green); padding:20px 40px; border-radius:8px; border:none; cursor:pointer; box-shadow:0 10px 30px -8px rgba(27,67,50,.4); transition:background .2s, transform .2s }
 .btn-confirm:hover{ background:var(--green-mid); transform:translateY(-1px) }
 .btn-confirm:disabled{ opacity:.4; pointer-events:none }
 .submit-note{ text-align:center; margin-top:14px; font-size:11.5px; font-weight:300; color:var(--ink-soft) }
 .submit-note a{ color:var(--green); text-decoration:none }
-
-/* Success */
 .success{ display:none; text-align:center; padding:88px 40px 72px; max-width:600px; margin:0 auto }
 .success.show{ display:block; animation:scaleIn .5s cubic-bezier(.16,.84,.44,1) forwards }
 .success-ring{ width:72px; height:72px; border-radius:50%; background:var(--green); margin:0 auto 24px; display:flex; align-items:center; justify-content:center }
@@ -468,176 +216,30 @@ header{
 .success-chips{ display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-bottom:32px }
 .s-note{ font-size:11px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:rgba(27,67,50,.3) }
 
-/* ============================================================
-   ADESÃO AO PROJETO SETORIAL
-============================================================ */
+/* AdesÃ£o */
 .adesao{ background:var(--green); position:relative; overflow:hidden }
 .adesao-inner{ max-width:1080px; margin:0 auto; padding:96px 40px; display:grid; grid-template-columns:1.1fr 1fr; gap:64px; align-items:start }
 .adesao-copy .s-eyebrow{ color:rgba(255,255,255,.5) }
 .adesao-copy .s-eyebrow::before{ background:rgba(255,255,255,.5) }
 .adesao-copy .s-title{ color:var(--white); font-size:clamp(1.9rem,3.2vw,2.8rem) }
 .adesao-copy .s-sub{ color:rgba(255,255,255,.5); max-width:480px }
-
 .adesao-lista{ display:flex; flex-direction:column; gap:12px; margin-top:28px }
-.al-item{
-  display:flex; align-items:flex-start; gap:12px; padding:14px 16px;
-  background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1);
-  border-radius:10px;
-}
+.al-item{ display:flex; align-items:flex-start; gap:12px; padding:14px 16px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); border-radius:10px }
 .al-dot{ width:8px; height:8px; border-radius:50%; background:var(--gold-lt); flex-shrink:0; margin-top:5px }
 .al-txt{ font-size:13px; font-weight:300; color:rgba(255,255,255,.55); line-height:1.55 }
 .al-txt strong{ color:rgba(255,255,255,.88); font-weight:600 }
-
-/* Régua centralizada */
-.regua-center{
-  display:flex; justify-content:center; margin:36px 0 28px;
-  padding:24px 0; border-top:1px solid rgba(255,255,255,.15); border-bottom:1px solid rgba(255,255,255,.15);
-}
-.regua-center img{
-  height:90px; max-height:90px; width:auto; max-width:100%;
-  object-fit:contain; mix-blend-mode:screen; opacity:.88;
-}
-
-/* CTA box */
-.adesao-box{
-  background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.15);
-  border-radius:16px; padding:40px; position:sticky; top:80px;
-}
-.adesao-box .badge{
-  display:inline-flex; align-items:center; gap:8px;
-  font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase;
-  color:var(--gold-lt); background:rgba(200,151,58,.15);
-  border:1px solid rgba(200,151,58,.25);
-  padding:6px 14px; border-radius:20px; margin-bottom:20px;
-}
+.regua-center{ display:flex; justify-content:center; margin:36px 0 28px; padding:24px 0; border-top:1px solid rgba(255,255,255,.15); border-bottom:1px solid rgba(255,255,255,.15) }
+.regua-center img{ height:90px; max-height:90px; width:auto; max-width:100%; object-fit:contain; mix-blend-mode:screen; opacity:.88 }
+.adesao-box{ background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.15); border-radius:16px; padding:40px; position:sticky; top:80px }
+.adesao-box .badge{ display:inline-flex; align-items:center; gap:8px; font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--gold-lt); background:rgba(200,151,58,.15); border:1px solid rgba(200,151,58,.25); padding:6px 14px; border-radius:20px; margin-bottom:20px }
 .adesao-box .bdot{ width:5px; height:5px; border-radius:50%; background:var(--gold-lt); animation:scaleIn 1.5s infinite alternate }
 .adesao-box h4{ font-size:1.3rem; font-weight:700; color:var(--white); letter-spacing:-.01em; margin-bottom:10px }
 .adesao-box p{ font-size:13px; font-weight:300; color:rgba(255,255,255,.45); line-height:1.65; margin-bottom:28px }
-.btn-adesao{
-  display:flex; align-items:center; justify-content:center; gap:10px;
-  font-family:'Poppins',sans-serif; font-size:13.5px; font-weight:700;
-  letter-spacing:.05em; text-transform:uppercase;
-  color:var(--green); background:var(--white);
-  padding:18px 32px; border-radius:8px; border:none; cursor:pointer;
-  box-shadow:0 10px 30px -8px rgba(0,0,0,.3);
-  text-decoration:none; transition:background .2s, transform .2s; width:100%;
-}
-.btn-adesao:hover{ background:var(--cream); transform:translateY(-1px) }
+.btn-adesao{ display:flex; align-items:center; justify-content:center; gap:10px; font-family:'Poppins',sans-serif; font-size:13.5px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--green); background:var(--white); padding:18px 32px; border-radius:8px; border:none; cursor:pointer; box-shadow:0 10px 30px -8px rgba(0,0,0,.3); text-decoration:none; transition:background .2s; width:100% }
+.btn-adesao:hover{ background:var(--cream) }
 .adesao-note{ font-size:11.5px; font-weight:300; color:rgba(255,255,255,.3); text-align:center; margin-top:12px }
 
-/* ============================================================
-   FORM BSCA LOGO
-============================================================ */
-.form-bsca-logo{
-  display:flex; align-items:center; gap:12px;
-  margin-top:20px; padding-top:18px;
-  border-top:1px solid var(--line);
-}
-.form-bsca-logo img{ height:34px; width:auto }
-.form-bsca-logo span{ font-size:11px; font-weight:500; color:var(--ink-soft); letter-spacing:.03em }
-
-/* ============================================================
-   PROJETO CHECK WIDGET
-============================================================ */
-.projeto-check{
-  background:var(--white); border:1.5px solid var(--gold-border);
-  border-radius:12px; overflow:hidden;
-  margin-bottom:36px; box-shadow:var(--shadow);
-}
-.pc-inner{
-  display:flex; align-items:center; gap:18px; flex-wrap:wrap;
-  padding:20px 24px;
-}
-.pc-icon{ font-size:24px; flex-shrink:0 }
-.pc-txt{ flex:1; min-width:200px }
-.pc-txt strong{ display:block; font-size:.92rem; font-weight:700; color:var(--ink); margin-bottom:3px }
-.pc-txt span{ font-size:12px; font-weight:300; color:var(--ink-soft); line-height:1.5 }
-.pc-btns{ display:flex; gap:8px; flex-shrink:0 }
-.pc-btn{
-  font-family:'Poppins',sans-serif; font-size:12px; font-weight:600; letter-spacing:.04em;
-  padding:10px 20px; border-radius:7px; border:1.5px solid; cursor:pointer;
-  transition:all .18s;
-}
-.pc-sim{ border-color:var(--green); color:var(--green); background:transparent }
-.pc-sim:hover, .pc-sim.active{ background:var(--green); color:var(--white) }
-.pc-nao{ border-color:var(--gold); color:var(--gold); background:transparent }
-.pc-nao:hover, .pc-nao.active{ background:var(--gold-pale); }
-.pc-nao-info{
-  display:none; border-top:1px dashed var(--gold-border);
-  background:var(--gold-pale); padding:22px 24px;
-  animation:fadeUp .3s ease;
-}
-.pc-nao-info.show{ display:block }
-.pni-title{ font-size:11px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); margin-bottom:16px }
-.pni-steps{ display:flex; flex-direction:column; gap:12px; margin-bottom:18px }
-.pni-step{ display:flex; gap:12px; align-items:flex-start; font-size:13px; font-weight:300; color:var(--ink-soft); line-height:1.6 }
-.pni-step strong{ color:var(--ink); font-weight:600 }
-.pni-num{
-  width:24px; height:24px; border-radius:50%; flex-shrink:0;
-  background:var(--gold); color:var(--white);
-  font-size:11px; font-weight:700;
-  display:flex; align-items:center; justify-content:center;
-}
-.pni-cta{
-  display:inline-flex; align-items:center;
-  font-size:13px; font-weight:600; color:var(--green);
-  text-decoration:none; border-bottom:1.5px solid rgba(27,67,50,.25);
-  transition:color .2s;
-}
-.pni-cta:hover{ color:var(--green-mid) }
-
-/* ============================================================
-   NÃO MEMBRO CTA
-============================================================ */
-.membro-cta{
-  display:none; /* shown via JS when Não Membro */
-  background:linear-gradient(135deg, var(--green) 0%, var(--green-mid) 100%);
-  border-radius:16px; margin-top:36px; overflow:hidden;
-  box-shadow:0 16px 48px -12px rgba(27,67,50,.35);
-}
-.membro-cta.show{ display:block; animation:fadeUp .4s ease }
-.mc-content{ padding:44px 48px }
-.mc-badge{
-  display:inline-flex; align-items:center; gap:8px;
-  font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase;
-  color:var(--gold-lt); background:rgba(200,151,58,.18);
-  border:1px solid rgba(200,151,58,.3);
-  padding:6px 14px; border-radius:20px; margin-bottom:18px;
-}
-.mc-title{
-  font-size:clamp(1.25rem,2.5vw,1.85rem); font-weight:700; letter-spacing:-.015em;
-  color:var(--white); line-height:1.25; margin-bottom:12px;
-}
-.mc-title em{ font-style:italic; font-weight:300; color:rgba(255,255,255,.7) }
-.mc-title strong{ color:var(--gold-lt) }
-.mc-desc{ font-size:13px; font-weight:300; color:rgba(255,255,255,.5); line-height:1.7; max-width:520px; margin-bottom:28px }
-.mc-comparison{
-  display:flex; align-items:center; gap:20px; flex-wrap:wrap;
-  background:rgba(0,0,0,.18); border-radius:12px; padding:22px 24px;
-  margin-bottom:28px;
-}
-.mc-col{ display:flex; flex-direction:column; gap:8px }
-.mc-col-label{ font-size:10px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,.4); margin-bottom:4px }
-.mc-price{ font-size:13px; font-weight:500; color:rgba(255,255,255,.45) }
-.mc-price span{ font-size:11px; font-weight:300; color:rgba(255,255,255,.28); display:block }
-.mc-price.green{ color:var(--green-lt) }
-.mc-price.green span{ color:rgba(82,183,136,.5) }
-.mc-arrow{ font-size:1.5rem; color:var(--gold-lt); flex-shrink:0; opacity:.7 }
-.mc-btn{
-  display:inline-flex; align-items:center; gap:10px;
-  font-family:'Poppins',sans-serif; font-size:13.5px; font-weight:700;
-  letter-spacing:.05em; text-transform:uppercase;
-  color:var(--green); background:var(--white);
-  padding:17px 32px; border-radius:8px; text-decoration:none;
-  box-shadow:0 10px 30px -8px rgba(0,0,0,.3);
-  transition:background .2s, transform .2s;
-}
-.mc-btn:hover{ background:var(--cream); transform:translateY(-1px) }
-.mc-note{ font-size:11.5px; font-weight:300; color:rgba(255,255,255,.25); margin-top:12px }
-
-/* ============================================================
-   FOOTER
-============================================================ */
+/* Footer */
 footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); padding:52px 40px 36px }
 .foot-inner{ max-width:1080px; margin:0 auto }
 .foot-top{ display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:32px; margin-bottom:44px }
@@ -646,40 +248,26 @@ footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); paddi
 .foot-links{ display:flex; flex-direction:column; gap:8px }
 .foot-links a{ font-size:13px; font-weight:300; color:rgba(255,255,255,.38); text-decoration:none; transition:color .2s }
 .foot-links a:hover{ color:rgba(255,255,255,.85) }
-.foot-bottom{
-  border-top:1px solid rgba(255,255,255,.08); padding-top:18px;
-  display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
-  font-size:11px; font-weight:300; color:rgba(255,255,255,.22); letter-spacing:.04em;
-}
-.foot-bottom a{ color:rgba(255,255,255,.28); text-decoration:none; transition:color .2s }
+.foot-bottom{ border-top:1px solid rgba(255,255,255,.08); padding-top:18px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; font-size:11px; font-weight:300; color:rgba(255,255,255,.22) }
+.foot-bottom a{ color:rgba(255,255,255,.28); text-decoration:none }
 .foot-bottom a:hover{ color:rgba(255,255,255,.7) }
 
-/* ============================================================
-   RESPONSIVE
-============================================================ */
+/* Responsive */
 @media(max-width:900px){ .form-layout{ grid-template-columns:1fr; gap:40px } }
 @media(max-width:800px){ .adesao-inner{ grid-template-columns:1fr; gap:44px } }
 @media(max-width:768px){
   header{ padding:0 20px }
   .hd-nav .hd-link{ display:none }
-  .hd-tagline{ display:none }
   .hero-inner{ padding:64px 20px 76px }
-  .section-wrap{ padding:60px 20px }
-  .events-wrap{ padding:60px 20px }
-  .participacao-section{ margin:0 0 28px; padding:24px 20px }
-  .submit-wrap{ padding:60px 20px 56px }
-  .adesao-inner{ padding:72px 20px }
+  .section-wrap,.events-wrap,.submit-wrap,.adesao-inner{ padding-left:20px; padding-right:20px }
   footer{ padding:40px 20px 28px }
-  .stats-inner{ padding:0 20px }
+  .stats-band{ padding:0 20px }
+  .mc-content{ padding:28px 20px }
 }
 @media(max-width:700px){
   .stats-inner{ grid-template-columns:1fr 1fr }
-  .stat-wide{ grid-column:1/-1; border-right:none; border-top:1px solid rgba(255,255,255,.15) }
+  .stat-item:last-child{ grid-column:1/-1; border-top:1px solid rgba(255,255,255,.15) }
   .stat-item:nth-child(2){ border-right:none }
-  .pc-inner{ flex-direction:column; align-items:flex-start }
-  .pc-btns{ width:100% }
-  .pc-btn{ flex:1; text-align:center }
-  .mc-content{ padding:28px 20px }
 }
 @media(max-width:520px){
   .events-grid{ grid-template-columns:1fr }
@@ -689,12 +277,9 @@ footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); paddi
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
   <div class="hd-brand">
-    <img class="hd-logo"
-      src="https://www.bsca.com.br/wp-content/uploads/2025/09/Logo_BSCA.png"
-      alt="BSCA" onerror="this.src='https://www.bsca.com.br/wp-content/uploads/2025/09/Logo_BSCA-white.png'">
+    <img class="hd-logo" src="https://www.bsca.com.br/wp-content/uploads/2025/09/Logo_BSCA.png" alt="BSCA">
   </div>
   <nav class="hd-nav">
     <a href="https://www.bsca.com.br/projeto-setorial/" class="hd-link" target="_blank">Projeto Setorial</a>
@@ -703,15 +288,14 @@ footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); paddi
   </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-inner">
-    <h1>O café especial<br>brasileiro no <em>palco</em><br>do mundo</h1>
-    <p class="hero-lede">Manifeste seu interesse nas principais feiras internacionais do 2º semestre de 2026 e janeiro de 2027. Adesão ao projeto é gratuita.</p>
+    <h1>O cafÃ© especial<br>brasileiro no <em>palco</em><br>do mundo</h1>
+    <p class="hero-lede">Manifeste seu interesse nas aÃ§Ãµes internacionais do Projeto Setorial "Brazil. The Coffee Nation" â BSCA + Apex-Brasil. ParticipaÃ§Ã£o gratuita no projeto.</p>
     <div class="hero-pills">
-      <div class="pill"><strong>13</strong> ações no projeto setorial</div>
-      <div class="pill"><strong>11</strong> países estratégicos</div>
+      <div class="pill"><strong>15</strong> aÃ§Ãµes no projeto setorial</div>
+      <div class="pill"><strong>11</strong> paÃ­ses estratÃ©gicos</div>
       <div class="pill"><strong>50% off</strong> para Membros BSCA</div>
       <div class="pill"><strong>Gratuito</strong> manifestar interesse</div>
     </div>
@@ -720,113 +304,192 @@ footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); paddi
         Ver os eventos
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
-      <button class="btn-gold" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">
-        Preencher formulário
-      </button>
+      <button class="btn-gold" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">Preencher formulÃ¡rio</button>
     </div>
   </div>
 </section>
 
-<!-- STATS -->
 <div class="stats-band">
   <div class="stats-inner">
-    <div class="stat-item"><div class="stat-n">13</div><div class="stat-l">Ações previstas 2025–2027</div></div>
-    <div class="stat-item"><div class="stat-n">11</div><div class="stat-l">Países estratégicos</div></div>
-    <div class="stat-item stat-wide"><div class="stat-n">50<span>%</span></div><div class="stat-l">de desconto para Membros BSCA nas ações do Projeto Setorial</div></div>
+    <div class="stat-item"><div class="stat-n">15</div><div class="stat-l">AÃ§Ãµes previstas 2026â2027</div></div>
+    <div class="stat-item"><div class="stat-n">11</div><div class="stat-l">PaÃ­ses estratÃ©gicos</div></div>
+    <div class="stat-item"><div class="stat-n">50<span>%</span></div><div class="stat-l">de desconto para Membros BSCA nas aÃ§Ãµes do Projeto Setorial</div></div>
   </div>
 </div>
 
-<!-- FORM SECTION -->
 <section class="form-section" id="form-section">
   <div class="section-wrap">
     <div class="form-layout">
       <div class="form-aside reveal">
         <div class="s-eyebrow">Seus dados</div>
         <h2 class="s-title">Registre seu interesse</h2>
-        <p class="s-sub">Preencha abaixo para que nossa equipe entre em contato com as condições de participação.</p>
+        <p class="s-sub">Preencha abaixo para que nossa equipe entre em contato com as condiÃ§Ãµes de participaÃ§Ã£o de cada aÃ§Ã£o.</p>
         <div class="feat-list">
-          <div class="feat-row"><div class="feat-ico">🌎</div><div class="feat-txt"><strong>Alcance global</strong><span>Feiras nos mercados asiático, americano e árabe</span></div></div>
-          <div class="feat-row"><div class="feat-ico">🤝</div><div class="feat-txt"><strong>Suporte completo</strong><span>Equipe BSCA acompanha toda a sua participação</span></div></div>
-          <div class="feat-row"><div class="feat-ico">🎯</div><div class="feat-txt"><strong>Sem compromisso</strong><span>Manifestar interesse é gratuito e sem obrigação</span></div></div>
+          <div class="feat-row"><div class="feat-ico">ð</div><div class="feat-txt"><strong>Alcance global</strong><span>Feiras e missÃµes em 11 paÃ­ses estratÃ©gicos</span></div></div>
+          <div class="feat-row"><div class="feat-ico">ð¤</div><div class="feat-txt"><strong>Suporte completo</strong><span>Equipe BSCA acompanha toda a sua participaÃ§Ã£o</span></div></div>
+          <div class="feat-row"><div class="feat-ico">ð¯</div><div class="feat-txt"><strong>Sem compromisso</strong><span>Manifestar interesse Ã© gratuito e sem obrigaÃ§Ã£o</span></div></div>
         </div>
       </div>
       <div class="form-card reveal">
         <div class="fc-label">Dados de contato</div>
         <div class="form-grid">
           <div class="f-field"><label class="f-label" for="fNome">Nome completo</label><input class="f-input" type="text" id="fNome" placeholder="Seu nome" autocomplete="name"></div>
-          <div class="f-field"><label class="f-label" for="fEmpresa">Empresa / Propriedade</label><input class="f-input" type="text" id="fEmpresa" placeholder="Razão social ou fazenda"></div>
+          <div class="f-field"><label class="f-label" for="fEmpresa">Empresa / Propriedade</label><input class="f-input" type="text" id="fEmpresa" placeholder="RazÃ£o social ou fazenda"></div>
           <div class="f-field"><label class="f-label" for="fEmail">E-mail</label><input class="f-input" type="email" id="fEmail" placeholder="seu@email.com" autocomplete="email"></div>
           <div class="f-field"><label class="f-label" for="fTelefone">Telefone / WhatsApp</label><input class="f-input" type="tel" id="fTelefone" placeholder="(00) 00000-0000" autocomplete="tel"></div>
         </div>
         <div class="form-divider"></div>
-        <p class="form-note">Seus dados são protegidos pela LGPD e serão usados exclusivamente para contato sobre as ações do projeto setorial. <a href="https://www.bsca.com.br/politica-de-privacidade/" target="_blank">Política de Privacidade.</a></p>
+        <p class="form-note">Seus dados sÃ£o protegidos pela LGPD e serÃ£o usados exclusivamente para contato sobre as aÃ§Ãµes do Projeto Setorial. <a href="https://www.bsca.com.br/politica-de-privacidade/" target="_blank">PolÃ­tica de Privacidade.</a></p>
         <div class="form-bsca-logo">
-          <img src="https://www.bsca.com.br/wp-content/uploads/2025/09/Logo_BSCA.png" alt="BSCA — Associação Brasileira de Cafés Especiais" onerror="this.src='https://www.bsca.com.br/wp-content/uploads/2024/01/Logo-BSCA.png'">
-          <span>Associação Brasileira de Cafés Especiais</span>
+          <img src="https://www.bsca.com.br/wp-content/uploads/2025/09/Logo_BSCA.png" alt="BSCA â AssociaÃ§Ã£o Brasileira de CafÃ©s Especiais">
+          <span>AssociaÃ§Ã£o Brasileira de CafÃ©s Especiais</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- EVENTS SECTION -->
 <section class="events-section" id="events-section">
   <div class="events-wrap">
 
     <div class="events-head reveal" style="margin-bottom:40px">
-      <div class="s-eyebrow">Próximas ações · 2º semestre 2026 e Jan 2027</div>
-      <h2 class="s-title">Selecione os eventos de interesse</h2>
-      <p class="s-sub">Ações confirmadas para os próximos 6 meses — outubro de 2026 a janeiro de 2027. Você pode selecionar quantos quiser e, em seguida, escolher o tipo de participação em cada um.</p>
+      <div class="s-eyebrow">AÃ§Ãµes confirmadas Â· 2026 â 2027</div>
+      <h2 class="s-title">Selecione as aÃ§Ãµes de interesse</h2>
+      <p class="s-sub">Feiras internacionais, missÃµes comerciais e aÃ§Ãµes promocionais do Projeto Setorial. Selecione quantas quiser e informe o tipo de participaÃ§Ã£o de interesse.</p>
     </div>
 
-    <!-- TOGGLE MEMBRO -->
     <div class="toggle-bar reveal">
-      <div class="toggle-label">Exibir valores para: <strong>qual perfil?</strong></div>
+      <div class="toggle-label">Sou: <strong>qual perfil?</strong></div>
       <div class="toggle-group">
-        <button class="tg-btn a-membro" id="btnMembro" onclick="setMember(true)">✓ Membro BSCA</button>
-        <button class="tg-btn" id="btnNao" onclick="setMember(false)">Não Membro</button>
+        <button class="tg-btn a-membro" id="btnMembro" onclick="setMember(true)">â Membro BSCA</button>
+        <button class="tg-btn" id="btnNao" onclick="setMember(false)">NÃ£o Membro</button>
       </div>
     </div>
     <div class="nao-note" id="naoNote">
-      <span style="font-size:18px;flex-shrink:0">💡</span>
-      <span><strong>Membros BSCA pagam 50% a menos</strong> em todas as ações do projeto. A adesão ao projeto é gratuita para ambos os perfis, mas os valores de participação nas feiras diferem. <a href="https://www.bsca.com.br/membros/" target="_blank">Conheça a associação →</a></span>
+      <span style="font-size:18px;flex-shrink:0">ð¡</span>
+      <span><strong>Membros BSCA tÃªm 50% de desconto</strong> em todas as aÃ§Ãµes do projeto. A adesÃ£o ao projeto Ã© gratuita, mas os valores de participaÃ§Ã£o diferem por perfil. <a href="https://www.bsca.com.br/membros/" target="_blank">ConheÃ§a a BSCA â</a></span>
     </div>
+
+    <!-- JUL 2026 -->
+    <div class="month-block reveal">
+      <div class="month-row"><span class="month-lbl">Julho 2026</span><div class="month-rule"></div></div>
+      <div class="events-grid">
+
+        <div class="ev-card" data-id="expocafe-chile" data-tag="EXPOCAFE CHILE 2026" data-name="EXPOCAFÃ Chile 2026" data-tipo="feira" onclick="toggleEvent(this)">
+          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&fit=crop&crop=center')"></div>
+          <div class="ev-overlay"></div>
+          <div class="ev-top">
+            <div class="ev-date">24â26 Jul 2026</div>
+            <div style="display:flex;gap:5px;align-items:center">
+              <div class="ev-check"><span class="ev-check-v">â</span></div>
+            </div>
+          </div>
+          <div class="ev-body">
+            <div class="ev-loc">Santiago, Chile</div>
+            <div class="ev-name">EXPOCAFÃ Chile 2026</div>
+            <div class="ev-desc">Principal evento do setor cafeeiro no Chile, reunindo torrefadores, importadores e especialistas. PresenÃ§a estratÃ©gica para conectar o cafÃ© especial brasileiro com compradores chilenos e de toda a regiÃ£o.</div>
+            <div class="ev-action">Selecionar</div>
+          </div>
+        </div>
+
+        <div class="ev-card" data-id="missao-chile" data-tag="MISSAO COMERCIAL CHILE 2026" data-name="MissÃ£o Comercial Chile 2026" data-tipo="missao" onclick="toggleEvent(this)">
+          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80&fit=crop&crop=center')"></div>
+          <div class="ev-overlay"></div>
+          <div class="ev-top">
+            <div class="ev-date">22â27 Jul 2026</div>
+            <div style="display:flex;gap:5px;align-items:center">
+              <div class="ev-badge missao">MissÃ£o</div>
+              <div class="ev-check"><span class="ev-check-v">â</span></div>
+            </div>
+          </div>
+          <div class="ev-body">
+            <div class="ev-loc">Chile</div>
+            <div class="ev-name">MissÃ£o Comercial Chile 2026</div>
+            <div class="ev-desc">ImersÃ£o comercial no mercado chileno com visitas a torrefadores, distribuidores e pontos de venda de cafÃ©s especiais. Oportunidade de prospecÃ§Ã£o direta e construÃ§Ã£o de relacionamentos com compradores locais.</div>
+            <div class="ev-action">Selecionar</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="participacao-section" id="part-jul-2026"></div>
 
     <!-- OUT 2026 -->
     <div class="month-block reveal">
       <div class="month-row"><span class="month-lbl">Outubro 2026</span><div class="month-rule"></div></div>
       <div class="events-grid">
 
-        <div class="ev-card" data-id="scaj-2026" data-tag="SCAJ-2026" data-name="SCAJ 2026" data-tipo="exterior-nao-sca" data-membro="USD 1.500" data-nao="USD 3.000" onclick="toggleEvent(this)">
+        <div class="ev-card" data-id="scaj-2026" data-tag="SCAJ 2026" data-name="SCAJ 2026" data-tipo="feira" onclick="toggleEvent(this)">
           <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=80&fit=crop&crop=center')"></div>
           <div class="ev-overlay"></div>
-          <div class="ev-top"><div class="ev-date">14–16 Out 2026</div><div class="ev-check"><span class="ev-check-v">✓</span></div></div>
-          <div class="ev-price" id="price-scaj-2026"><div class="ev-pb m" id="pm-scaj-2026">Membro · USD 1.500</div><div class="ev-pb n" id="pn-scaj-2026" style="display:none">Não Membro · USD 3.000</div><div class="ev-ps" id="ps-scaj-2026">Membro economiza USD 1.500</div></div>
+          <div class="ev-top">
+            <div class="ev-date">14â16 Out 2026</div>
+            <div class="ev-check"><span class="ev-check-v">â</span></div>
+          </div>
           <div class="ev-body">
-            <div class="ev-loc">Tóquio, Japão · Tokyo Big Sight</div>
+            <div class="ev-loc">TÃ³quio, JapÃ£o Â· Tokyo Big Sight</div>
             <div class="ev-name">SCAJ 2026</div>
-            <div class="ev-desc">World Specialty Coffee Conference and Exhibition — maior evento de cafés especiais da Ásia, reunindo importadores, torrefadores e compradores globais.</div>
-            <div class="ev-action">Selecionar evento</div>
+            <div class="ev-desc">World Specialty Coffee Conference and Exhibition â maior evento de cafÃ©s especiais da Ãsia, reunindo importadores, torrefadores e compradores globais em TÃ³quio.</div>
+            <div class="ev-action">Selecionar</div>
           </div>
         </div>
 
-        <div class="ev-card" data-id="woc-panama-2026" data-tag="WOC-PANAMA-2026" data-name="World of Coffee Panamá" data-tipo="exterior-sca" data-membro="USD 2.100" data-nao="USD 4.200" onclick="toggleEvent(this)">
+        <div class="ev-card" data-id="taste-harvest" data-tag="TASTE OF THE HARVEST 2026" data-name="Taste of the Harvest 2026" data-tipo="concurso" onclick="toggleEvent(this)">
+          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=800&q=80&fit=crop&crop=center')"></div>
+          <div class="ev-overlay"></div>
+          <div class="ev-top">
+            <div class="ev-date">14â16 Out 2026</div>
+            <div style="display:flex;gap:5px;align-items:center">
+              <div class="ev-badge concurso">Concurso</div>
+              <div class="ev-check"><span class="ev-check-v">â</span></div>
+            </div>
+          </div>
+          <div class="ev-body">
+            <div class="ev-loc">TÃ³quio, JapÃ£o</div>
+            <div class="ev-name">Taste of the Harvest 2026</div>
+            <div class="ev-desc">CompetiÃ§Ã£o internacional que avalia cafÃ©s de origem com um dos mais rigorosos jÃºris de especialistas asiÃ¡ticos â uma plataforma para showcasing de qualidade junto aos principais compradores japoneses.</div>
+            <div class="ev-action">Selecionar</div>
+          </div>
+        </div>
+
+        <div class="ev-card" data-id="woc-panama" data-tag="WOC PANAMA 2026" data-name="World of Coffee PanamÃ¡" data-tipo="feira-sca" onclick="toggleEvent(this)">
           <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1605298613890-b82abd3793e8?w=800&q=80&fit=crop&crop=center')"></div>
           <div class="ev-overlay"></div>
-          <div class="ev-top"><div class="ev-date">23–25 Out 2026</div><div class="ev-check"><span class="ev-check-v">✓</span></div></div>
-          <div class="ev-price" id="price-woc-panama-2026"><div class="ev-pb m" id="pm-woc-panama-2026">Membro · USD 2.100</div><div class="ev-pb n" id="pn-woc-panama-2026" style="display:none">Não Membro · USD 4.200</div><div class="ev-ps" id="ps-woc-panama-2026">Membro economiza USD 2.100</div></div>
+          <div class="ev-top">
+            <div class="ev-date">22â25 Out 2026</div>
+            <div style="display:flex;gap:5px;align-items:center">
+              <div class="ev-badge sca">SCA Event</div>
+              <div class="ev-check"><span class="ev-check-v">â</span></div>
+            </div>
+          </div>
           <div class="ev-body">
-            <div class="ev-loc">Cidade do Panamá · SCA event</div>
-            <div class="ev-name">World of Coffee Panamá</div>
-            <div class="ev-desc">A maior plataforma global do café especial — edição das Américas, conectando produtores brasileiros a compradores internacionais de alto padrão.</div>
-            <div class="ev-action">Selecionar evento</div>
+            <div class="ev-loc">Cidade do PanamÃ¡</div>
+            <div class="ev-name">World of Coffee PanamÃ¡</div>
+            <div class="ev-desc">O principal evento da SCA nas AmÃ©ricas â plataforma de conexÃ£o entre produtores brasileiros e compradores internacionais de alto padrÃ£o, reunindo milhares de profissionais da cadeia do cafÃ© especial.</div>
+            <div class="ev-action">Selecionar</div>
+          </div>
+        </div>
+
+        <div class="ev-card" data-id="missao-panama" data-tag="MISSAO PANAMA 2026" data-name="MissÃ£o PanamÃ¡ 2026" data-tipo="missao" onclick="toggleEvent(this)">
+          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1508736793122-f516e3ba5569?w=800&q=80&fit=crop&crop=center')"></div>
+          <div class="ev-overlay"></div>
+          <div class="ev-top">
+            <div class="ev-date">26â27 Out 2026</div>
+            <div style="display:flex;gap:5px;align-items:center">
+              <div class="ev-badge missao">MissÃ£o</div>
+              <div class="ev-check"><span class="ev-check-v">â</span></div>
+            </div>
+          </div>
+          <div class="ev-body">
+            <div class="ev-loc">PanamÃ¡ Â· ExperiÃªncia de Origem</div>
+            <div class="ev-name">MissÃ£o PanamÃ¡ 2026</div>
+            <div class="ev-desc">ExperiÃªncia de imersÃ£o entre os dias 26 e 27 de outubro, voltada ao conhecimento da origem produtora panamenha, com visitas a fazendas, contato com produtores, degustaÃ§Ãµes e intercÃ¢mbio tÃ©cnico entre profissionais da cadeia do cafÃ©.</div>
+            <div class="ev-action">Selecionar</div>
           </div>
         </div>
 
       </div>
     </div>
-
-    <!-- Participação OUT 2026 -->
     <div class="participacao-section" id="part-out-2026"></div>
 
     <!-- NOV 2026 -->
@@ -834,49 +497,56 @@ footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); paddi
       <div class="month-row"><span class="month-lbl">Novembro 2026</span><div class="month-rule"></div></div>
       <div class="events-grid">
 
-        <div class="ev-card" data-id="sic-2026" data-tag="SIC-2026" data-name="SIC 2026 – Projeto Comprador" data-tipo="brasil" data-membro="BRL 3.200" data-nao="BRL 6.400" onclick="toggleEvent(this)">
+        <div class="ev-card" data-id="sic-2026" data-tag="SIC 2026" data-name="SIC 2026 â Projeto Comprador" data-tipo="feira" onclick="toggleEvent(this)">
           <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1464983953574-0892a716854b?w=800&q=80&fit=crop&crop=center')"></div>
           <div class="ev-overlay"></div>
-          <div class="ev-top"><div class="ev-date">11–13 Nov 2026</div><div class="ev-check"><span class="ev-check-v">✓</span></div></div>
-          <div class="ev-price" id="price-sic-2026"><div class="ev-pb m" id="pm-sic-2026">Membro · BRL 3.200</div><div class="ev-pb n" id="pn-sic-2026" style="display:none">Não Membro · BRL 6.400</div><div class="ev-ps" id="ps-sic-2026">Membro economiza BRL 3.200</div></div>
+          <div class="ev-top">
+            <div class="ev-date">11â13 Nov 2026</div>
+            <div class="ev-check"><span class="ev-check-v">â</span></div>
+          </div>
           <div class="ev-body">
-            <div class="ev-loc">Brasil · Projeto Comprador</div>
-            <div class="ev-name">SIC 2026</div>
-            <div class="ev-desc">Semana Internacional do Café — maior evento da América Latina, com foco em compradores internacionais visitando o Brasil para negócios diretos.</div>
-            <div class="ev-action">Selecionar evento</div>
+            <div class="ev-loc">Brasil Â· Projeto Comprador</div>
+            <div class="ev-name">SIC 2026 â Projeto Comprador</div>
+            <div class="ev-desc">A Semana Internacional do CafÃ© Ã© o maior evento da AmÃ©rica Latina. O Projeto Comprador traz compradores internacionais qualificados ao Brasil para negÃ³cios diretos com produtores e exportadores de cafÃ©s especiais.</div>
+            <div class="ev-action">Selecionar</div>
           </div>
         </div>
 
-        <div class="ev-card" data-id="taiwan-2026" data-tag="TAIWAN-COFFEE-2026" data-name="Taiwan Intl Coffee Show" data-tipo="exterior-nao-sca" data-membro="USD 1.500" data-nao="USD 3.000" onclick="toggleEvent(this)">
-          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1470004914212-05527e49370b?w=800&q=80&fit=crop&crop=center')"></div>
-          <div class="ev-overlay"></div>
-          <div class="ev-top"><div class="ev-date">13–16 Nov 2026</div><div class="ev-check"><span class="ev-check-v">✓</span></div></div>
-          <div class="ev-price" id="price-taiwan-2026"><div class="ev-pb m" id="pm-taiwan-2026">Membro · USD 1.500</div><div class="ev-pb n" id="pn-taiwan-2026" style="display:none">Não Membro · USD 3.000</div><div class="ev-ps" id="ps-taiwan-2026">Membro economiza USD 1.500</div></div>
-          <div class="ev-body">
-            <div class="ev-loc">Taipei, Taiwan</div>
-            <div class="ev-name">Taiwan Intl Coffee Show</div>
-            <div class="ev-desc">Referência no mercado asiático de cafés premium, com acesso direto a torrefadores, redes de cafeterias e distribuidores da região.</div>
-            <div class="ev-action">Selecionar evento</div>
-          </div>
-        </div>
-
-        <div class="ev-card" data-id="cafe-show-2026" data-tag="CAFE-SHOW-KOREA-2026" data-name="Café Show Seoul" data-tipo="exterior-nao-sca" data-membro="USD 1.500" data-nao="USD 3.000" onclick="toggleEvent(this)">
+        <div class="ev-card" data-id="cafe-show-seoul" data-tag="SEOUL CAFE SHOW 2026" data-name="Seoul International Cafe Show 2026" data-tipo="feira" onclick="toggleEvent(this)">
           <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1517154421773-0529f29ea451?w=800&q=80&fit=crop&crop=center')"></div>
           <div class="ev-overlay"></div>
-          <div class="ev-top"><div class="ev-date">11–14 Nov 2026</div><div class="ev-check"><span class="ev-check-v">✓</span></div></div>
-          <div class="ev-price" id="price-cafe-show-2026"><div class="ev-pb m" id="pm-cafe-show-2026">Membro · USD 1.500</div><div class="ev-pb n" id="pn-cafe-show-2026" style="display:none">Não Membro · USD 3.000</div><div class="ev-ps" id="ps-cafe-show-2026">Membro economiza USD 1.500</div></div>
+          <div class="ev-top">
+            <div class="ev-date">11â14 Nov 2026</div>
+            <div class="ev-check"><span class="ev-check-v">â</span></div>
+          </div>
           <div class="ev-body">
             <div class="ev-loc">Seul, Coreia do Sul</div>
-            <div class="ev-name">Café Show</div>
-            <div class="ev-desc">O maior evento de café da Coreia do Sul — um dos mercados que mais crescem no consumo de cafés especiais de origem brasileira no mundo.</div>
-            <div class="ev-action">Selecionar evento</div>
+            <div class="ev-name">Seoul Intl Cafe Show 2026</div>
+            <div class="ev-desc">O maior evento de cafÃ© da Coreia do Sul, um dos mercados que mais cresce no consumo de cafÃ©s especiais no mundo. Acesso direto a redes de cafeterias, torrefadores e distribuidores coreanos.</div>
+            <div class="ev-action">Selecionar</div>
+          </div>
+        </div>
+
+        <div class="ev-card" data-id="missao-asia" data-tag="MISSAO COMERCIAL ASIA 2026" data-name="MissÃ£o Comercial Ãsia 2026" data-tipo="missao" onclick="toggleEvent(this)">
+          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1536599018102-9f803c140fc1?w=800&q=80&fit=crop&crop=center')"></div>
+          <div class="ev-overlay"></div>
+          <div class="ev-top">
+            <div class="ev-date">11â18 Nov 2026</div>
+            <div style="display:flex;gap:5px;align-items:center">
+              <div class="ev-badge missao">MissÃ£o</div>
+              <div class="ev-check"><span class="ev-check-v">â</span></div>
+            </div>
+          </div>
+          <div class="ev-body">
+            <div class="ev-loc">China e Coreia do Sul</div>
+            <div class="ev-name">MissÃ£o Comercial Ãsia 2026</div>
+            <div class="ev-desc">MissÃ£o comercial multi-destino percorrendo os principais mercados asiÃ¡ticos â Coreia do Sul e China â com agenda de reuniÃµes com importadores, torrefadores e distribuidores de cafÃ© especial.</div>
+            <div class="ev-action">Selecionar</div>
           </div>
         </div>
 
       </div>
     </div>
-
-    <!-- Participação NOV 2026 -->
     <div class="participacao-section" id="part-nov-2026"></div>
 
     <!-- JAN 2027 -->
@@ -884,212 +554,301 @@ footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); paddi
       <div class="month-row"><span class="month-lbl">Janeiro 2027</span><div class="month-rule"></div></div>
       <div class="events-grid">
 
-        <div class="ev-card" style="max-width:420px" data-id="woc-dubai-2027" data-tag="WOC-DUBAI-2027" data-name="World of Coffee Dubai" data-tipo="exterior-sca" data-membro="USD 2.100" data-nao="USD 4.200" onclick="toggleEvent(this)">
+        <div class="ev-card" data-id="woc-dubai" data-tag="WOC DUBAI 2027" data-name="World of Coffee Dubai 2027" data-tipo="feira-sca" onclick="toggleEvent(this)">
           <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80&fit=crop&crop=center')"></div>
           <div class="ev-overlay"></div>
-          <div class="ev-top"><div class="ev-date">26–28 Jan 2027</div><div class="ev-check"><span class="ev-check-v">✓</span></div></div>
-          <div class="ev-price" id="price-woc-dubai-2027"><div class="ev-pb m" id="pm-woc-dubai-2027">Membro · USD 2.100</div><div class="ev-pb n" id="pn-woc-dubai-2027" style="display:none">Não Membro · USD 4.200</div><div class="ev-ps" id="ps-woc-dubai-2027">Membro economiza USD 2.100</div></div>
+          <div class="ev-top">
+            <div class="ev-date">26â28 Jan 2027</div>
+            <div style="display:flex;gap:5px;align-items:center">
+              <div class="ev-badge sca">SCA Event</div>
+              <div class="ev-check"><span class="ev-check-v">â</span></div>
+            </div>
+          </div>
           <div class="ev-body">
-            <div class="ev-loc">Dubai, Emirados Árabes · SCA event</div>
-            <div class="ev-name">World of Coffee Dubai</div>
-            <div class="ev-desc">Porta de entrada para o Oriente Médio — uma das regiões com maior crescimento no consumo de cafés especiais, com compradores de todo o mundo árabe.</div>
-            <div class="ev-action">Selecionar evento</div>
+            <div class="ev-loc">Dubai, Emirados Ãrabes</div>
+            <div class="ev-name">World of Coffee Dubai 2027</div>
+            <div class="ev-desc">Porta de entrada para o Oriente MÃ©dio â uma das regiÃµes com maior crescimento no consumo de cafÃ©s especiais. O evento reÃºne compradores de todo o mundo Ã¡rabe e da Ãsia Central.</div>
+            <div class="ev-action">Selecionar</div>
           </div>
         </div>
 
       </div>
     </div>
-
-    <!-- Participação JAN 2027 -->
     <div class="participacao-section" id="part-jan-2027"></div>
 
-    <!-- CTA NÃO MEMBRO -->
-    <div class="membro-cta" id="membroCta">
-      <div class="mc-content">
-        <div class="mc-badge">🏅 Benefício exclusivo</div>
-        <h3 class="mc-title">Seja Membro BSCA e acesse as ações do Projeto Setorial<br><em>"Brazil. The Coffee Nation"</em> com <strong>50% de desconto</strong></h3>
-        <p class="mc-desc">Membros BSCA adimplentes têm acesso a todos os eventos internacionais com 50% de redução nos valores de participação — bancada individual, cupping, brew bar e mais.</p>
-        <div class="mc-comparison">
-          <div class="mc-col mc-nao-col">
-            <div class="mc-col-label">Não Membro</div>
-            <div class="mc-price">USD 3.000 <span>bancada exterior</span></div>
-            <div class="mc-price">USD 4.200 <span>bancada SCA event</span></div>
-            <div class="mc-price">BRL 6.400 <span>bancada Brasil</span></div>
+    <!-- MAR 2027 -->
+    <div class="month-block reveal">
+      <div class="month-row"><span class="month-lbl">MarÃ§o 2027</span><div class="month-rule"></div></div>
+      <div class="events-grid">
+
+        <div class="ev-card" data-id="coffeefest-madrid" data-tag="COFFEEFEST MADRID 2027" data-name="CoffeeFest Madrid 2027" data-tipo="feira" onclick="toggleEvent(this)">
+          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&q=80&fit=crop&crop=center')"></div>
+          <div class="ev-overlay"></div>
+          <div class="ev-top">
+            <div class="ev-date">6â8 Mar 2027</div>
+            <div class="ev-check"><span class="ev-check-v">â</span></div>
           </div>
-          <div class="mc-arrow">→</div>
-          <div class="mc-col mc-sim-col">
-            <div class="mc-col-label">Membro BSCA</div>
-            <div class="mc-price green">USD 1.500 <span>bancada exterior</span></div>
-            <div class="mc-price green">USD 2.100 <span>bancada SCA event</span></div>
-            <div class="mc-price green">BRL 3.200 <span>bancada Brasil</span></div>
+          <div class="ev-body">
+            <div class="ev-loc">Madrid, Espanha</div>
+            <div class="ev-name">CoffeeFest Madrid 2027</div>
+            <div class="ev-desc">Principal festival de cafÃ© especial da Espanha e da PenÃ­nsula IbÃ©rica. Acesso ao mercado europeu de lÃ­ngua hispÃ¢nica e ponto de encontro de importadores e torrefadores de toda a Europa.</div>
+            <div class="ev-action">Selecionar</div>
           </div>
         </div>
-        <a href="https://www.bsca.com.br/membros/" target="_blank" class="mc-btn">
-          Quero ser Membro BSCA →
-        </a>
-        <p class="mc-note">A adesão ao Projeto Setorial é gratuita para Membros e Não Membros.</p>
+
+        <div class="ev-card" data-id="hotelex-shanghai" data-tag="HOTELEX SHANGHAI 2027" data-name="Hotelex Shanghai 2027" data-tipo="feira" onclick="toggleEvent(this)">
+          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1474674804-5e3db4e6e82a?w=800&q=80&fit=crop&crop=center')"></div>
+          <div class="ev-overlay"></div>
+          <div class="ev-top">
+            <div class="ev-date">30 Marâ2 Abr 2027</div>
+            <div class="ev-check"><span class="ev-check-v">â</span></div>
+          </div>
+          <div class="ev-body">
+            <div class="ev-loc">Xangai, China</div>
+            <div class="ev-name">Hotelex Shanghai 2027</div>
+            <div class="ev-desc">Maior feira de hospitalidade e gastronomia da China, com forte setor de cafÃ©. Plataforma de acesso ao mercado chinÃªs, o de maior crescimento no consumo de cafÃ©s especiais na Ãºltima dÃ©cada.</div>
+            <div class="ev-action">Selecionar</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="participacao-section" id="part-mar-2027"></div>
+
+    <!-- ABR 2027 -->
+    <div class="month-block reveal">
+      <div class="month-row"><span class="month-lbl">Abril 2027</span><div class="month-rule"></div></div>
+      <div class="events-grid">
+
+        <div class="ev-card" data-id="woc-new-orleans" data-tag="WOC NEW ORLEANS 2027" data-name="World of Coffee New Orleans 2027" data-tipo="feira-sca" onclick="toggleEvent(this)">
+          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=80&fit=crop&crop=center')"></div>
+          <div class="ev-overlay"></div>
+          <div class="ev-top">
+            <div class="ev-date">9â11 Abr 2027</div>
+            <div style="display:flex;gap:5px;align-items:center">
+              <div class="ev-badge sca">SCA Event</div>
+              <div class="ev-check"><span class="ev-check-v">â</span></div>
+            </div>
+          </div>
+          <div class="ev-body">
+            <div class="ev-loc">Nova Orleans, EUA</div>
+            <div class="ev-name">World of Coffee New Orleans 2027</div>
+            <div class="ev-desc">Principal evento da SCA nos Estados Unidos â o maior mercado consumidor de cafÃ©s especiais do mundo. PresenÃ§a estratÃ©gica junto a importadores, torrefadores e redes de cafeterias americanas.</div>
+            <div class="ev-action">Selecionar</div>
+          </div>
+        </div>
+
+        <div class="ev-card" data-id="woc-tokyo" data-tag="WOC TOKYO 2027" data-name="World of Coffee Tokyo 2027" data-tipo="feira-sca" onclick="toggleEvent(this)">
+          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80&fit=crop&crop=center')"></div>
+          <div class="ev-overlay"></div>
+          <div class="ev-top">
+            <div class="ev-date">28 Abrâ1 Mai 2027</div>
+            <div style="display:flex;gap:5px;align-items:center">
+              <div class="ev-badge sca">SCA Event</div>
+              <div class="ev-check"><span class="ev-check-v">â</span></div>
+            </div>
+          </div>
+          <div class="ev-body">
+            <div class="ev-loc">TÃ³quio, JapÃ£o</div>
+            <div class="ev-name">World of Coffee Tokyo 2027</div>
+            <div class="ev-desc">EdiÃ§Ã£o do WOC no JapÃ£o, consolidando a presenÃ§a brasileira no mercado asiÃ¡tico mais sofisticado do mundo em termos de consumo e valorizaÃ§Ã£o dos cafÃ©s especiais de origem.</div>
+            <div class="ev-action">Selecionar</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="participacao-section" id="part-abr-2027"></div>
+
+    <!-- JUN 2027 -->
+    <div class="month-block reveal">
+      <div class="month-row"><span class="month-lbl">Junho 2027</span><div class="month-rule"></div></div>
+      <div class="events-grid">
+
+        <div class="ev-card" data-id="woc-europa" data-tag="WOC EUROPA 2027" data-name="World of Coffee Europa 2027" data-tipo="feira-sca" onclick="toggleEvent(this)">
+          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1548707309-dcebeab9ea9b?w=800&q=80&fit=crop&crop=center')"></div>
+          <div class="ev-overlay"></div>
+          <div class="ev-top">
+            <div class="ev-date">17â19 Jun 2027</div>
+            <div style="display:flex;gap:5px;align-items:center">
+              <div class="ev-badge sca">SCA Event</div>
+              <div class="ev-check"><span class="ev-check-v">â</span></div>
+            </div>
+          </div>
+          <div class="ev-body">
+            <div class="ev-loc">Portugal Â· Europa</div>
+            <div class="ev-name">World of Coffee Europa 2027</div>
+            <div class="ev-desc">EdiÃ§Ã£o europeia do World of Coffee, sediada em Portugal â porta de entrada para o mercado europeu e plataforma de conexÃ£o com importadores e torrefadores de toda a Europa.</div>
+            <div class="ev-action">Selecionar</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="participacao-section" id="part-jun-2027"></div>
+
+    <!-- CTA NÃO MEMBRO -->
+    <div class="membro-cta" id="membroCta">
+      <div class="mc-content">
+        <div class="mc-badge">ð BenefÃ­cio exclusivo</div>
+        <h3 class="mc-title">Seja Membro BSCA e acesse as aÃ§Ãµes do Projeto Setorial<br><em>"Brazil. The Coffee Nation"</em> com <strong>50% de desconto</strong></h3>
+        <p class="mc-desc">Membros BSCA adimplentes tÃªm 50% de reduÃ§Ã£o em todas as aÃ§Ãµes â bancada individual, cupping, brew bar e missÃµes. A adesÃ£o ao Projeto Setorial Ã© gratuita para ambos os perfis.</p>
+        <a href="https://www.bsca.com.br/membros/" target="_blank" class="mc-btn">Quero ser Membro BSCA â</a>
+        <p class="mc-note">A adesÃ£o ao Projeto Setorial Ã© gratuita Â· Membros e NÃ£o Membros</p>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- FLOATING BAR -->
 <div class="float-bar" id="floatBar">
   <div class="float-n" id="floatN">0</div>
-  <span class="float-txt">evento(s) selecionado(s)</span>
-  <button class="float-btn" onclick="document.getElementById('submit-section').scrollIntoView({behavior:'smooth'})">Confirmar →</button>
+  <span class="float-txt">aÃ§Ã£o(Ãµes) selecionada(s)</span>
+  <button class="float-btn" onclick="document.getElementById('submit-section').scrollIntoView({behavior:'smooth'})">Confirmar â</button>
 </div>
 
-<!-- SUBMIT -->
 <section class="submit-section" id="submit-section">
   <div id="submitForm">
     <div class="submit-wrap">
       <div class="submit-head reveal">
         <div class="s-eyebrow" style="justify-content:center">Etapa final</div>
         <h2 class="s-title">Confirme seu interesse</h2>
-        <p class="s-sub" style="margin:0 auto">Revise os eventos e envie. Nossa equipe entrará em contato em até 48h.</p>
+        <p class="s-sub" style="margin:0 auto">Revise os eventos e envie. Nossa equipe entrarÃ¡ em contato em atÃ© 48h.</p>
       </div>
-
       <div class="sel-box reveal">
-        <div class="sel-box-title">Eventos e tipos de participação selecionados</div>
-        <div class="sel-chips" id="selChips"><span class="sel-empty">Selecione eventos e tipos de participação acima.</span></div>
+        <div class="sel-box-title">AÃ§Ãµes e tipos de participaÃ§Ã£o selecionados</div>
+        <div class="sel-chips" id="selChips"><span class="sel-empty">Selecione aÃ§Ãµes e tipos de participaÃ§Ã£o acima.</span></div>
       </div>
-
       <div class="err-box" id="errBox"></div>
-
       <button class="btn-confirm" id="btnConfirm" onclick="handleSubmit()">
-        Enviar manifestação de interesse
+        Enviar manifestaÃ§Ã£o de interesse
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M11 5l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
-      <p class="submit-note">Ao enviar, você concorda com a <a href="https://www.bsca.com.br/politica-de-privacidade/" target="_blank">Política de Privacidade da BSCA</a>.</p>
+      <p class="submit-note">Ao enviar, vocÃª concorda com a <a href="https://www.bsca.com.br/politica-de-privacidade/" target="_blank">PolÃ­tica de Privacidade da BSCA</a>.</p>
     </div>
   </div>
-
   <div class="success" id="successScreen">
     <div class="success-ring"><svg viewBox="0 0 32 32"><path d="M6 16l8 8 12-12"/></svg></div>
     <h3>Interesse registrado!</h3>
-    <p>Recebemos seu cadastro. A equipe da BSCA entrará em contato em até 48h com as condições de participação e próximos passos.</p>
+    <p>Recebemos seu cadastro. A equipe da BSCA entrarÃ¡ em contato em atÃ© 48h com as condiÃ§Ãµes de participaÃ§Ã£o e prÃ³ximos passos.</p>
     <div class="success-chips" id="successChips"></div>
-    <div class="s-note">Brazil. The Coffee Nation · BSCA + ApexBrasil</div>
+    <div class="s-note">Brazil. The Coffee Nation Â· BSCA + ApexBrasil</div>
   </div>
 </section>
 
-<!-- ADESÃO AO PROJETO SETORIAL -->
 <section class="adesao" id="adesao">
   <div class="adesao-inner">
     <div class="adesao-copy reveal">
-      <div class="s-eyebrow">Adesão ao Projeto Setorial</div>
-      <h2 class="s-title">Faça parte do<br><em style="font-style:italic;font-weight:300">"Brasil. A Nação<br>do Café"</em></h2>
-      <p class="s-sub">A adesão ao projeto setorial é <strong style="color:rgba(255,255,255,.75)">gratuita</strong> para empresas e produtores que firmam o termo vinculado ao convênio BSCA + Apex-Brasil.</p>
+      <div class="s-eyebrow">AdesÃ£o ao Projeto Setorial</div>
+      <h2 class="s-title">FaÃ§a parte do<br><em style="font-style:italic;font-weight:300">"Brasil. A NaÃ§Ã£o<br>do CafÃ©"</em></h2>
+      <p class="s-sub">A adesÃ£o ao projeto setorial Ã© <strong style="color:rgba(255,255,255,.75)">gratuita</strong> para empresas e produtores que firmam o termo vinculado ao convÃªnio BSCA + Apex-Brasil.</p>
       <div class="adesao-lista">
-        <div class="al-item"><div class="al-dot"></div><div class="al-txt"><strong>Acesso a todos os eventos internacionais</strong> — feiras, missões e promoções do projeto 2025–2027</div></div>
-        <div class="al-item"><div class="al-dot"></div><div class="al-txt"><strong>50% de desconto</strong> em todas as ações para membros BSCA adimplentes</div></div>
-        <div class="al-item"><div class="al-dot"></div><div class="al-txt"><strong>Visibilidade internacional</strong> — exposição da marca brasileira em 5+ países estratégicos</div></div>
-        <div class="al-item"><div class="al-dot"></div><div class="al-txt"><strong>Apoio Apex-Brasil</strong> — cofinanciamento de 50% das ações de promoção comercial</div></div>
+        <div class="al-item"><div class="al-dot"></div><div class="al-txt"><strong>Acesso a todas as aÃ§Ãµes internacionais</strong> â feiras, missÃµes e promoÃ§Ãµes do projeto 2025â2027</div></div>
+        <div class="al-item"><div class="al-dot"></div><div class="al-txt"><strong>50% de desconto</strong> em todas as aÃ§Ãµes para membros BSCA adimplentes</div></div>
+        <div class="al-item"><div class="al-dot"></div><div class="al-txt"><strong>Visibilidade internacional</strong> â exposiÃ§Ã£o da marca brasileira em 11 paÃ­ses estratÃ©gicos</div></div>
+        <div class="al-item"><div class="al-dot"></div><div class="al-txt"><strong>Apoio Apex-Brasil</strong> â cofinanciamento de 50% das aÃ§Ãµes de promoÃ§Ã£o comercial</div></div>
       </div>
-
-      <!-- RÉGUA CENTRALIZADA -->
       <div class="regua-center">
-        <img
-          src="https://www.bsca.com.br/wp-content/uploads/2026/07/Regua-APEX-1536x416.png"
-          alt="Realização BSCA + Cafés do Brasil · Promoção ApexBrasil"
-        >
+        <img src="https://www.bsca.com.br/wp-content/uploads/2026/07/Regua-APEX-1536x416.png" alt="RealizaÃ§Ã£o BSCA + CafÃ©s do Brasil Â· PromoÃ§Ã£o ApexBrasil">
       </div>
     </div>
-
     <div class="adesao-box reveal">
-      <div class="badge"><span class="bdot"></span>Adesão gratuita</div>
-      <h4>Pronto para internacionalizar seu negócio?</h4>
-      <p>Faça sua adesão ao Projeto Setorial "Brazil. The Coffee Nation" e tenha acesso a oportunidades exclusivas no mercado internacional de cafés especiais.</p>
-      <a href="https://www.bsca.com.br/projeto-setorial/" target="_blank" class="btn-adesao">
-        Inscreva-se agora →
-      </a>
-      <p class="adesao-note">Gratuito · Sem compromisso · BSCA + ApexBrasil</p>
+      <div class="badge"><span class="bdot"></span>AdesÃ£o gratuita</div>
+      <h4>Pronto para internacionalizar seu negÃ³cio?</h4>
+      <p>FaÃ§a sua adesÃ£o ao Projeto Setorial "Brazil. The Coffee Nation" e tenha acesso a oportunidades exclusivas no mercado internacional de cafÃ©s especiais.</p>
+      <a href="https://www.bsca.com.br/projeto-setorial/" target="_blank" class="btn-adesao">Inscreva-se agora â</a>
+      <p class="adesao-note">Gratuito Â· Sem compromisso Â· BSCA + ApexBrasil</p>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="foot-inner">
     <div class="foot-top">
       <div class="foot-logo">
         <img src="https://www.bsca.com.br/wp-content/uploads/2025/09/Logo_BSCA-white.png" alt="BSCA">
-        <p>BRAZIL. THE COFFEE NATION · 2026 – 2027</p>
+        <p>BRAZIL. THE COFFEE NATION Â· 2026 â 2027</p>
       </div>
       <div class="foot-links">
         <a href="https://www.bsca.com.br/projeto-setorial/" target="_blank">Sobre o Projeto Setorial</a>
         <a href="https://www.bsca.com.br/membros/" target="_blank">Seja Membro BSCA</a>
-        <a href="https://www.bsca.com.br/missoes-e-feiras/" target="_blank">Missões e Feiras</a>
+        <a href="https://www.bsca.com.br/missoes-e-feiras/" target="_blank">MissÃµes e Feiras</a>
         <a href="mailto:info@bsca.com.br">info@bsca.com.br</a>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 Brazilian Specialty Coffee Association — BSCA</span>
+      <span>Â© 2026 Brazilian Specialty Coffee Association â BSCA</span>
       <a href="https://www.bsca.com.br/politica-de-privacidade/" target="_blank">Privacidade</a>
     </div>
   </div>
 </footer>
 
-<!-- ============================================================
-     JAVASCRIPT
-============================================================ -->
 <script>
 /* ================================================================
-   CONFIG
+   CONFIG â preencha antes de publicar
 ================================================================ */
-const MAILCHIMP_URL = ''; // 'https://bsca.us17.list-manage.com/subscribe/post?u=XXX&id=YYY'
-const MONDAY_HOOK   = 'https://hook.us2.make.com/wonhep92y3ur7xgkbhiuhsklmhh3e2op';
+// Mailchimp: copie a URL do formulÃ¡rio incorporado da sua audiÃªncia NEWSLETTER
+// Exemplo: 'https://bsca.us17.list-manage.com/subscribe/post?u=XXXX&id=YYYY'
+const MAILCHIMP_URL = '';
+
+// Make.com webhook (jÃ¡ configurado)
+const MONDAY_HOOK = 'https://hook.us2.make.com/wonhep92y3ur7xgkbhiuhsklmhh3e2op';
+
+// Tags fixas adicionadas a todos os leads no Mailchimp
+const MC_TAG_BASE = 'INTERESSE MERCADOS';
 
 /* ================================================================
-   PARTICIPATION TYPES — per event type
+   PARTICIPATION OPTIONS â sem valores
 ================================================================ */
 const PART_OPTS = {
-  // SCA events abroad (WOC Panama, WOC Dubai)
-  'exterior-sca': [
-    { id:'bancada-individual',   label:'Bancada Individual',   pMembro:'USD 2.100', pNao:'USD 4.200' },
-    { id:'bancada-compartilhada',label:'Bancada Compartilhada',pMembro:'USD 900',   pNao:'USD 1.800' },
-    { id:'cupping',              label:'Sala de Cupping',       pMembro:'BRL 2.250', pNao:'BRL 4.500' },
-    { id:'brew-bar',             label:'Brew Bar Show',         pMembro:'USD 250',   pNao:'USD 500'   },
-    { id:'missao',               label:'Missão Visitante',      pMembro:'A consultar', pNao:'A consultar' },
+  'feira': [
+    { id:'bancada-individual',    label:'Bancada Individual'    },
+    { id:'bancada-compartilhada', label:'Bancada Compartilhada' },
+    { id:'cupping',               label:'Sala de Cupping'       },
+    { id:'brew-bar',              label:'Brew Bar Show'         },
+    { id:'missao-visitante',      label:'MissÃ£o Visitante'      },
   ],
-  // Non-SCA exterior events (SCAJ, Taiwan, Café Show)
-  'exterior-nao-sca': [
-    { id:'bancada-individual',   label:'Bancada Individual',   pMembro:'USD 1.500', pNao:'USD 3.000' },
-    { id:'bancada-compartilhada',label:'Bancada Compartilhada',pMembro:'USD 900',   pNao:'USD 1.800' },
-    { id:'cupping',              label:'Sala de Cupping',       pMembro:'BRL 2.250', pNao:'BRL 4.500' },
-    { id:'brew-bar',             label:'Brew Bar Show',         pMembro:'USD 250',   pNao:'USD 500'   },
-    { id:'missao',               label:'Missão Visitante',      pMembro:'A consultar', pNao:'A consultar' },
+  'feira-sca': [
+    { id:'bancada-individual',    label:'Bancada Individual'    },
+    { id:'bancada-compartilhada', label:'Bancada Compartilhada' },
+    { id:'cupping',               label:'Sala de Cupping'       },
+    { id:'brew-bar',              label:'Brew Bar Show'         },
+    { id:'missao-visitante',      label:'MissÃ£o Visitante'      },
   ],
-  // Brazil events (SIC)
-  'brasil': [
-    { id:'bancada-individual',   label:'Bancada Individual',   pMembro:'BRL 3.200', pNao:'BRL 6.400' },
-    { id:'bancada-compartilhada',label:'Bancada Compartilhada',pMembro:'BRL 3.200', pNao:'BRL 6.400' },
-    { id:'cupping',              label:'Sala de Cupping',       pMembro:'BRL 2.250', pNao:'BRL 4.500' },
-    { id:'brew-bar',             label:'Brew Bar Show',         pMembro:'BRL 350',   pNao:'BRL 700'   },
-    { id:'missao',               label:'Missão Visitante',      pMembro:'A consultar', pNao:'A consultar' },
+  'missao': [
+    { id:'participante',          label:'Participar da MissÃ£o'  },
+  ],
+  'concurso': [
+    { id:'amostras',              label:'Envio de Amostras'     },
+    { id:'visitante',             label:'Visita ao Evento'      },
   ],
 };
 
-/* Event → month panel mapping */
+/* Event â month panel mapping */
 const MONTH_MAP = {
-  'scaj-2026':       'part-out-2026',
-  'woc-panama-2026': 'part-out-2026',
-  'sic-2026':        'part-nov-2026',
-  'taiwan-2026':     'part-nov-2026',
-  'cafe-show-2026':  'part-nov-2026',
-  'woc-dubai-2027':  'part-jan-2027',
+  'expocafe-chile':   'part-jul-2026',
+  'missao-chile':     'part-jul-2026',
+  'scaj-2026':        'part-out-2026',
+  'taste-harvest':    'part-out-2026',
+  'woc-panama':       'part-out-2026',
+  'missao-panama':    'part-out-2026',
+  'sic-2026':         'part-nov-2026',
+  'cafe-show-seoul':  'part-nov-2026',
+  'missao-asia':      'part-nov-2026',
+  'woc-dubai':        'part-jan-2027',
+  'coffeefest-madrid':'part-mar-2027',
+  'hotelex-shanghai': 'part-mar-2027',
+  'woc-new-orleans':  'part-abr-2027',
+  'woc-tokyo':        'part-abr-2027',
+  'woc-europa':       'part-jun-2027',
 };
-
-const EVENT_IDS = ['scaj-2026','woc-panama-2026','sic-2026','taiwan-2026','cafe-show-2026','woc-dubai-2027'];
 
 /* ================================================================
    STATE
 ================================================================ */
-const selected  = new Set();
-let isMembro    = true;
-const partSelections = {}; // { eventId: Set([opt ids]) }
+const selected       = new Set();
+const partSelections = {};
+let isMembro         = true;
 
 /* ================================================================
    SCROLL REVEAL
@@ -1100,18 +859,6 @@ const ro = new IntersectionObserver(es => {
 document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
 /* ================================================================
-   PROJETO SETORIAL CHECK
-================================================================ */
-let projetoMembro = null;
-
-function setProjetoMembro(sim){
-  projetoMembro = sim;
-  document.getElementById('pcSim').classList.toggle('active', sim);
-  document.getElementById('pcNao').classList.toggle('active', !sim);
-  document.getElementById('pcNaoInfo').classList.toggle('show', !sim);
-}
-
-/* ================================================================
    MEMBER TOGGLE
 ================================================================ */
 function setMember(m){
@@ -1120,19 +867,6 @@ function setMember(m){
   document.getElementById('btnNao').className    = 'tg-btn' + (!m ? ' a-nao' : '');
   document.getElementById('naoNote').className   = 'nao-note' + (!m ? ' show' : '');
   document.getElementById('membroCta').classList.toggle('show', !m);
-  EVENT_IDS.forEach(id => {
-    const pw = document.getElementById(`price-${id}`);
-    const pm = document.getElementById(`pm-${id}`);
-    const pn = document.getElementById(`pn-${id}`);
-    const ps = document.getElementById(`ps-${id}`);
-    if(!pw) return;
-    pw.classList.toggle('show', true);
-    pm.style.display = m ? 'block' : 'none';
-    pn.style.display = !m ? 'block' : 'none';
-    if(ps) ps.style.display = !m ? 'block' : 'none';
-  });
-  // Re-render participation panels with updated prices
-  selected.forEach(id => renderPartPanel(id));
 }
 
 /* ================================================================
@@ -1143,7 +877,7 @@ function toggleEvent(card){
   if(selected.has(id)){
     selected.delete(id);
     card.classList.remove('selected');
-    if(partSelections[id]) delete partSelections[id];
+    delete partSelections[id];
   } else {
     selected.add(id);
     card.classList.add('selected');
@@ -1155,62 +889,58 @@ function toggleEvent(card){
 }
 
 function updatePanels(){
-  // For each month panel, determine which events in that month are selected
   const months = {
-    'part-out-2026': ['scaj-2026','woc-panama-2026'],
-    'part-nov-2026': ['sic-2026','taiwan-2026','cafe-show-2026'],
-    'part-jan-2027': ['woc-dubai-2027'],
+    'part-jul-2026':  ['expocafe-chile','missao-chile'],
+    'part-out-2026':  ['scaj-2026','taste-harvest','woc-panama','missao-panama'],
+    'part-nov-2026':  ['sic-2026','cafe-show-seoul','missao-asia'],
+    'part-jan-2027':  ['woc-dubai'],
+    'part-mar-2027':  ['coffeefest-madrid','hotelex-shanghai'],
+    'part-abr-2027':  ['woc-new-orleans','woc-tokyo'],
+    'part-jun-2027':  ['woc-europa'],
   };
   Object.entries(months).forEach(([panelId, evIds]) => {
     const panel = document.getElementById(panelId);
     if(!panel) return;
-    const activeEvs = evIds.filter(id => selected.has(id));
-    if(!activeEvs.length){
-      panel.classList.remove('show');
-      panel.innerHTML = '';
-      return;
-    }
+    const active = evIds.filter(id => selected.has(id));
+    if(!active.length){ panel.classList.remove('show'); panel.innerHTML=''; return; }
     panel.classList.add('show');
-    renderPanelContent(panel, activeEvs);
+    renderPanelContent(panel, active);
   });
 }
 
 function renderPanelContent(panel, evIds){
   panel.innerHTML = `
-    <div class="ptitle">Como você quer participar?</div>
+    <div class="ptitle">Como vocÃª quer participar?</div>
     <div class="p-events-list">
       ${evIds.map(id => {
         const card = document.querySelector(`[data-id="${id}"]`);
         const tipo = card.dataset.tipo;
-        const opts = PART_OPTS[tipo] || PART_OPTS['exterior-nao-sca'];
+        const opts = PART_OPTS[tipo] || PART_OPTS['feira'];
         const sel  = partSelections[id] || new Set();
         return `
           <div class="p-event-block">
             <div class="p-event-name">${card.dataset.name}</div>
             <div class="p-opts">
               ${opts.map(o => {
-                const price = isMembro ? o.pMembro : o.pNao;
                 const isSel = sel.has(o.id);
-                return `
-                  <label class="p-opt ${isSel ? 'selected' : ''}" onclick="togglePart('${id}','${o.id}',this)">
-                    <div class="p-opt-check">${isSel ? '✓' : ''}</div>
-                    ${o.label}
-                    <span class="p-opt-price">${price}</span>
-                  </label>`;
+                return `<label class="p-opt${isSel?' selected':''}" onclick="togglePart('${id}','${o.id}',this)">
+                  <div class="p-opt-check">${isSel?'â':''}</div>
+                  ${o.label}
+                </label>`;
               }).join('')}
             </div>
           </div>`;
       }).join('')}
     </div>
-    <p class="p-require-note">Selecione pelo menos um tipo de participação por evento. Os valores acima são por bancada (Bancada Individual), por sessão (Cupping) ou por ação (Brew Bar). Informações finais serão confirmadas pela equipe BSCA.</p>
+    <p class="p-require-note">Selecione ao menos uma modalidade por aÃ§Ã£o. Os detalhes finais serÃ£o confirmados pela equipe BSCA.</p>
   `;
 }
 
 function togglePart(evId, optId, label){
   if(!partSelections[evId]) partSelections[evId] = new Set();
   const s = partSelections[evId];
-  if(s.has(optId)){ s.delete(optId); label.classList.remove('selected'); label.querySelector('.p-opt-check').textContent = ''; }
-  else            { s.add(optId);    label.classList.add('selected');    label.querySelector('.p-opt-check').textContent = '✓'; }
+  if(s.has(optId)){ s.delete(optId); label.classList.remove('selected'); label.querySelector('.p-opt-check').textContent=''; }
+  else             { s.add(optId);   label.classList.add('selected');    label.querySelector('.p-opt-check').textContent='â'; }
   updateSelChips();
 }
 
@@ -1225,14 +955,15 @@ function updateFloatBar(){
 
 function updateSelChips(){
   const el = document.getElementById('selChips');
-  if(!selected.size){ el.innerHTML = '<span class="sel-empty">Selecione eventos e tipos de participação acima.</span>'; return; }
+  if(!selected.size){ el.innerHTML='<span class="sel-empty">Selecione aÃ§Ãµes e tipos de participaÃ§Ã£o acima.</span>'; return; }
   let html = '';
   document.querySelectorAll('.ev-card.selected').forEach(c => {
     const id = c.dataset.id;
     const opts = partSelections[id];
+    const tipo = c.dataset.tipo;
     const optLabels = opts && opts.size
-      ? [...opts].map(o => PART_OPTS[c.dataset.tipo]?.find(p=>p.id===o)?.label || o).join(', ')
-      : '<em style="opacity:.6">— tipo a definir</em>';
+      ? [...opts].map(o => PART_OPTS[tipo]?.find(p=>p.id===o)?.label||o).join(', ')
+      : '<em style="opacity:.6">â tipo a definir</em>';
     html += `<div class="sel-chip" style="flex-direction:column;align-items:flex-start;gap:2px;border-radius:10px;padding:10px 14px">
       <span style="font-weight:700">${c.dataset.name}</span>
       <span style="font-size:11px;font-weight:400;color:var(--green-mid)">${optLabels}</span>
@@ -1246,8 +977,8 @@ function updateSelChips(){
 ================================================================ */
 document.getElementById('fTelefone').addEventListener('input', function(){
   let v = this.value.replace(/\D/g,'').slice(0,11);
-  this.value = v.length <= 10
-    ? v.replace(/^(\d{0,2})(\d{0,4})(\d{0,4})$/,(_,a,b,c)=>a?(b?`(${a}) ${b}`+(c?`-${c}`:''):`(${a}`):'')
+  this.value = v.length<=10
+    ? v.replace(/^(\d{0,2})(\d{0,4})(\d{0,4})$/,(_,a,b,c)=>a?(b?(`(${a}) ${b}`+(c?`-${c}`:'')):`(${a}`):'')
     : v.replace(/^(\d{2})(\d{5})(\d{0,4})$/,'($1) $2-$3');
 });
 
@@ -1255,7 +986,7 @@ document.getElementById('fTelefone').addEventListener('input', function(){
    VALIDATION
 ================================================================ */
 function showErr(msg){ const b=document.getElementById('errBox'); b.textContent=msg; b.classList.add('show'); b.scrollIntoView({behavior:'smooth',block:'center'}); }
-function clearErr()  { document.getElementById('errBox').classList.remove('show'); }
+function clearErr(){ document.getElementById('errBox').classList.remove('show'); }
 
 function validate(){
   ['fNome','fEmpresa','fEmail','fTelefone'].forEach(id=>document.getElementById(id).classList.remove('err'));
@@ -1266,75 +997,113 @@ function validate(){
   const t=document.getElementById('fTelefone').value.trim();
   if(!n){ document.getElementById('fNome').classList.add('err'); showErr('Preencha seu nome completo.'); return false; }
   if(!e){ document.getElementById('fEmpresa').classList.add('err'); showErr('Informe a empresa ou propriedade.'); return false; }
-  if(!m||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(m)){ document.getElementById('fEmail').classList.add('err'); showErr('Informe um e-mail válido.'); return false; }
+  if(!m||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(m)){ document.getElementById('fEmail').classList.add('err'); showErr('Informe um e-mail vÃ¡lido.'); return false; }
   if(!t){ document.getElementById('fTelefone').classList.add('err'); showErr('Informe o telefone ou WhatsApp.'); return false; }
-  if(!selected.size){ showErr('Selecione pelo menos um evento antes de enviar.'); return false; }
+  if(!selected.size){ showErr('Selecione pelo menos uma aÃ§Ã£o antes de enviar.'); return false; }
   return true;
 }
 
 /* ================================================================
-   SUBMIT
+   SUBMIT + INTEGRATIONS
 ================================================================ */
 function handleSubmit(){
   if(!validate()) return;
-  const btn=document.getElementById('btnConfirm');
-  btn.disabled=true; btn.innerHTML='<span style="opacity:.5">Enviando…</span>';
+  const btn = document.getElementById('btnConfirm');
+  btn.disabled = true;
+  btn.innerHTML = '<span style="opacity:.5">Enviandoâ¦</span>';
 
   const nome    = document.getElementById('fNome').value.trim();
   const empresa = document.getElementById('fEmpresa').value.trim();
   const email   = document.getElementById('fEmail').value.trim();
   const tel     = document.getElementById('fTelefone').value.trim();
-  const perfil  = isMembro ? 'Membro BSCA' : 'Não Membro BSCA';
+  const perfil  = isMembro ? 'Membro BSCA' : 'NÃ£o Membro BSCA';
 
-  const evCards = [...document.querySelectorAll('.ev-card.selected')];
-  const evNames = evCards.map(c => c.dataset.name);
-  const evTags  = evCards.map(c => c.dataset.tag);
+  const evCards  = [...document.querySelectorAll('.ev-card.selected')];
+  const evNames  = evCards.map(c => c.dataset.name);
+  const evTags   = evCards.map(c => c.dataset.tag);   // tags por aÃ§Ã£o
+  const mcTags   = [MC_TAG_BASE, ...evTags];           // INTERESSE MERCADOS + tag de cada aÃ§Ã£o
 
-  // Build detailed participation string
+  // Detalhes de participaÃ§Ã£o por aÃ§Ã£o
   const detalhes = evCards.map(c => {
-    const id = c.dataset.id;
-    const opts = partSelections[id];
+    const id   = c.dataset.id;
     const tipo = c.dataset.tipo;
-    const optLabels = opts && opts.size
-      ? [...opts].map(o => PART_OPTS[tipo]?.find(p=>p.id===o)?.label || o).join(', ')
+    const opts = partSelections[id];
+    const mods = opts && opts.size
+      ? [...opts].map(o => PART_OPTS[tipo]?.find(p=>p.id===o)?.label||o).join(', ')
       : 'A definir';
-    return `${c.dataset.name}: ${optLabels}`;
+    return `${c.dataset.name}: ${mods}`;
   }).join(' | ');
 
+  /* âââ 1. Make.com webhook âââ */
+  // O payload inclui mc_tags para o Make.com aplicar via Mailchimp API
   if(MONDAY_HOOK){
-    fetch(MONDAY_HOOK,{
-      method:'POST', headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({ nome, empresa, email, telefone:tel, perfil, eventos:evNames.join(', '), detalhes_participacao:detalhes, fonte:'interesse-setorial-bcn' })
+    fetch(MONDAY_HOOK, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        nome,
+        empresa,
+        email,
+        telefone:   tel,
+        perfil,
+        eventos:    evNames.join('; '),
+        detalhes_participacao: detalhes,
+        fonte:      'interesse-setorial-bcn',
+        // âââ Mailchimp âââ
+        // Configure o cenÃ¡rio Make.com para:
+        // 1. Criar item no Monday.com (jÃ¡ configurado)
+        // 2. Chamar Mailchimp API POST /lists/{id}/members com:
+        //    status: "subscribed", email_address: email,
+        //    merge_fields: { FNAME, LMAME PHONE, EMPRESA },
+        //    tags: mc_tags (abaixo)
+        mc_audience:  'NEWSLETTER',
+        mc_tags:      mcTags,
+      })
     }).catch(()=>{});
   }
 
+  /* âââ 2. Mailchimp JSONP (assinatura direta na audiÃªncia NEWSLETTER) âââ */
+  // Preencha MAILCHIMP_URL com a URL do formulÃ¡rio incorporado da sua lista.
+  // As tags por aÃ§Ã£o sÃ£o aplicadas via Make.com (mc_tags acima).
   if(MAILCHIMP_URL){
-    const [fn,...rest]=nome.split(/\s+/);
-    const cb='mc_'+Date.now();
-    window[cb]=()=>{ delete window[cb]; };
-    const url=MAILCHIMP_URL.replace(/\/post(\?)/,'/post-json$1')+'&'+
-      new URLSearchParams({EMAIL:email,FNAME:fn,LNAME:rest.join(' '),PHONE:tel,EMPRESA:empresa,EVENTOS:evNames.join(', '),PARTICIP:detalhes,PERFIL:perfil,c:cb});
-    const sc=document.createElement('script');sc.src=url;document.head.appendChild(sc);
-    setTimeout(()=>{ if(window[cb])delete window[cb]; if(sc.parentNode)sc.parentNode.removeChild(sc); },8000);
+    const [fn, ...rest] = nome.split(/\s+/);
+    const cb = 'mc_' + Date.now();
+    window[cb] = () => { delete window[cb]; };
+    const url = MAILCHIMP_URL.replace('/post?', '/post-json?') + '&' + new URLSearchParams({
+      EMAIL:    email,
+      FNAME:    fn,
+      LNAME:    rest.join(' '),
+      PHONE:    tel,
+      EMPRESA:  empresa,
+      EVENTOS:  evNames.join('; '),
+      PERFIL:   perfil,
+      c:        cb,
+    });
+    const sc = document.createElement('script');
+    sc.src = url;
+    document.head.appendChild(sc);
+    setTimeout(() => { if(window[cb]) delete window[cb]; if(sc.parentNode) sc.parentNode.removeChild(sc); }, 8000);
   }
 
-  setTimeout(()=>showSuccess(evCards), 900);
+  setTimeout(() => showSuccess(evCards), 900);
 }
 
 function showSuccess(evCards){
-  document.getElementById('submitForm').style.display='none';
-  const ss=document.getElementById('successScreen');
+  document.getElementById('submitForm').style.display = 'none';
+  const ss = document.getElementById('successScreen');
   ss.classList.add('show');
   document.getElementById('successChips').innerHTML = evCards.map(c => {
-    const id=c.dataset.id, tipo=c.dataset.tipo;
-    const opts=partSelections[id];
-    const labels=opts&&opts.size ? [...opts].map(o=>PART_OPTS[tipo]?.find(p=>p.id===o)?.label||o).join(', '):'A definir';
+    const id = c.dataset.id, tipo = c.dataset.tipo;
+    const opts = partSelections[id];
+    const labels = opts && opts.size
+      ? [...opts].map(o => PART_OPTS[tipo]?.find(p=>p.id===o)?.label||o).join(', ')
+      : 'A definir';
     return `<div class="sel-chip" style="flex-direction:column;align-items:flex-start;gap:2px;border-radius:10px;padding:10px 14px">
       <span style="font-weight:700">${c.dataset.name}</span>
       <span style="font-size:11px;color:var(--green-mid)">${labels}</span>
     </div>`;
   }).join('');
-  ss.scrollIntoView({behavior:'smooth',block:'center'});
+  ss.scrollIntoView({ behavior:'smooth', block:'center' });
   document.getElementById('floatBar').classList.remove('show');
 }
 </script>
