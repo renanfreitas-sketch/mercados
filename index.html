@@ -111,7 +111,7 @@ header{ background:var(--white); border-bottom:1px solid var(--line); padding:0 
 .toggle-label{ font-size:13px; font-weight:500; color:var(--ink-soft) }
 .toggle-label strong{ color:var(--ink); font-weight:600 }
 .toggle-group{ display:flex; gap:4px; background:var(--cream); border:1.5px solid var(--line); border-radius:8px; padding:4px }
-.tg-btn{ font-family:'Poppins',sans-serif; font-size:12px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; padding:9px 22px; border-radius:6px; border:none; cursor:pointer; color:var(--ink-soft); background:transparent; transition:all .2s; white-space:nowrap }
+.tg-btn{ font-family:'Poppins',sans-serif; font-size:12px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; padding:9px 22px; border-radius:6px; border:none; cursor:pointer; color:var(--ink-soft); background:transparent; transition:all .2s;white-space:nowrap }
 .tg-btn.a-membro{ background:var(--green); color:var(--white); box-shadow:0 3px 12px rgba(27,67,50,.3) }
 .tg-btn.a-nao{ background:var(--gold-pale); color:var(--gold); border:1.5px solid var(--gold-border) }
 .nao-note{ display:none; align-items:flex-start; gap:12px; background:var(--gold-pale); border:1.5px solid var(--gold-border); border-radius:10px; padding:14px 18px; margin-bottom:28px; font-size:12.5px; font-weight:400; color:var(--ink-soft); line-height:1.55 }
@@ -139,6 +139,7 @@ header{ background:var(--white); border-bottom:1px solid var(--line); padding:0 
 .ev-badge.missao{ background:rgba(200,151,58,.85); color:var(--ink) }
 .ev-badge.sca{ background:rgba(27,67,50,.85); color:var(--white); border:1px solid rgba(255,255,255,.2) }
 .ev-badge.concurso{ background:rgba(82,183,136,.85); color:var(--ink) }
+.ev-badge.evento{ background:rgba(27,67,50,.82); color:var(--white); border:1px solid rgba(255,255,255,.2) }
 .ev-check{ width:28px; height:28px; border-radius:50%; border:1.5px solid rgba(255,255,255,.4); background:rgba(255,255,255,.12); backdrop-filter:blur(8px); display:flex; align-items:center; justify-content:center; transition:all .22s; opacity:.7; flex-shrink:0 }
 .ev-card.selected .ev-check{ background:var(--green); border-color:var(--green); box-shadow:0 3px 14px rgba(27,67,50,.55); opacity:1 }
 .ev-check-v{ font-size:12px; font-weight:900; color:var(--white); opacity:0; transition:opacity .18s }
@@ -316,7 +317,7 @@ footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); paddi
   <div class="stats-inner">
     <div class="stat-item"><div class="stat-n">15</div><div class="stat-l">Ações previstas 2026–2027</div></div>
     <div class="stat-item"><div class="stat-n">11</div><div class="stat-l">Países estratégicos</div></div>
-    <div class="stat-item"><div class="stat-n">50<span>%</span></div><div class="stat-l">de desconto para Membros BSCA nas ações do Projeto Setorial</div></div>
+    <div class="stat-item"><div class="stat-n">50<span>%</span></div><div class="stat-l">de desconto para Membros BSCA</div></div>
   </div>
 </div>
 
@@ -326,7 +327,7 @@ footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); paddi
       <div class="form-aside reveal">
         <div class="s-eyebrow">Seus dados</div>
         <h2 class="s-title">Registre seu interesse</h2>
-        <p class="s-sub">Preencha abaixo para que nossa equipe entre em contato com as condições de participação de cada ação.</p>
+        <p class="s-sub">Preencha abaixo para receber informações quando as inscrições abrirem.</p>
         <div class="feat-list">
           <div class="feat-row"><div class="feat-ico">🌎</div><div class="feat-txt"><strong>Alcance global</strong><span>Feiras e missões em mais de 11 países.</span></div></div>
           <div class="feat-row"><div class="feat-ico">🤝</div><div class="feat-txt"><strong>Suporte completo</strong><span>Equipe BSCA acompanha toda a sua participação</span></div></div>
@@ -356,7 +357,7 @@ footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); paddi
   <div class="events-wrap">
 
     <div class="events-head reveal" style="margin-bottom:40px">
-      <div class="s-eyebrow">Ações confirmadas · 2026 – 2027</div>
+      <div class="s-eyebrow">Ações previstas · 2026 – 2027</div>
       <h2 class="s-title">Selecione as ações de interesse</h2>
       <p class="s-sub">Feiras internacionais, missões comerciais e ações promocionais. Selecione quantas quiser e informe o tipo de participação de interesse.</p>
     </div>
@@ -383,7 +384,10 @@ footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); paddi
           <div class="ev-overlay"></div>
           <div class="ev-top">
             <div class="ev-date">14–16 Out 2026</div>
-            <div class="ev-check"><span class="ev-check-v">✓</span></div>
+            <div style="display:flex;gap:5px;align-items:center">
+              <div class="ev-badge evento">Evento</div>
+              <div class="ev-check"><span class="ev-check-v">✓</span></div>
+            </div>
           </div>
           <div class="ev-body">
             <div class="ev-loc">Tóquio, Japão · Tokyo Big Sight</div>
@@ -393,13 +397,13 @@ footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); paddi
           </div>
         </div>
 
-        <div class="ev-card" data-id="taste-harvest" data-tag="TASTE OF THE HARVEST 2026" data-name="Taste of the Harvest 2026" data-tipo="concurso" onclick="toggleEvent(this)">
-          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=800&q=80&fit=crop&crop=center')"></div>
+        <div class="ev-card" data-id="taste-harvest" data-tag="TASTE OF THE HARVEST 2026" data-name="Taste of the Harvest 2026" data-tipo="missao" onclick="toggleEvent(this)">
+          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80&fit=crop&crop=center')"></div>
           <div class="ev-overlay"></div>
           <div class="ev-top">
             <div class="ev-date">14–16 Out 2026</div>
             <div style="display:flex;gap:5px;align-items:center">
-              <div class="ev-badge concurso">Concurso</div>
+              <div class="ev-badge missao">Missão</div>
               <div class="ev-check"><span class="ev-check-v">✓</span></div>
             </div>
           </div>
@@ -412,12 +416,12 @@ footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); paddi
         </div>
 
         <div class="ev-card" data-id="woc-panama" data-tag="WOC PANAMA 2026" data-name="World of Coffee Panamá" data-tipo="feira-sca" onclick="toggleEvent(this)">
-          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1605298613890-b82abd3793e8?w=800&q=80&fit=crop&crop=center')"></div>
+          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&q=80&fit=crop&crop=center')"></div>
           <div class="ev-overlay"></div>
           <div class="ev-top">
             <div class="ev-date">22–25 Out 2026</div>
             <div style="display:flex;gap:5px;align-items:center">
-              <div class="ev-badge sca">SCA Event</div>
+              <div class="ev-badge evento">Evento</div>
               <div class="ev-check"><span class="ev-check-v">✓</span></div>
             </div>
           </div>
@@ -430,7 +434,7 @@ footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); paddi
         </div>
 
         <div class="ev-card" data-id="missao-panama" data-tag="MISSAO PANAMA 2026" data-name="Missão Panamá 2026" data-tipo="missao" onclick="toggleEvent(this)">
-          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1508736793122-f516e3ba5569?w=800&q=80&fit=crop&crop=center')"></div>
+          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?w=800&q=80&fit=crop&crop=center')"></div>
           <div class="ev-overlay"></div>
           <div class="ev-top">
             <div class="ev-date">26–27 Out 2026</div>
@@ -457,11 +461,14 @@ footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); paddi
       <div class="events-grid">
 
         <div class="ev-card" data-id="sic-2026" data-tag="SIC 2026" data-name="SIC 2026 – Projeto Comprador" data-tipo="feira" onclick="toggleEvent(this)">
-          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1464983953574-0892a716854b?w=800&q=80&fit=crop&crop=center')"></div>
+          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1540575467537-05e7a30cf1b2?w=800&q=80&fit=crop&crop=center')"></div>
           <div class="ev-overlay"></div>
           <div class="ev-top">
             <div class="ev-date">11–13 Nov 2026</div>
-            <div class="ev-check"><span class="ev-check-v">✓</span></div>
+            <div style="display:flex;gap:5px;align-items:center">
+              <div class="ev-badge evento">Evento</div>
+              <div class="ev-check"><span class="ev-check-v">✓</span></div>
+            </div>
           </div>
           <div class="ev-body">
             <div class="ev-loc">Brasil · Projeto Comprador</div>
@@ -476,30 +483,15 @@ footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); paddi
           <div class="ev-overlay"></div>
           <div class="ev-top">
             <div class="ev-date">11–14 Nov 2026</div>
-            <div class="ev-check"><span class="ev-check-v">✓</span></div>
+            <div style="display:flex;gap:5px;align-items:center">
+              <div class="ev-badge evento">Evento</div>
+              <div class="ev-check"><span class="ev-check-v">✓</span></div>
+            </div>
           </div>
           <div class="ev-body">
             <div class="ev-loc">Seul, Coreia do Sul</div>
             <div class="ev-name">Seoul Intl Cafe Show 2026</div>
             <div class="ev-desc">O maior evento de café da Coreia do Sul, um dos mercados que mais cresce no consumo de cafés especiais no mundo. Acesso direto a redes de cafeterias, torrefadores e distribuidores coreanos.</div>
-            <div class="ev-action">Selecionar</div>
-          </div>
-        </div>
-
-        <div class="ev-card" data-id="missao-asia" data-tag="MISSAO COMERCIAL ASIA 2026" data-name="Missão Comercial Ásia 2026" data-tipo="missao" onclick="toggleEvent(this)">
-          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1536599018102-9f803c140fc1?w=800&q=80&fit=crop&crop=center')"></div>
-          <div class="ev-overlay"></div>
-          <div class="ev-top">
-            <div class="ev-date">11–18 Nov 2026</div>
-            <div style="display:flex;gap:5px;align-items:center">
-              <div class="ev-badge missao">Missão</div>
-              <div class="ev-check"><span class="ev-check-v">✓</span></div>
-            </div>
-          </div>
-          <div class="ev-body">
-            <div class="ev-loc">China e Coreia do Sul</div>
-            <div class="ev-name">Missão Comercial Ásia 2026</div>
-            <div class="ev-desc">Missão comercial multi-destino percorrendo os principais mercados asiáticos — Coreia do Sul e China — com agenda de reuniões com importadores, torrefadores e distribuidores de café especial.</div>
             <div class="ev-action">Selecionar</div>
           </div>
         </div>
@@ -519,7 +511,7 @@ footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); paddi
           <div class="ev-top">
             <div class="ev-date">26–28 Jan 2027</div>
             <div style="display:flex;gap:5px;align-items:center">
-              <div class="ev-badge sca">SCA Event</div>
+              <div class="ev-badge evento">Evento</div>
               <div class="ev-check"><span class="ev-check-v">✓</span></div>
             </div>
           </div>
@@ -527,6 +519,24 @@ footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); paddi
             <div class="ev-loc">Dubai, Emirados Árabes</div>
             <div class="ev-name">World of Coffee Dubai 2027</div>
             <div class="ev-desc">Porta de entrada para o Oriente Médio — uma das regiões com maior crescimento no consumo de cafés especiais. O evento reúne compradores de todo o mundo árabe e da Ásia Central.</div>
+            <div class="ev-action">Selecionar</div>
+          </div>
+        </div>
+
+        <div class="ev-card" data-id="missao-oriente-medio-2027" data-tag="MISSAO ORIENTE MEDIO 2027" data-name="Missão Comercial Oriente Médio 2027" data-tipo="missao" onclick="toggleEvent(this)">
+          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&q=80&fit=crop&crop=center')"></div>
+          <div class="ev-overlay"></div>
+          <div class="ev-top">
+            <div class="ev-date">20–28 Jan 2027</div>
+            <div style="display:flex;gap:5px;align-items:center">
+              <div class="ev-badge missao">Missão</div>
+              <div class="ev-check"><span class="ev-check-v">✓</span></div>
+            </div>
+          </div>
+          <div class="ev-body">
+            <div class="ev-loc">Emirados Árabes Unidos</div>
+            <div class="ev-name">Missão Comercial Oriente Médio 2027</div>
+            <div class="ev-desc">Missão comercial ao Oriente Médio com agenda de reuniões de negócios com importadores, torrefadores e distribuidores da região — um dos mercados que mais cresce no consumo de cafés especiais.</div>
             <div class="ev-action">Selecionar</div>
           </div>
         </div>
@@ -570,6 +580,24 @@ footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); paddi
           </div>
         </div>
 
+        <div class="ev-card" data-id="missao-asia-2027" data-tag="MISSAO ASIA 2027" data-name="Missão Comercial Ásia 2027" data-tipo="missao" onclick="toggleEvent(this)">
+          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=800&q=80&fit=crop&crop=center')"></div>
+          <div class="ev-overlay"></div>
+          <div class="ev-top">
+            <div class="ev-date">25 Mar–2 Abr 2027</div>
+            <div style="display:flex;gap:5px;align-items:center">
+              <div class="ev-badge missao">Missão</div>
+              <div class="ev-check"><span class="ev-check-v">✓</span></div>
+            </div>
+          </div>
+          <div class="ev-body">
+            <div class="ev-loc">China</div>
+            <div class="ev-name">Missão Comercial Ásia 2027</div>
+            <div class="ev-desc">Missão comercial à Ásia com agenda de reuniões de negócios junto a importadores, torrefadores e distribuidores — mercado de maior crescimento no consumo de cafés especiais na última década.</div>
+            <div class="ev-action">Selecionar</div>
+          </div>
+        </div>
+
       </div>
     </div>
     <div class="participacao-section" id="part-mar-2027"></div>
@@ -585,7 +613,7 @@ footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); paddi
           <div class="ev-top">
             <div class="ev-date">9–11 Abr 2027</div>
             <div style="display:flex;gap:5px;align-items:center">
-              <div class="ev-badge sca">SCA Event</div>
+              <div class="ev-badge evento">Evento</div>
               <div class="ev-check"><span class="ev-check-v">✓</span></div>
             </div>
           </div>
@@ -603,7 +631,7 @@ footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); paddi
           <div class="ev-top">
             <div class="ev-date">28 Abr–1 Mai 2027</div>
             <div style="display:flex;gap:5px;align-items:center">
-              <div class="ev-badge sca">SCA Event</div>
+              <div class="ev-badge evento">Evento</div>
               <div class="ev-check"><span class="ev-check-v">✓</span></div>
             </div>
           </div>
@@ -611,6 +639,24 @@ footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); paddi
             <div class="ev-loc">Tóquio, Japão</div>
             <div class="ev-name">World of Coffee Tokyo 2027</div>
             <div class="ev-desc">Edição do WOC no Japão, consolidando a presença brasileira no mercado asiático mais sofisticado do mundo em termos de consumo e valorização dos cafés especiais de origem.</div>
+            <div class="ev-action">Selecionar</div>
+          </div>
+        </div>
+
+        <div class="ev-card" data-id="missao-eua-2027" data-tag="MISSAO EUA 2027" data-name="Missão Comercial EUA 2027" data-tipo="missao" onclick="toggleEvent(this)">
+          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1485738422979-f5c462d49f74?w=800&q=80&fit=crop&crop=center')"></div>
+          <div class="ev-overlay"></div>
+          <div class="ev-top">
+            <div class="ev-date">9–14 Abr 2027</div>
+            <div style="display:flex;gap:5px;align-items:center">
+              <div class="ev-badge missao">Missão</div>
+              <div class="ev-check"><span class="ev-check-v">✓</span></div>
+            </div>
+          </div>
+          <div class="ev-body">
+            <div class="ev-loc">Estados Unidos</div>
+            <div class="ev-name">Missão Comercial EUA 2027</div>
+            <div class="ev-desc">Missão comercial aos Estados Unidos com agenda de reuniões de negócios junto a importadores, torrefadores e distribuidores americanos — o maior mercado consumidor de cafés especiais do mundo.</div>
             <div class="ev-action">Selecionar</div>
           </div>
         </div>
@@ -624,20 +670,38 @@ footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); paddi
       <div class="month-row"><span class="month-lbl">Junho 2027</span><div class="month-rule"></div></div>
       <div class="events-grid">
 
-        <div class="ev-card" data-id="woc-europa" data-tag="WOC EUROPA 2027" data-name="World of Coffee Europa 2027" data-tipo="feira-sca" onclick="toggleEvent(this)">
+        <div class="ev-card" data-id="woc-lisboa" data-tag="WOC LISBON 2027" data-name="World of Coffee Lisbon 2027" data-tipo="feira-sca" onclick="toggleEvent(this)">
           <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1548707309-dcebeab9ea9b?w=800&q=80&fit=crop&crop=center')"></div>
           <div class="ev-overlay"></div>
           <div class="ev-top">
             <div class="ev-date">17–19 Jun 2027</div>
             <div style="display:flex;gap:5px;align-items:center">
-              <div class="ev-badge sca">SCA Event</div>
+              <div class="ev-badge evento">Evento</div>
+              <div class="ev-check"><span class="ev-check-v">✓</span></div>
+            </div>
+          </div>
+          <div class="ev-body">
+            <div class="ev-loc">Lisboa, Portugal</div>
+            <div class="ev-name">World of Coffee Lisbon 2027</div>
+            <div class="ev-desc">Edição europeia do World of Coffee, sediada em Lisboa — porta de entrada para o mercado europeu e plataforma de conexão com importadores e torrefadores de toda a Europa.</div>
+            <div class="ev-action">Selecionar</div>
+          </div>
+        </div>
+
+        <div class="ev-card" data-id="missao-europa-2027" data-tag="MISSAO EUROPA 2027" data-name="Missão Comercial Europa 2027" data-tipo="missao" onclick="toggleEvent(this)">
+          <div class="ev-photo" style="background-image:url('https://images.unsplash.com/photo-1534614971-6be99a7a3ffd?w=800&q=80&fit=crop&crop=center')"></div>
+          <div class="ev-overlay"></div>
+          <div class="ev-top">
+            <div class="ev-date">17–23 Jun 2027</div>
+            <div style="display:flex;gap:5px;align-items:center">
+              <div class="ev-badge missao">Missão</div>
               <div class="ev-check"><span class="ev-check-v">✓</span></div>
             </div>
           </div>
           <div class="ev-body">
             <div class="ev-loc">Portugal · Europa</div>
-            <div class="ev-name">World of Coffee Europa 2027</div>
-            <div class="ev-desc">Edição europeia do World of Coffee, sediada em Portugal — porta de entrada para o mercado europeu e plataforma de conexão com importadores e torrefadores de toda a Europa.</div>
+            <div class="ev-name">Missão Comercial Europa 2027</div>
+            <div class="ev-desc">Missão comercial à Europa com agenda de reuniões de negócios junto a importadores, torrefadores e distribuidores europeus — plataforma para expansão da presença brasileira no mercado europeu de cafés especiais.</div>
             <div class="ev-action">Selecionar</div>
           </div>
         </div>
@@ -689,9 +753,8 @@ footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); paddi
   <div class="success" id="successScreen">
     <div class="success-ring"><svg viewBox="0 0 32 32"><path d="M6 16l8 8 12-12"/></svg></div>
     <h3>Interesse registrado!</h3>
-    <p>Recebemos seu cadastro. A equipe da BSCA entrará em contato em até 48h com as condições de participação e próximos passos.</p>
+    <p>Sua manifestação foi registrada e será utilizada para apoiar o planejamento das iniciativas. As informações sobre inscrições e condições de participação serão divulgadas oportunamente aos interessados.</p>
     <div class="success-chips" id="successChips"></div>
-    <div class="s-note">Brazil. The Coffee Nation · BSCA + ApexBrasil</div>
   </div>
 </section>
 
@@ -705,7 +768,6 @@ footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); paddi
         <div class="al-item"><div class="al-dot"></div><div class="al-txt"><strong>Acesso a todas as ações internacionais</strong> — feiras, missões e promoções do projeto 2025–2027</div></div>
         <div class="al-item"><div class="al-dot"></div><div class="al-txt"><strong>50% de desconto</strong> em todas as ações para membros BSCA adimplentes</div></div>
         <div class="al-item"><div class="al-dot"></div><div class="al-txt"><strong>Visibilidade internacional</strong> — exposição da marca brasileira em 11 países estratégicos</div></div>
-        <div class="al-item"><div class="al-dot"></div><div class="al-txt"><strong>Apoio Apex-Brasil</strong> — cofinanciamento de 50% das ações de promoção comercial</div></div>
       </div>
       <div class="regua-center">
         <img src="https://www.bsca.com.br/wp-content/uploads/2026/07/Regua-APEX-1536x416.png" alt="Realização BSCA + Cafés do Brasil · Promoção ApexBrasil">
@@ -761,43 +823,42 @@ const MC_TAG_BASE = 'INTERESSE MERCADOS';
 ================================================================ */
 const PART_OPTS = {
   'feira': [
-    { id:'bancada-individual',    label:'Bancada Individual'    },
-    { id:'bancada-compartilhada', label:'Bancada Compartilhada' },
-    { id:'cupping',               label:'Sala de Cupping'       },
-    { id:'brew-bar',              label:'Brew Bar Show'         },
-    { id:'missao-visitante',      label:'Missão Visitante'      },
+    { id:'bancada',       label:'Bancada'              },
+    { id:'cupping',       label:'Sessão de Cupping'    },
+    { id:'sala-reuniao',  label:'Sala de Reunião'      },
+    { id:'brew-bar',      label:'Destaques Brew Bar'   },
+    { id:'credencial',    label:'Credencial Visitante' },
   ],
   'feira-sca': [
-    { id:'bancada-individual',    label:'Bancada Individual'    },
-    { id:'bancada-compartilhada', label:'Bancada Compartilhada' },
-    { id:'cupping',               label:'Sala de Cupping'       },
-    { id:'brew-bar',              label:'Brew Bar Show'         },
-    { id:'missao-visitante',      label:'Missão Visitante'      },
+    { id:'bancada',       label:'Bancada'              },
+    { id:'cupping',       label:'Sessão de Cupping'    },
+    { id:'sala-reuniao',  label:'Sala de Reunião'      },
+    { id:'brew-bar',      label:'Destaques Brew Bar'   },
+    { id:'credencial',    label:'Credencial Visitante' },
   ],
   'missao': [
-    { id:'participante',          label:'Participar da Missão'  },
-  ],
-  'concurso': [
-    { id:'amostras',              label:'Envio de Amostras'     },
-    { id:'visitante',             label:'Visita ao Evento'      },
+    { id:'participante',  label:'Participar da Missão' },
   ],
 };
 
 /* Event → month panel mapping */
 const MONTH_MAP = {
-  'scaj-2026':        'part-out-2026',
-  'taste-harvest':    'part-out-2026',
-  'woc-panama':       'part-out-2026',
-  'missao-panama':    'part-out-2026',
-  'sic-2026':         'part-nov-2026',
-  'cafe-show-seoul':  'part-nov-2026',
-  'missao-asia':      'part-nov-2026',
-  'woc-dubai':        'part-jan-2027',
-  'coffeefest-madrid':'part-mar-2027',
-  'hotelex-shanghai': 'part-mar-2027',
-  'woc-new-orleans':  'part-abr-2027',
-  'woc-tokyo':        'part-abr-2027',
-  'woc-europa':       'part-jun-2027',
+  'scaj-2026':               'part-out-2026',
+  'taste-harvest':           'part-out-2026',
+  'woc-panama':              'part-out-2026',
+  'missao-panama':           'part-out-2026',
+  'sic-2026':                'part-nov-2026',
+  'cafe-show-seoul':         'part-nov-2026',
+  'woc-dubai':               'part-jan-2027',
+  'missao-oriente-medio-2027': 'part-jan-2027',
+  'coffeefest-madrid':       'part-mar-2027',
+  'hotelex-shanghai':        'part-mar-2027',
+  'missao-asia-2027':        'part-mar-2027',
+  'woc-new-orleans':         'part-abr-2027',
+  'woc-tokyo':               'part-abr-2027',
+  'missao-eua-2027':         'part-abr-2027',
+  'woc-lisboa':              'part-jun-2027',
+  'missao-europa-2027':      'part-jun-2027',
 };
 
 /* ================================================================
@@ -848,11 +909,11 @@ function toggleEvent(card){
 function updatePanels(){
   const months = {
     'part-out-2026':  ['scaj-2026','taste-harvest','woc-panama','missao-panama'],
-    'part-nov-2026':  ['sic-2026','cafe-show-seoul','missao-asia'],
-    'part-jan-2027':  ['woc-dubai'],
-    'part-mar-2027':  ['coffeefest-madrid','hotelex-shanghai'],
-    'part-abr-2027':  ['woc-new-orleans','woc-tokyo'],
-    'part-jun-2027':  ['woc-europa'],
+    'part-nov-2026':  ['sic-2026','cafe-show-seoul'],
+    'part-jan-2027':  ['woc-dubai','missao-oriente-medio-2027'],
+    'part-mar-2027':  ['coffeefest-madrid','hotelex-shanghai','missao-asia-2027'],
+    'part-abr-2027':  ['woc-new-orleans','woc-tokyo','missao-eua-2027'],
+    'part-jun-2027':  ['woc-lisboa','missao-europa-2027'],
   };
   Object.entries(months).forEach(([panelId, evIds]) => {
     const panel = document.getElementById(panelId);
@@ -934,7 +995,7 @@ function updateSelChips(){
 document.getElementById('fTelefone').addEventListener('input', function(){
   let v = this.value.replace(/\D/g,'').slice(0,11);
   this.value = v.length<=10
-    ? v.replace(/^(\d{0,2})(\d{0,4})(\d{0,4})$/,(_,a,b,c)=>a?(b?`(${a}) ${b}`+(c?`-${c}`:''):`(${a}`):'')
+    ? v.replace(/^(\d{0,2})(\d{0,4})(\d{0,4})$/,(_,a,b,c)=>a?(b?(`(${a}) ${b}`+(c?`-${c}`:'')):`(${a})`):'')
     : v.replace(/^(\d{2})(\d{5})(\d{0,4})$/,'($1) $2-$3');
 });
 
