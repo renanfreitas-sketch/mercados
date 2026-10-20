@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -154,6 +153,21 @@ header{ background:var(--white); border-bottom:1px solid var(--line); padding:0 
 .ev-card.selected .ev-action{ color:var(--green-lt) }
 .ev-card.selected .ev-action::before{ content:'✓  ' }
 
+/* ===== Ações encerradas (registro histórico) ===== */
+.encerradas{ margin-top:56px; padding-top:34px; border-top:1px solid var(--line) }
+.enc-head{ display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:6px }
+.enc-title{ font-size:11px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-xsoft) }
+.enc-pill{ font-size:10px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-xsoft); background:rgba(0,0,0,.04); border:1px solid var(--line); padding:4px 11px; border-radius:30px }
+.enc-sub{ font-size:12.5px; font-weight:300; color:var(--ink-xsoft); line-height:1.6; margin-bottom:20px; max-width:620px }
+.enc-list{ display:flex; flex-direction:column; gap:1px; background:var(--line); border:1px solid var(--line); border-radius:10px; overflow:hidden }
+.enc-row{ display:flex; align-items:center; gap:16px; padding:14px 18px; background:var(--cream-deep); opacity:.72 }
+.enc-date{ font-size:10.5px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-xsoft); white-space:nowrap; min-width:104px }
+.enc-info{ flex:1; min-width:0 }
+.enc-name{ font-size:13.5px; font-weight:600; color:var(--ink-soft); line-height:1.3 }
+.enc-loc{ font-size:11px; font-weight:300; color:var(--ink-xsoft); margin-top:2px }
+.enc-status{ display:inline-flex; align-items:center; gap:6px; font-size:10px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-xsoft); white-space:nowrap }
+.enc-status::before{ content:''; width:6px; height:6px; border-radius:50%; background:var(--ink-xsoft); opacity:.55 }
+
 /* Participation panel */
 .participacao-section{ background:var(--white); border:1.5px solid var(--green); border-radius:var(--r); padding:32px; margin-bottom:36px; box-shadow:var(--shadow); display:none; animation:fadeUp .4s ease forwards }
 .participacao-section.show{ display:block }
@@ -258,26 +272,120 @@ footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); paddi
 .foot-bottom a{ color:rgba(255,255,255,.28); text-decoration:none }
 .foot-bottom a:hover{ color:rgba(255,255,255,.7) }
 
-/* Responsive */
-@media(max-width:900px){ .form-layout{ grid-template-columns:1fr; gap:40px } }
-@media(max-width:800px){ .adesao-inner{ grid-template-columns:1fr; gap:44px } }
-@media(max-width:768px){
-  header{ padding:0 20px }
-  .hd-nav .hd-link{ display:none }
-  .hero-inner{ padding:64px 20px 76px }
-  .section-wrap,.events-wrap,.submit-wrap,.adesao-inner{ padding-left:20px; padding-right:20px }
-  footer{ padding:40px 20px 28px }
-  .stats-band{ padding:0 20px }
-  .mc-content{ padding:28px 20px }
+/* ============ RESPONSIVE ============ */
+
+/* Evita overflow horizontal em qualquer breakpoint */
+html,body{ max-width:100%; overflow-x:hidden }
+img{ max-width:100% }
+
+/* Em telas de toque não há hover: descrição do card sempre visível */
+@media(hover:none){
+  .ev-desc{ max-height:90px }
+  .ev-card:hover{ transform:none }
+  .ev-card:hover .ev-photo{ transform:none; filter:brightness(.76) saturate(.95) }
 }
+
+/* ---- Tablet grande ---- */
+@media(max-width:900px){
+  .form-layout{ grid-template-columns:1fr; gap:40px }
+  .section-wrap,.events-wrap{ padding-top:64px; padding-bottom:64px }
+}
+
+/* ---- Tablet ---- */
+@media(max-width:800px){
+  .adesao-inner{ grid-template-columns:1fr; gap:44px; padding-top:72px; padding-bottom:72px }
+  .adesao-box{ position:static; padding:32px }
+  .regua-center img{ height:70px }
+}
+
+/* ---- Mobile / tablet pequeno ---- */
+@media(max-width:768px){
+  header{ padding:0 18px; height:60px }
+  .hd-logo{ height:30px }
+  .hd-nav{ gap:18px }
+  .hd-nav .hd-link{ font-size:12px }
+
+  .hero{ min-height:auto }
+  .hero-inner{ padding:56px 18px 64px }
+  .hero-lede{ font-size:1rem; margin-bottom:28px }
+  .hero-acts{ gap:10px }
+  .btn-primary,.btn-gold{ padding:16px 26px; font-size:12.5px; flex:1 1 auto; justify-content:center }
+
+  .section-wrap,.events-wrap,.submit-wrap,.adesao-inner{ padding-left:18px; padding-right:18px }
+  .section-wrap,.events-wrap{ padding-top:56px; padding-bottom:56px }
+  .submit-wrap{ padding-top:56px; padding-bottom:56px }
+  footer{ padding:40px 18px 28px }
+  .stats-band{ padding:0 18px }
+  .mc-content{ padding:30px 22px }
+
+  .form-card{ padding:26px 20px }
+  .participacao-section{ padding:24px 20px }
+  .sel-box{ padding:18px 20px }
+  .month-block{ margin-bottom:40px }
+
+  /* Barra de perfil: ocupa largura total e botões iguais */
+  .toggle-bar{ padding:16px 18px; gap:14px }
+  .toggle-label{ width:100%; font-size:12.5px }
+  .toggle-group{ width:100%; }
+  .toggle-group .tg-btn{ flex:1; padding:14px 12px; font-size:11.5px; text-align:center }
+
+  /* Barra flutuante: encaixa na largura da tela */
+  .float-bar{ left:14px; right:14px; bottom:14px; transform:translateY(12px);
+              border-radius:16px; padding:12px 14px; gap:10px; white-space:normal }
+  .float-bar.show{ transform:translateY(0) }
+  .float-txt{ flex:1; font-size:11.5px; line-height:1.3 }
+  .float-bar .float-btn{ padding:14px 18px; white-space:nowrap }
+
+  .success{ padding:64px 18px 56px }
+  .success h3{ font-size:1.65rem }
+  .foot-top{ gap:24px; margin-bottom:32px }
+  .foot-bottom{ flex-direction:column; align-items:flex-start; text-align:left }
+}
+
+/* ---- Faixa de números ---- */
 @media(max-width:700px){
   .stats-inner{ grid-template-columns:1fr 1fr }
+  .stat-item{ padding:22px 16px }
   .stat-item:last-child{ grid-column:1/-1; border-top:1px solid rgba(255,255,255,.15) }
   .stat-item:nth-child(2){ border-right:none }
+  .stat-n{ font-size:1.7rem }
 }
+
+/* ---- Celular ---- */
 @media(max-width:520px){
   .events-grid{ grid-template-columns:1fr }
   .ev-card{ aspect-ratio:3/2 }
+  .ev-name{ font-size:1.05rem }
+
+  /* Campos do formulário empilhados */
+  .form-grid{ grid-template-columns:1fr }
+  /* 16px evita o zoom automático do iOS ao focar o campo */
+  .f-input{ font-size:16px; padding:14px 15px }
+
+  .btn-confirm{ padding:18px 24px; font-size:13px }
+  .p-opt{ width:100%; padding:12px 14px }
+  .mc-btn,.btn-adesao{ width:100%; justify-content:center; padding:16px 24px }
+  /* Ações encerradas: empilha data/nome e joga o status para a linha de baixo */
+  .enc-row{ flex-wrap:wrap; gap:4px 12px; padding:13px 15px }
+  .enc-date{ min-width:0; order:1 }
+  .enc-status{ order:2; margin-left:auto }
+  .enc-info{ order:3; flex:1 1 100% }
+
+  .hero-pills{ gap:6px }
+  .pill{ font-size:10.5px; padding:6px 13px }
+  .regua-center img{ height:56px }
+  .adesao-box{ padding:26px 20px }
+}
+
+/* ---- Celular pequeno ---- */
+@media(max-width:380px){
+  .hd-nav{ gap:14px }
+  .hd-nav .hd-link{ font-size:11.5px }
+  .float-txt{ display:none }
+  .toggle-group .tg-btn{ font-size:11px; letter-spacing:.02em }
+  .stats-inner{ grid-template-columns:1fr }
+  .stat-item{ border-right:none; border-top:1px solid rgba(255,255,255,.15) }
+  .stat-item:first-child{ border-top:none }
 }
 </style>
 </head>
@@ -342,86 +450,6 @@ footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); paddi
       <span><strong>Membros BSCA têm 50% de desconto</strong> em todas as ações do projeto. A adesão ao projeto é gratuita, mas os valores de participação diferem por perfil. <a href="https://www.bsca.com.br/membros/" target="_blank">Conheça a BSCA →</a></span>
     </div>
 
-    <!-- OUT 2026 -->
-    <div class="month-block reveal">
-      <div class="month-row"><span class="month-lbl">Outubro 2026</span><div class="month-rule"></div></div>
-      <div class="events-grid">
-
-        <div class="ev-card" data-id="scaj-2026" data-tag="SCAJ 2026" data-name="SCAJ 2026" data-tipo="feira" onclick="toggleEvent(this)">
-          <div class="ev-photo" style="background-image:url('https://images.squarespace-cdn.com/content/v1/595a0771e6f2e180dc825946/1779347916165-0GLIK3W5KY8A0OHO1DXG/SCAJ+2026.png?format=1500w')"></div>
-          <div class="ev-overlay"></div>
-          <div class="ev-top">
-            <div class="ev-date">14–16 Out 2026</div>
-            <div style="display:flex;gap:5px;align-items:center">
-              <div class="ev-badge evento">Evento</div>
-              <div class="ev-check"><span class="ev-check-v">✓</span></div>
-            </div>
-          </div>
-          <div class="ev-body">
-            <div class="ev-loc">Tóquio, Japão · Tokyo Big Sight</div>
-            <div class="ev-name">SCAJ 2026</div>
-            <div class="ev-desc">World Specialty Coffee Conference and Exhibition — maior evento de cafés especiais da Ásia, reunindo importadores, torrefadores e compradores globais em Tóquio.</div>
-            <div class="ev-action">Selecionar</div>
-          </div>
-        </div>
-
-        <div class="ev-card" data-id="taste-harvest" data-tag="TASTE OF THE HARVEST 2026" data-name="Taste of the Harvest 2026" data-tipo="missao" onclick="toggleEvent(this)">
-          <div class="ev-photo" style="background-image:url('https://perfectdailygrind.com/pt/wp-content/uploads/sites/5/2022/02/image-6-1.png')"></div>
-          <div class="ev-overlay"></div>
-          <div class="ev-top">
-            <div class="ev-date">14–16 Out 2026</div>
-            <div style="display:flex;gap:5px;align-items:center">
-              <div class="ev-badge missao">Missão</div>
-              <div class="ev-check"><span class="ev-check-v">✓</span></div>
-            </div>
-          </div>
-          <div class="ev-body">
-            <div class="ev-loc">Tóquio, Japão</div>
-            <div class="ev-name">Taste of the Harvest 2026</div>
-            <div class="ev-desc">Competição internacional que avalia cafés de origem com um dos mais rigorosos júris de especialistas asiáticos — uma plataforma para showcasing de qualidade junto aos principais compradores japoneses.</div>
-            <div class="ev-action">Selecionar</div>
-          </div>
-        </div>
-
-        <div class="ev-card" data-id="woc-panama" data-tag="WOC PANAMA 2026" data-name="World of Coffee Panamá" data-tipo="feira-sca" onclick="toggleEvent(this)">
-          <div class="ev-photo" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTACmKo_zq9O9HN8pVpyyMZeGa_0QnvQrHurvWLVnkJ2pRWGmiuI_pzQBY&s=10')"></div>
-          <div class="ev-overlay"></div>
-          <div class="ev-top">
-            <div class="ev-date">22–25 Out 2026</div>
-            <div style="display:flex;gap:5px;align-items:center">
-              <div class="ev-badge evento">Evento</div>
-              <div class="ev-check"><span class="ev-check-v">✓</span></div>
-            </div>
-          </div>
-          <div class="ev-body">
-            <div class="ev-loc">Cidade do Panamá</div>
-            <div class="ev-name">World of Coffee Panamá</div>
-            <div class="ev-desc">O principal evento da SCA nas Américas — plataforma de conexão entre produtores brasileiros e compradores internacionais de alto padrão, reunindo milhares de profissionais da cadeia do café especial.</div>
-            <div class="ev-action">Selecionar</div>
-          </div>
-        </div>
-
-        <div class="ev-card" data-id="missao-panama" data-tag="MISSAO PANAMA 2026" data-name="Missão Panamá 2026" data-tipo="missao" onclick="toggleEvent(this)">
-          <div class="ev-photo" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8eAC_YQdE3JPXeGGcvnPZu90HxyY4OZn4KySsOkomCs6S4JqeOmQDNVKQ&s=10')"></div>
-          <div class="ev-overlay"></div>
-          <div class="ev-top">
-            <div class="ev-date">26–27 Out 2026</div>
-            <div style="display:flex;gap:5px;align-items:center">
-              <div class="ev-badge missao">Missão</div>
-              <div class="ev-check"><span class="ev-check-v">✓</span></div>
-            </div>
-          </div>
-          <div class="ev-body">
-            <div class="ev-loc">Panamá · Experiência de Origem</div>
-            <div class="ev-name">Missão Panamá 2026</div>
-            <div class="ev-desc">Experiência de imersão entre os dias 26 e 27 de outubro, voltada ao conhecimento da origem produtora panamenha, com visitas a fazendas, contato com produtores, degustações e intercâmbio técnico entre profissionais da cadeia do café.</div>
-            <div class="ev-action">Selecionar</div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <div class="participacao-section" id="part-out-2026"></div>
 
     <!-- NOV 2026 -->
     <div class="month-block reveal">
@@ -684,15 +712,56 @@ footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); paddi
     </div>
     <div class="participacao-section" id="part-jun-2027"></div>
 
+    <!-- REGISTRO: ações com período de manifestação encerrado -->
+    <div class="encerradas reveal">
+      <div class="enc-head">
+        <span class="enc-title">Ações já realizadas</span>
+        <span class="enc-pill">Manifestação encerrada</span>
+      </div>
+      <p class="enc-sub">Estas ações integraram o projeto setorial 2026–2027 e já tiveram seu período de manifestação de interesse encerrado. Permanecem listadas como registro das iniciativas realizadas.</p>
+      <div class="enc-list">
+
+        <div class="enc-row">
+          <div class="enc-date">14–16 Out 2026</div>
+          <div class="enc-info">
+            <div class="enc-name">SCAJ 2026</div>
+            <div class="enc-loc">Tóquio, Japão · Tokyo Big Sight</div>
+          </div>
+          <span class="enc-status">Encerrada</span>
+        </div>
+
+        <div class="enc-row">
+          <div class="enc-date">14–16 Out 2026</div>
+          <div class="enc-info">
+            <div class="enc-name">Taste of the Harvest 2026</div>
+            <div class="enc-loc">Tóquio, Japão</div>
+          </div>
+          <span class="enc-status">Encerrada</span>
+        </div>
+
+        <div class="enc-row">
+          <div class="enc-date">22–25 Out 2026</div>
+          <div class="enc-info">
+            <div class="enc-name">World of Coffee Panamá</div>
+            <div class="enc-loc">Cidade do Panamá</div>
+          </div>
+          <span class="enc-status">Encerrada</span>
+        </div>
+
+        <div class="enc-row">
+          <div class="enc-date">26–27 Out 2026</div>
+          <div class="enc-info">
+            <div class="enc-name">Missão Panamá 2026</div>
+            <div class="enc-loc">Panamá · Experiência de Origem</div>
+          </div>
+          <span class="enc-status">Encerrada</span>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </section>
-
-<div class="float-bar" id="floatBar">
-  <div class="float-n" id="floatN">0</div>
-  <span class="float-txt">ação(ões) selecionada(s)</span>
-  <button class="float-btn" onclick="document.getElementById('submit-section').scrollIntoView({behavior:'smooth'})">Confirmar →</button>
-</div>
-
 
 <section class="form-section" id="form-section">
   <div class="section-wrap">
@@ -725,6 +794,13 @@ footer{ background:var(--ink); border-top:1px solid rgba(255,255,255,.06); paddi
     </div>
   </div>
 </section>
+
+<div class="float-bar" id="floatBar">
+  <div class="float-n" id="floatN">0</div>
+  <span class="float-txt">ação(ões) selecionada(s)</span>
+  <button class="float-btn" onclick="document.getElementById('submit-section').scrollIntoView({behavior:'smooth'})">Confirmar →</button>
+</div>
+
 <section class="submit-section" id="submit-section">
   <div id="submitForm">
     <div class="submit-wrap">
@@ -838,10 +914,6 @@ const PART_OPTS = {
 
 /* Event → month panel mapping */
 const MONTH_MAP = {
-  'scaj-2026':               'part-out-2026',
-  'taste-harvest':           'part-out-2026',
-  'woc-panama':              'part-out-2026',
-  'missao-panama':           'part-out-2026',
   'sic-2026':                'part-nov-2026',
   'cafe-show-seoul':         'part-nov-2026',
   'woc-dubai':               'part-jan-2027',
@@ -903,7 +975,6 @@ function toggleEvent(card){
 
 function updatePanels(){
   const months = {
-    'part-out-2026':  ['scaj-2026','taste-harvest','woc-panama','missao-panama'],
     'part-nov-2026':  ['sic-2026','cafe-show-seoul'],
     'part-jan-2027':  ['woc-dubai','missao-oriente-medio-2027'],
     'part-mar-2027':  ['coffeefest-madrid','hotelex-shanghai','missao-asia-2027'],
